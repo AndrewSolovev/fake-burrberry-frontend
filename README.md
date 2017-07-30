@@ -1,2 +1,2 @@
 # fake-burrberry-frontend
-Frontend for rodionovkurs. 
+Фронтенд ru.burberry.com для курса 

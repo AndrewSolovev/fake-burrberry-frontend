@@ -1,3 +1,12 @@
-body {
-	background-color: pink;
+
+header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #c6c6c6;
+}
+.header-logo-img {
+  height: 10px;
+  width: 138px;
+  margin: 0px 91px;
+  padding: 1rem 0rem;
 }

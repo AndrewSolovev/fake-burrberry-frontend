@@ -1,23 +1,8 @@
-* {
--webkit-margin-before: 0em;
--webkit-margin-after: 0em;
-padding: 0px;
-}
 body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  /*background-image: url(bg.png);
-  width: 320px;
-  height: 2676px;
-  background-size: cover;
-  background-position: 0px 1px;*/
 }
-button {
-  outline: none;
-}
-
-
 
 header {
   display: flex;

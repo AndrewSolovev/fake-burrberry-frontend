@@ -4,11 +4,13 @@ body {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
 
+
 header {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #c6c6c6;
 }
+
 .header-logo-img {
   height: 10px;
   width: 138px;
@@ -26,11 +28,13 @@ header {
   line-height: 24px;
   color: #111111;
 }
+
 .product-card-showcase {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
 }
+
 .product-card-info {
   display: flex;
   justify-content: space-between;
@@ -39,27 +43,34 @@ header {
   border-bottom: 1px solid #c6c6c6;
   font-family: 'Raleway', 'Helvetica Neue', sans-serif;
 }
+
 .product-card-info-price {
+  margin: 0;
   margin-top: 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 19px;
   color: #111111;
 }
+
 .product-card-info-colour {
+  margin: 0;
   margin-top: 1rem;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
   color: #171717;
 }
+
 .product-card-info-itemid {
+  margin: 0;
   margin-top: 19px;
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
   color: #171717;
 }
+
 .product-card-info-button {
   display: inline-block;
   margin-top: 1rem;
@@ -69,6 +80,7 @@ header {
   border: 1px solid #232122;
   background-color: #232122;
 }
+
 .product-card-info-button-pressed {
   display: inline-block;
   margin-top: 1rem;
@@ -80,8 +92,8 @@ header {
 
 
 
-.product-card-size-button {
-  padding-left: 0px;
+.product-card-button-help {
+  padding: 0;
   padding-top: 0.5rem;
   background-color: #FFFFFF;
   border: none;
@@ -90,16 +102,19 @@ header {
   font-size: 12px;
   font-weight: 400;
 }
-.product-card-buttons-container {
+
+.product-card-buttons {
  padding: 2rem 1rem 3rem 1rem;
  border-bottom: 1px solid #c6c6c6;
 }
-.product-card-flex-buttons {
+
+.product-card-buttons-container {
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: stretch;
 }
+
 .product-card-button {
   margin-bottom: 1rem;
   padding: 1rem;
@@ -109,11 +124,13 @@ header {
   line-height: 14px;
   text-align: center;
 }
+
 #product-card-button-size {
   border: solid 1px #171717;
   background-color: #171717;
   color: #FFFFFF;
 }
+
 #product-card-button-find {
   border: solid 1px #999999;
   background-color: #FFFFFF;
@@ -121,75 +138,102 @@ header {
 
 
 
-.product-dropdown {
+.product-desc {
+  position: relative;
   padding: 2rem 1rem;
   border-bottom: 1px solid #c6c6c6;
 }
-.product-dropdown-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.product-dropdown-title {
+
+.product-desc-title {
+  margin: 0;
+  padding-bottom: 2rem;
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 20px;
 }
-.title-desc {
-  padding: 2rem 0rem 2rem 1rem;
-  padding-top: 31px;
-  line-height: 20px;
+
+.product-desc-title:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5px 0;
+  border-color: #171717 transparent transparent;
+  position: absolute;
+  top: 2.4rem;
+  right: 1rem;
+  transform: rotate(180deg);
 }
-.product-triangle {
-  height: 10px;
-  width: 10px;
-  cursor: pointer;
-}
-.product-triangle-dropped {
-  height: 10px;
-  width: 10px;
-  padding-left: 1rem;
-  padding-bottom: 2rem;
-  cursor: pointer;
-  transform: rotate(180deg)
-}
-.product-dropdown-desc {
-  padding-top: 2rem;
-}
-.product-dropdown-desc-textarea {
+
+.product-desc-textarea {
   display: flex;
   flex-flow: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #c6c6c6;
 }
-.product-dropdown-desc-p {
+
+.product-desc-textarea p {
+  margin: 0;
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 24px;
 }
-.product-dropdown-desc-p:last-of-type {
+
+.product-desc-textarea p:last-of-type {
   margin-bottom: 1.5rem;
 }
-.product-dropdown-list {
+
+.product-desc-list {
+  -webkit-padding-start: 0;
+  margin: 0;
   list-style: none;
 }
-.product-dropdown-list-item {
+
+.product-desc-list li {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 24px;
 }
+
+
+
+.product-shipping {
+  position: relative;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.product-shipping-title {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.product-shipping-title:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5px 0;
+  border-color: #171717 transparent transparent;
+  position: absolute;
+  top: 2.4rem;
+  right: 1rem;
+}
+
+
 
 
 
 .product-recommendations {
   padding: 3rem 1rem 0rem 1rem;
 }
+
 .product-recommendations-title {
+  margin: 0;
   display: inline-block;
   width: auto;
   padding-bottom: 0.5rem;
@@ -199,21 +243,26 @@ header {
   font-weight: 500;
   line-height: 19px;
 }
-.product-recommendations-flexcontainer {
+
+.product-recommendations-goods {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 1.5rem;
 }
-.product-recommendations-flex-child {
+
+.product-recommendations-goods-item {
   flex-basis: 130px;
 }
-.product-recommendations-item-img {
+
+.product-recommendations-goods-item-img {
   display: block;
   width: 130px;
   height: 174px;
 }
-.product-recommendations-item-name {
+
+.product-recommendations-goods-item-title {
+  margin: 0;
   padding-top: 0.5rem;
   font-size: 1rem;
   font-family: 'Lora', serif;
@@ -221,7 +270,9 @@ header {
   font-weight: 400;
   text-align: left;
 }
-.product-recommendations-item-price {
+
+.product-recommendations-goods-item-price {
+  margin: 0;
   padding-top: 0.5rem;
   padding-bottom: 2rem;
   font-size: 12px;
@@ -236,7 +287,9 @@ header {
   padding-left: 1rem;
   padding-top: 1rem;
 }
+
 .product-moreforyou-title {
+  margin: 0;
   display: inline-block;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
@@ -246,7 +299,9 @@ header {
   line-height: 19px;
   color: #111111;
 }
+
 .product-moreforyou-link {
+  margin: 0;
   display: block;
   padding-top: 1rem;
   font-size: 14px;
@@ -259,23 +314,24 @@ header {
 
 footer {
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
   background-color: #f3f3f3;
 }
-footer :first-child {
-  padding-top: 2rem;
-}
+
 .footer-button {
+  padding: 0;
   padding-top: 1rem;
   border: none;
   font-size: 0.75rem;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
-  line-height: 14px;
+  line-height: 16px;
   color: #999999;
   background-color: #f3f3f3;
 }
+
 .footer-needhelp {
+  margin: 0;
   padding-top: 1.5rem;
   text-align: center;
   font-size: 1rem;
@@ -283,7 +339,9 @@ footer :first-child {
   color: #171717;
   font-weight: 700;
 }
+
 .footer-contact {
+  margin: 0;
   display: block;
   padding-top: 1rem;
   padding-bottom: 1rem;

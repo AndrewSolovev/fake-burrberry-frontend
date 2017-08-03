@@ -224,13 +224,10 @@ header {
   margin-bottom: 1.5rem;
 }
 
-.product-desc-list {
+.product-desc-list ul {
   -webkit-padding-start: 0;
   margin: 0;
   list-style: none;
-}
-
-.product-desc-list li {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 0.875rem;

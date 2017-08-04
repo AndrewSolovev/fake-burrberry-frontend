@@ -14,14 +14,18 @@ header {
   justify-content: center;
   border-bottom: 1px solid #c6c6c6;
 }
+.header-logo {
+  display: inline-block;
+}
 
 .header-logo-img {
+  display: block;
   height: 10px;
   width: 138px;
   margin: 0px;
   padding: 1rem 0rem;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .header-logo-img {
     padding: 1.5rem 0rem;
   }
@@ -34,26 +38,28 @@ header {
 
 .product-card-title {
   margin: 1rem;
+  margin-left: 0.5rem;
   font-family: 'Lora', serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 24px;
   color: #111111;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .product-card-title {
-    margin: 1.5rem 0rem 1.5rem 0.5rem;
+    margin: 1.5rem 0rem 1.5rem 0rem;
     font-size: 1.5rem;
     line-height: 28px;
   }
 }
+
 .product-card-showcase {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
   padding: 0;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .product-card-showcase{
     padding-left: 0.5rem;
   }
@@ -63,10 +69,19 @@ header {
   }
 }
 
+.product-card-info-and-buttons {
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .product-card-info-and-buttons {
+    padding: 0 0.5rem;
+  }
+}
+
 .product-card-info {
   display: flex;
   justify-content: space-between;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
   font-family: 'Raleway', 'Helvetica Neue', sans-serif;
@@ -98,7 +113,7 @@ header {
   line-height: 16px;
   color: #171717;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .product-card-info, .product-card-info-price, .product-card-info-itemid {
     margin: 0;
   }
@@ -111,6 +126,7 @@ header {
   padding: 19px;
   border-radius: 50px;
   border: 1px solid #232122;
+  font-size: 0;
   background-color: #232122;
 }
 
@@ -120,6 +136,7 @@ header {
   padding: 19px;
   border-radius: 50px;
   border: 1px solid #232122;
+  font-size: 0;
   background-color: #cfa880;
 }
 
@@ -135,13 +152,11 @@ header {
 }
 
 .product-card-buttons {
- padding: 2rem 0.5rem 3rem 0.5rem;
- border-bottom: 1px solid #c6c6c6;
+ padding: 2rem 1rem 3rem 1rem;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .product-card-buttons {
     padding: 2rem 0rem 3rem 0rem;
-    border: none;
   }
 }
 
@@ -180,42 +195,47 @@ header {
 
 
 .product-desc {
-  position: relative;
   padding: 2rem 1rem;
+  border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .product-desc {
     padding: 1.5rem 0.5rem;
     border: none;
   }
 }
-
+.product-desc-heading {
+  display: flex;
+  flex-flow: column;
+}
 .product-desc-title {
-  margin: 0;
-  padding-bottom: 2rem;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
+  display: block;
+  padding: 0rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
   font-weight: 500;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .product-desc-title:after {
   content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 5px 0;
-  border-color: #171717 transparent transparent;
+  background-image: url(img/triangle.svg);
+  width: 10px;
+  height: 10px;
   position: absolute;
-  top: 2.4rem;
-  right: 1rem;
+  bottom: 30%;
+  right: 0rem;
   transform: rotate(180deg);
 }
-@media (min-width: 768px) {
-  .product-desc-title {
-    padding-bottom: 1rem;
-  }
+@media only screen and (min-width: 768px) {
   .product-desc-title:after {
     display: none;
   }
@@ -224,6 +244,12 @@ header {
 .product-desc-textarea {
   display: flex;
   flex-flow: column;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .product-desc-textarea {
+    margin-top: 1rem;
+  }
 }
 
 .product-desc-textarea p {
@@ -254,30 +280,98 @@ header {
 
 
 .product-shipping {
-  position: relative;
   padding: 2rem 1rem;
   border-bottom: 1px solid #c6c6c6;
 }
+@media only screen and (min-width: 768px) {
+  .product-shipping {
+    padding: 0;
+    border: none;
+  }
+}
 
-.product-shipping-title {
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
+.product-shipping-img {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .product-shipping-img {
+    display: block;
+  }
+}
+
+.product-shipping-heading {
+  display: flex;
+  flex-flow: column;
+}
+.product-shipping-title-mobile {
+  display: block;
+  padding: 0rem;
+  margin-left: -8px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
   font-weight: 500;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.product-shipping-title:after {
+.product-shipping-title-mobile:after {
   content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 5px 0;
-  border-color: #171717 transparent transparent;
+  background-image: url(img/triangle.svg);
+  width: 10px;
+  height: 10px;
   position: absolute;
-  top: 2.4rem;
-  right: 1rem;
+  bottom: 30%;
+  right: 0rem;
+  margin-right: -0.5rem;
 }
+@media only screen and (min-width: 768px) {
+
+  .product-shipping-title-mobile, .product-shipping-title-mobile:after {
+    display: none;
+  }
+}
+.product-shipping-title {
+    display: none;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+  .product-shipping-title {
+      display: block;
+  }
+}
+.product-shipping h3 {
+  display: none;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .product-shipping h3 {
+    display: block;
+    font-size: 0.75rem;
+  }
+}
+.product-shipping p {
+  display: none;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .product-shipping p {
+    display: block;
+    padding-top: 0.25rem;
+    padding-bottom: 1.5rem;
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+  .product-shipping h3:first-of-type {
+    margin-top: 1rem;
+  }
+}
+
 
 /*
  *  Recommendations section
@@ -285,13 +379,19 @@ header {
 
 
 .product-recommendations {
-  padding: 3rem 1rem 0rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .product-recommendations {
+    padding: 1.5rem 0rem 0rem 0rem;
+  }
 }
 
 .product-recommendations-title {
-  margin: 0;
   display: inline-block;
   width: auto;
+  margin: 0;
+  margin-left: -0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #171717;
   font-family: 'Raleway', sans-serif;
@@ -299,25 +399,48 @@ header {
   font-weight: 500;
   line-height: 19px;
 }
-
-.product-recommendations-goods {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 1.5rem;
+@media only screen and (min-width: 768px) {
+  .product-recommendations-title {
+    margin-left: 0;
+  }
 }
 
+.product-recommendations-goods {
+  padding-top: 1.5rem;
+}
 .product-recommendations-goods-item {
-  flex-basis: 8.125rem;
+  padding: 0;
+}
+.product-recommendations-goods-item:nth-child(odd) {
+  padding-right: 1rem;
+}
+.product-recommendations-goods-item:nth-child(even) {
+  padding-left: 1rem;
+}
+@media only screen and (min-width: 768px) {
+.product-recommendations-goods-item:nth-child(odd), .product-recommendations-goods-item:nth-child(even) {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+}
+@media only screen and (min-width: 768px) {
+  .product-recommendations-goods {
+    padding-top: 1rem;
+  }
 }
 
 .product-recommendations-goods-item-img {
-  display: block;
-  width: 130px;
-  height: 174px;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .product-recommendations-goods-item-img {
+    width: 176px;
+    height: 235px;
+  }
 }
 
 .product-recommendations-goods-item-title {
+  display: inline-block;
   margin: 0;
   padding-top: 0.5rem;
   font-size: 1rem;
@@ -343,14 +466,19 @@ header {
 
 .product-moreforyou {
   padding-left: 1rem;
-  padding-top: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .product-moreforyou {
+    display: none;
+  }
 }
 
 .product-moreforyou-title {
   margin: 0;
   display: inline-block;
-  padding-bottom: 0.5rem;
+  margin-left: -0.5rem;
   margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid #111111;
   font-size: 1rem;
   font-weight: 500;
@@ -360,6 +488,7 @@ header {
 
 .product-moreforyou-link {
   margin: 0;
+  margin-left: -0.5rem;
   display: block;
   padding-top: 1rem;
   font-size: 14px;
@@ -378,8 +507,45 @@ footer {
   margin-top: 4rem;
   background-color: #f3f3f3;
 }
+@media only screen and (min-width: 768px) {
+  footer {
+    padding: 0;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+.footer-nav {
+  display: none;
+  padding-bottom: 0.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer-nav {
+    display: block;
+  }
+}
+
+.footer-nav h3 {
+  margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 0.75rem;
+}
+
+.footer-nav ul {
+  -webkit-padding-start: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer-nav li {
+  padding-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #999999;
+}
 
 .footer-button {
+  display: block;
+  margin-left: -0.5rem;
   padding: 0;
   padding-top: 1rem;
   border: none;
@@ -390,9 +556,17 @@ footer {
   color: #999999;
   background-color: #f3f3f3;
 }
+@media only screen and (min-width: 768px) {
+  .footer-button {
+    display: inline-block;
+    padding-right: 1.5rem;
+    margin-left: 0rem;
+  }
+}
 
 .footer-needhelp {
   margin: 0;
+  margin-left: -0.5rem;
   padding-top: 1.5rem;
   text-align: center;
   font-size: 1rem;
@@ -403,6 +577,7 @@ footer {
 
 .footer-contact {
   margin: 0;
+  margin-left: -0.5rem;
   display: block;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -411,4 +586,10 @@ footer {
   font-family: 'Lora', serif;
   font-style: italic;
   line-height: 17px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-needhelp, .footer-contact {
+    display: none;
+  }
 }

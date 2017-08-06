@@ -63,11 +63,10 @@ header {
     margin: 0;
   }
 }
-.product-car-showcase-pic {
-  flex-shrink: 0;
-}
+
 .product-card-showcase img {
   display: block;
+  flex-shrink: 0;
   object-fit: contain;
   width: auto;
   height: 400px;

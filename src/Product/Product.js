@@ -3,13 +3,16 @@ import styled from 'styled-components';
 
 import SectionHeading from "./SectionHeading/SectionHeading"
 import ProductCardButton from "./ProductCardButton/ProductCardButton"
-
+import {Helmet} from "react-helmet";
 
 
 class Product extends Component {
   render() {
     return (
       <div>
+      <Helmet>
+        <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+      </Helmet>
       <section className="container">
         <h1 className="product-card-title">Long Cotton Gabardine Car Coat</h1>
         <div className="row">

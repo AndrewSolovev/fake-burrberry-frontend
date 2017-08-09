@@ -9,6 +9,7 @@ import SectionHeading from "./SectionHeading/SectionHeading";
 import Textarea from "./Textarea/Textarea";
 import WeRecommend from "./WeRecommend/WeRecommend";
 import Shipping from "./Shipping/Shipping";
+import MoreForYou from "./MoreForYou/MoreForYou";
 
 
 
@@ -43,12 +44,7 @@ class Product extends Component {
 
         <WeRecommend></WeRecommend>
 
-        <section className="container">
-          <h2 className="product-moreforyou-title">MORE FOR YOU</h2>
-          <a className="product-moreforyou-link">Men's Black Trench Coats</a>
-          <a className="product-moreforyou-link">Men's Short Trench Coats</a>
-          <a className="product-moreforyou-link">Men's Long Trench Coats</a>
-        </section>
+        <MoreForYou></MoreForYou>
       </div>
     );
   }

@@ -21,11 +21,11 @@ const Button = styled.button`
 `;
 
 
-class ProductCardButton extends Component {
+class CardButton extends Component {
   render() {
     return (
       <Button сolour={this.props.colour} type="button">{this.props.buttonName}</Button>
     );
   };
 };
-export default ProductCardButton;
+export default CardButton;

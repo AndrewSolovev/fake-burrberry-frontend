@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import SectionHeading from "./SectionHeading/SectionHeading"
-import ProductCardButton from "./ProductCardButton/ProductCardButton"
 import {Helmet} from "react-helmet";
+import ProductTitle from "./ProductTitle/ProductTitle"
+import SectionHeading from "./SectionHeading/SectionHeading"
+import CardButton from "./CardButton/CardButton"
+
 
 
 class Product extends Component {
@@ -14,7 +16,7 @@ class Product extends Component {
         <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
       </Helmet>
       <section className="container">
-        <h1 className="product-card-title">Long Cotton Gabardine Car Coat</h1>
+        <ProductTitle productName="Long Cotton Gabardine Car Coat"></ProductTitle>
         <div className="row">
           <div className="col-xs-12 col-md-7">
 
@@ -39,8 +41,8 @@ class Product extends Component {
             </div>
             <div className="product-card-buttons">
               <div className="product-card-buttons-container">
-                <ProductCardButton buttonName="SELECT A SIZE"></ProductCardButton>
-                <ProductCardButton colour="White" buttonName="FIND IN STORE"></ProductCardButton>
+                <CardButton buttonName="SELECT A SIZE"></CardButton>
+                <CardButton colour="White" buttonName="FIND IN STORE"></CardButton>
               </div>
               <button className="product-card-button-help" type="button">NEED SIZE HELP?</button>
             </div>

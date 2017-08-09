@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import SectionHeading from "./SectionHeading/SectionHeading"
-import CardButton from "./CardButton/CardButton"
+import ProductCardButton from "./ProductCardButton/ProductCardButton"
 
 
 
-class App extends Component {
+class Product extends Component {
   render() {
     return (
       <div>
@@ -36,9 +36,8 @@ class App extends Component {
             </div>
             <div className="product-card-buttons">
               <div className="product-card-buttons-container">
-                <CardButton ButtonName="SELECT A SIZE"></CardButton>
-                <button className="product-card-button product-card-button-size" type="button">SELECT A SIZE</button>
-                <button className="product-card-button product-card-button-find" type="button">FIND IN STORE</button>
+                <ProductCardButton buttonName="SELECT A SIZE"></ProductCardButton>
+                <ProductCardButton colour="White" buttonName="FIND IN STORE"></ProductCardButton>
               </div>
               <button className="product-card-button-help" type="button">NEED SIZE HELP?</button>
             </div>
@@ -138,4 +137,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Product;

@@ -9,6 +9,12 @@ const Title = styled.h1`
   font-weight: 400;
   line-height: 24px;
   color: #111111;
+
+  @media only screen and (min-width: 768px) {
+      padding: 1.5rem 0;
+      font-size: 1.5rem;
+      line-height: 28px;
+  }
 `;
 
 

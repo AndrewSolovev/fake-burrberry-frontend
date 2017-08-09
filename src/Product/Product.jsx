@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import {Helmet} from "react-helmet";
-import ProductTitle from "./ProductTitle/ProductTitle"
-import SectionHeading from "./SectionHeading/SectionHeading"
-import CardButton from "./CardButton/CardButton"
+import ProductTitle from "./ProductTitle/ProductTitle";
+import ProductCard from "./ProductCard/ProductCard";
+import Hr from "../Common/Hr/Hr";
+import SectionHeading from "./SectionHeading/SectionHeading";
 
 
 
@@ -17,39 +18,10 @@ class Product extends Component {
       </Helmet>
       <section className="container">
         <ProductTitle productName="Long Cotton Gabardine Car Coat"></ProductTitle>
-        <div className="row">
-          <div className="col-xs-12 col-md-7">
-
-            <div className="product-card-showcase">
-              <img src="/bitmap_1.jpg" alt="man in a coat"/>
-              <img src="/bitmap_2.jpg" alt="coat closer"/>
-              <img src="/bitmap_3.jpg" alt="coat's collar closer"/>
-              <img src="/bitmap_4.jpg" alt="man in a coat from behind"/>
-            </div>
-          </div>
-          <div className="col-xs-12 col-md-5">
-            <div className="product-card-info-and-buttons">
-              <div className="product-card-info">
-                <div>
-                  <h2 className="product-card-info-price">110 000 руб</h2>
-                  <p className="product-card-info-colour">Colour: Honey</p>
-                  <button className="product-card-info-button" type="button">change colour to black</button>
-                  <button className="product-card-info-button-pressed" type="button">change colour to honey</button>
-                </div>
-                <p className="product-card-info-itemid">Item 39428531</p>
-              </div>
-            </div>
-            <div className="product-card-buttons">
-              <div className="product-card-buttons-container">
-                <CardButton buttonName="SELECT A SIZE"></CardButton>
-                <CardButton colour="White" buttonName="FIND IN STORE"></CardButton>
-              </div>
-              <button className="product-card-button-help" type="button">NEED SIZE HELP?</button>
-            </div>
-          </div>
-        </div>
+        <ProductCard></ProductCard>
       </section>
 
+      <Hr></Hr>
 
       <section className="container">
         <SectionHeading></SectionHeading>
@@ -71,6 +43,7 @@ class Product extends Component {
         </div>
       </section>
 
+      <Hr></Hr>
 
       <section className="container">
         <div className="product-shipping-heading">

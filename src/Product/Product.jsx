@@ -7,6 +7,7 @@ import ProductCard from "./ProductCard/ProductCard";
 import Hr from "../Common/Hr/Hr";
 import SectionHeading from "./SectionHeading/SectionHeading";
 import Textarea from "./Textarea/Textarea";
+import WeRecommend from "./WeRecommend/WeRecommend";
 
 
 
@@ -53,41 +54,7 @@ class Product extends Component {
 
       <Hr></Hr>
 
-      <section className="container">
-        <h2 className="product-recommendations-title">WE RECOMMEND</h2>
-        <div className="product-recommendations-goods">
-          <div className="row">
-            <div className="col-xs-6 col-md-3">
-              <a className="product-recommendations-goods-item">
-                <img className="product-recommendations-goods-item-img" src="/rec_1.jpg" alt="man in hoodie"/>
-                <h3 className="product-recommendations-goods-item-title">Emroided Hooded</h3>
-                <h5 className="product-recommendations-goods-item-price">27 000 руб</h5>
-              </a>
-            </div>
-            <div className="col-xs-6 col-md-3">
-              <a className="product-recommendations-goods-item">
-                <img className="product-recommendations-goods-item-img" src="/rec_2.jpg" alt="man in jeans"/>
-                <h3 className="product-recommendations-goods-item-title">Relaxed Fit Stretch Jeans Content For Three Lines</h3>
-                <h5 className="product-recommendations-goods-item-price">22 500 руб</h5>
-              </a>
-            </div>
-            <div className="col-xs-6 col-md-3">
-              <a className="product-recommendations-goods-item">
-                <img className="product-recommendations-goods-item-img" src="/rec_3.jpg" alt="bag"/>
-                <h3 className="product-recommendations-goods-item-title">Leather and House Check</h3>
-                <h5 className="product-recommendations-goods-item-price">120 000 руб</h5>
-              </a>
-            </div>
-            <div className="col-xs-6 col-md-3">
-              <a className="product-recommendations-goods-item">
-                <img className="product-recommendations-goods-item-img" src="/rec_4.jpg" alt="shoes"/>
-                <h3 className="product-recommendations-goods-item-title">Leather Wingtip Check</h3>
-                <h5 className="product-recommendations-goods-item-price">46 000 руб</h5>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <WeRecommend></WeRecommend>
 
       <section className="container">
         <h2 className="product-moreforyou-title">MORE FOR YOU</h2>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Pic = styled.img`
   display: block;
+  width: 100%;
 `;
 
 class Img extends Component {

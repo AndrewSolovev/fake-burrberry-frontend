@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import {Helmet} from "react-helmet";
-import ProductTitle from "./ProductTitle/ProductTitle";
-import ProductCard from "./ProductCard/ProductCard";
-import Hr from "../Common/Hr/Hr";
-import SectionHeading from "./SectionHeading/SectionHeading";
-import Textarea from "./Textarea/Textarea";
-import WeRecommend from "./WeRecommend/WeRecommend";
-import Shipping from "./Shipping/Shipping";
-import MoreForYou from "./MoreForYou/MoreForYou";
+import ProductTitle from "./ProductTitle/";
+import ProductCard from "./ProductCard/";
+import Hr from "../Common/Hr/";
+import SectionHeading from "./SectionHeading/";
+import Textarea from "./Textarea/";
+import WeRecommend from "./WeRecommend/";
+import Shipping from "./Shipping/";
+import MoreForYou from "./MoreForYou/";
 
 
 

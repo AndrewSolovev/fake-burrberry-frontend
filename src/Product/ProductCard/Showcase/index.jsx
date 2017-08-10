@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Img from "../../../Common/Img/Img";
+import Pic from "../../../Common/Image/";
 
 const Container = styled.div`
   display: flex;
@@ -10,16 +10,16 @@ const Container = styled.div`
   @media only screen and (min-width: 768px) {
     margin: 0;
   }
-  img {
+`
+
+const Bla = Pic.extend `
     flex-shrink: 0;
     object-fit: contain;
     width: auto;
     height: 400px;
-
     @media only screen and (min-width: 768px) {
     height: 576px;
     }
-  }
 `
 
 
@@ -27,10 +27,10 @@ class Showcase extends Component {
   render() {
     return (
       <Container>
-        <Img src="/bitmap_1.jpg" alt="man in a coat"/>
-        <Img src="/bitmap_2.jpg" alt="coat closer"/>
-        <Img src="/bitmap_3.jpg" alt="coat's collar closer"/>
-        <Img src="/bitmap_4.jpg" alt="man in a coat from behind"/>
+        <Bla src="/bitmap_1.jpg" alt="man in a coat"/>
+        <Bla src="/bitmap_2.jpg" alt="coat closer"/>
+        <Bla src="/bitmap_3.jpg" alt="coat's collar closer"/>
+        <Bla src="/bitmap_4.jpg" alt="man in a coat from behind"/>
       </Container>
     );
   };

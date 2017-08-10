@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Showcase from "./Showcase/Showcase";
-import Info from "./Info/Info";
-import CardButton from "./CardButton/CardButton"
+import Showcase from "./Showcase/";
+import Info from "./Info/";
+import CardButton from "./CardButton/"
 
 const ProductCardButtons = styled.div`
  padding: 2rem 0.5rem 3rem 0.5rem;

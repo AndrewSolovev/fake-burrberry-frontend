@@ -7,11 +7,11 @@ const Pic = styled.img`
   width: 100%;
 `;
 
-class Img extends Component {
+class Image extends Component {
   render() {
     return (
         <Pic src={this.props.src} alt={this.props.alt} />
     );
   };
 };
-export default Img;
+export default Pic;

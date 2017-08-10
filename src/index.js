@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
-import Product from './Product/Product';
-import Header from "./Common/Header/Header";
-import Footer from "./Common/Footer/Footer"
+import Product from './Product';
+import Header from "./Common/Header/";
+import Footer from "./Common/Footer/"
 import {Helmet} from "react-helmet";
 
 import 'normalize.css';

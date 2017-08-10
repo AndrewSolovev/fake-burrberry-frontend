@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Img from '../../../Common/Img/Img';
+import Image from '../../../Common/Image/';
 
 
 const Product = styled.a`
@@ -33,7 +33,7 @@ class ProductCard extends Component {
     return (
       <div className="col-xs-6 col-md-3">
         <Product>
-          <Img src={this.props.src} alt={this.props.alt} />
+          <Image src={this.props.src} alt={this.props.alt} />
           <ProductTitle>Emroided Hooded</ProductTitle>
           <ProductPrice>27 000 руб</ProductPrice>
         </Product>

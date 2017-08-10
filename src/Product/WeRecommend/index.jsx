@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import ProductCard from "./ProductCard/ProductCard";
+import ProductCard from "./ProductCard/";
 
 
 const Title = styled.h2`

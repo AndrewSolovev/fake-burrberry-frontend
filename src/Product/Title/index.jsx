@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import styled from "styled-components";
 
 const Title = styled.h1`
   margin: 0;
@@ -11,18 +11,19 @@ const Title = styled.h1`
   color: #111111;
 
   @media only screen and (min-width: 768px) {
-      padding: 1.5rem 0;
-      font-size: 1.5rem;
-      line-height: 28px;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    line-height: 28px;
   }
 `;
-
 
 class ProductTitle extends Component {
   render() {
     return (
-      <Title>{this.props.productName}</Title>
+      <Title>
+        {this.props.productName}
+      </Title>
     );
-  };
-};
+  }
+}
 export default ProductTitle;

@@ -1,6 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-
+import React from "react";
+import styled from "styled-components";
 
 const Title = styled.h2`
   margin: 0;
@@ -14,11 +13,7 @@ const Title = styled.h2`
   font-weight: 500;
   line-height: 19px;
   color: #111111;
-
-  @media only screen and (min-width: 768px) {
-    display: none;
-  }
-`
+`;
 
 const Link = styled.a`
   margin: 0;
@@ -30,12 +25,7 @@ const Link = styled.a`
   line-height: 17px;
   font-style: italic;
   font-weight: 400;
-
-  @media only screen and (min-width: 768px) {
-    display: none;
-  }
-`
-
+`;
 
 export default () => {
   return (

@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import styled from "styled-components";
 
-import ProductCard from "./ProductCard/";
-
+import Card from "./Card/";
 
 const Title = styled.h2`
   display: inline-block;
@@ -20,15 +19,14 @@ const Title = styled.h2`
     padding-top: 1.5rem;
     margin-left: 0;
   }
-`
+`;
 
 const Container = styled.div`
   padding-top: 1.5rem;
   @media only screen and (min-width: 768px) {
     padding-top: 1rem;
   }
-`
-
+`;
 
 class WeRecommend extends Component {
   render() {
@@ -37,14 +35,14 @@ class WeRecommend extends Component {
         <Title>WE RECOMMEND</Title>
         <Container>
           <div className="row">
-            <ProductCard src="/rec_1.jpg" alt="man in hoodie"></ProductCard>
-            <ProductCard src="/rec_2.jpg" alt="man in jeans"></ProductCard>
-            <ProductCard src="/rec_3.jpg" alt="bag"></ProductCard>
-            <ProductCard src="/rec_4.jpg" alt="shoes"></ProductCard>
+            <Card src="/rec_1.jpg" alt="man in hoodie" />
+            <Card src="/rec_2.jpg" alt="man in jeans" />
+            <Card src="/rec_3.jpg" alt="bag" />
+            <Card src="/rec_4.jpg" alt="shoes" />
           </div>
         </Container>
       </section>
     );
-  };
-};
+  }
+}
 export default WeRecommend;

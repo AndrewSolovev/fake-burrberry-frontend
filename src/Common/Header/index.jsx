@@ -1,7 +1,6 @@
-import React from 'react';
-import Logo from '../Logo/'
-import styled from 'styled-components';
-
+import React from "react";
+import Logo from "../Logo/";
+import styled from "styled-components";
 
 const Header = styled.header`
   display: flex;
@@ -16,13 +15,17 @@ const Link = styled.a`
   @media only screen and (min-width: 768px) {
     padding: 1.5rem 0rem;
   }
+  @media only screen and (min-width: 1124px) {
+    padding: 2rem 0rem;
+  }
 `;
-
 
 export default () => {
   return (
     <Header>
-      <Link><Logo/></Link>
+      <Link>
+        <Logo />
+      </Link>
     </Header>
   );
 };

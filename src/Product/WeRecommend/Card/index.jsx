@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import Image from '../../../Common/Image/';
-
+import React, { Component } from "react";
+import styled from "styled-components";
+import Image from "../../../Common/Image/";
 
 const Product = styled.a`
   display: block;
   padding: 0;
-`
+`;
 const ProductTitle = styled.h3`
   display: inline-block;
   margin: 0;
@@ -16,7 +15,7 @@ const ProductTitle = styled.h3`
   line-height: 19px;
   font-weight: 400;
   text-align: left;
-`
+`;
 
 const ProductPrice = styled.h5`
   margin: 0;
@@ -25,8 +24,8 @@ const ProductPrice = styled.h5`
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
-  color:#999999;
-`
+  color: #999999;
+`;
 
 class ProductCard extends Component {
   render() {
@@ -39,6 +38,6 @@ class ProductCard extends Component {
         </Product>
       </div>
     );
-  };
-};
+  }
+}
 export default ProductCard;

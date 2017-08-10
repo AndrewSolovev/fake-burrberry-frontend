@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Footer = styled.footer`
   margin-top: 4rem;
@@ -12,7 +12,7 @@ const Footer = styled.footer`
     padding-top: 0;
     padding-bottom: 2rem;
   }
-`
+`;
 
 const Nav = styled.nav`
   display: none;
@@ -21,14 +21,14 @@ const Nav = styled.nav`
   @media only screen and (min-width: 768px) {
     display: block;
   }
-`
+`;
 
 const NavTitle = styled.h3`
   margin: 0;
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-size: 0.75rem;
-`
+`;
 
 const NavLink = styled.a`
   display: block;
@@ -36,12 +36,12 @@ const NavLink = styled.a`
   font-size: 0.75rem;
   line-height: 1rem;
   color: #999999;
-`
+`;
 const LocationButtons = styled.div`
-@media only screen and (min-width: 768px) {
-  display: flex;
-}
-`
+  @media only screen and (min-width: 768px) {
+    display: flex;
+  }
+`;
 
 const LocationButton = styled.button`
   display: block;
@@ -60,7 +60,7 @@ const LocationButton = styled.button`
     padding-left: 0;
     padding-right: 0;
   }
-`
+`;
 
 const NeedHelp = styled.h2`
   margin: 0;
@@ -74,7 +74,7 @@ const NeedHelp = styled.h2`
   @media only screen and (min-width: 768px) {
     display: none;
   }
-`
+`;
 
 const Contact = styled.a`
   margin: 0;
@@ -90,7 +90,7 @@ const Contact = styled.a`
   @media only screen and (min-width: 768px) {
     display: none;
   }
-`
+`;
 
 export default () => {
   return (
@@ -100,35 +100,37 @@ export default () => {
           <div className="row">
             <div className="col-md-3">
               <NavTitle>CUSTOMER SERVICE</NavTitle>
-                <NavLink>Contact Us</NavLink>
-                <NavLink>Payment</NavLink>
-                <NavLink>Payment</NavLink>
-                <NavLink>Returns</NavLink>
-                <NavLink>Faqs</NavLink>
-                <NavLink>Live Chat</NavLink>
-                <NavLink>The Burberry App</NavLink>
-                <NavLink>Store Locator</NavLink>
+              <NavLink>Contact Us</NavLink>
+              <NavLink>Payment</NavLink>
+              <NavLink>Payment</NavLink>
+              <NavLink>Returns</NavLink>
+              <NavLink>Faqs</NavLink>
+              <NavLink>Live Chat</NavLink>
+              <NavLink>The Burberry App</NavLink>
+              <NavLink>Store Locator</NavLink>
             </div>
             <div className="col-md-3">
               <NavTitle>OUR COMPANY</NavTitle>
-                <NavLink>Our History</NavLink>
-                <NavLink>Burberry Group Plc</NavLink>
-                <NavLink>Careers</NavLink>
-                <NavLink>Corporate Responsibility</NavLink>
-                <NavLink>Site Map</NavLink>
+              <NavLink>Our History</NavLink>
+              <NavLink>Burberry Group Plc</NavLink>
+              <NavLink>Careers</NavLink>
+              <NavLink>Corporate Responsibility</NavLink>
+              <NavLink>Site Map</NavLink>
             </div>
             <div className="col-md-3">
               <NavTitle>LEGAL & COOKIES</NavTitle>
-                <NavLink>Terms & Conditions</NavLink>
-                <NavLink>Privacy Policy</NavLink>
-                <NavLink>Cookie Policy</NavLink>
-                <NavLink>Accessibility Statement</NavLink>
-                <NavLink>Japan Only - SCTL indications</NavLink>
+              <NavLink>Terms & Conditions</NavLink>
+              <NavLink>Privacy Policy</NavLink>
+              <NavLink>Cookie Policy</NavLink>
+              <NavLink>Accessibility Statement</NavLink>
+              <NavLink>Japan Only - SCTL indications</NavLink>
             </div>
           </div>
         </Nav>
         <LocationButtons>
-          <LocationButton type="button">Shipping country: RussiaFederation</LocationButton>
+          <LocationButton type="button">
+            Shipping country: RussiaFederation
+          </LocationButton>
           <LocationButton type="button">Language: English</LocationButton>
         </LocationButtons>
         <NeedHelp>Need help?</NeedHelp>

@@ -1,27 +1,26 @@
-import React from 'react';
-import styled from 'styled-components';
-
+import React from "react";
+import styled from "styled-components";
 
 const Img = styled.img`
   display: none;
 
   @media only screen and (min-width: 768px) {
-   display: block;
-   width: 100%;
+    display: block;
+    width: 100%;
   }
-`
+`;
 const Title = styled.h2`
-    display: none;
-    margin: 0;
-    font-size: 1rem;
-    line-height: 19px;
-    font-weight: 500;
-    margin-bottom: 1rem;
+  display: none;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 19px;
+  font-weight: 500;
+  margin-bottom: 1rem;
 
-    @media only screen and (min-width: 768px) {
-      display: block;
-    }
-`
+  @media only screen and (min-width: 768px) {
+    display: block;
+  }
+`;
 const OptionsTitle = styled.h3`
   display: none;
   margin: 0;
@@ -31,7 +30,7 @@ const OptionsTitle = styled.h3`
   @media only screen and (min-width: 768px) {
     display: block;
   }
-`
+`;
 const OptionsDesc = styled.p`
   display: none;
   margin: 0;
@@ -41,26 +40,33 @@ const OptionsDesc = styled.p`
   line-height: 16px;
 
   @media only screen and (min-width: 768px) {
-      display: block;
+    display: block;
   }
-`
+`;
 
 export default () => {
   return (
     <div className="row">
       <div className="col-md-7">
-        <Img src="/shipping-img.jpg" alt="two burberry's boxes with tape"/>
+        <Img src="/shipping-img.jpg" alt="two burberry's boxes with tape" />
       </div>
       <div className="col-md-5">
         <Title>DELIVERY</Title>
         <OptionsTitle>Free Next Day Delivery</OptionsTitle>
-          <OptionsDesc>Order before 7pm Monday to Thursday for delivery the next day</OptionsDesc>
+        <OptionsDesc>
+          Order before 7pm Monday to Thursday for delivery the next day
+        </OptionsDesc>
         <OptionsTitle>Collect-in-Store</OptionsTitle>
-          <OptionsDesc>Order online today and pick up your items in storeas early as tomorrow</OptionsDesc>
+        <OptionsDesc>
+          Order online today and pick up your items in storeas early as tomorrow
+        </OptionsDesc>
         <OptionsTitle>Free Returns</OptionsTitle>
-          <OptionsDesc>Enjoy free returns on your order</OptionsDesc>
+        <OptionsDesc>Enjoy free returns on your order</OptionsDesc>
         <OptionsTitle>Free Gift Packaging</OptionsTitle>
-          <OptionsDesc>Discover our gift packaging, a gold lined box tied with a coloured ribbon</OptionsDesc>
+        <OptionsDesc>
+          Discover our gift packaging, a gold lined box tied with a coloured
+          ribbon
+        </OptionsDesc>
       </div>
     </div>
   );

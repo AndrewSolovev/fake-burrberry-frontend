@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-
+import React, { Component } from "react";
+import styled from "styled-components";
 
 const Button = styled.button`
   margin-bottom: 1rem;
@@ -12,21 +11,24 @@ const Button = styled.button`
   text-align: center;
   background-color: #171717;
   border: solid 1px #171717;
-  color: #FFFFFF;
+  color: #ffffff;
 
-  ${props => props.сolour === "White" && `
+  ${props =>
+    props.сolour === "White" &&
+    `
     background-color: #FFFFFF;
     border: solid 1px #999999;
     color: #171717;
-  `}
+  `};
 `;
-
 
 class CardButton extends Component {
   render() {
     return (
-      <Button сolour={this.props.colour} type="button">{this.props.buttonName}</Button>
+      <Button сolour={this.props.colour} type="button">
+        {this.props.buttonName}
+      </Button>
     );
-  };
-};
+  }
+}
 export default CardButton;

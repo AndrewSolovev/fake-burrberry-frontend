@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-
+import React, { Component } from "react";
+import styled from "styled-components";
 
 const Pic = styled.img`
   display: block;
@@ -9,9 +8,7 @@ const Pic = styled.img`
 
 class Image extends Component {
   render() {
-    return (
-        <Pic src={this.props.src} alt={this.props.alt} />
-    );
-  };
-};
+    return <Pic src={this.props.src} alt={this.props.alt} />;
+  }
+}
 export default Pic;

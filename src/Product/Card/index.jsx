@@ -6,6 +6,7 @@ import Title from "../Title/";
 import Showcase from "./Showcase/";
 import Info from "./Info/";
 import Button from "./Button/";
+import TextButton from "./TextButton/";
 
 var MediaQuery = require("react-responsive");
 
@@ -48,28 +49,30 @@ export default () => {
       <section className="container">
         <div className="row">
           <MediaQuery minDeviceWidth={1124}>
-            <div className="col-xl-5">
+            <div>
               <Pic src="/bitmap.jpg" />
             </div>
           </MediaQuery>
-          <MediaQuery maxDeviceWidth={1124}>
+          <MediaQuery maxDeviceWidth={1123}>
             <div className="col-xs-12">
               <Title productName="Long Cotton Gabardine Car Coat" />
             </div>
           </MediaQuery>
-          <MediaQuery maxDeviceWidth={1124}>
+          <MediaQuery maxDeviceWidth={1123}>
             <div className="col-xs-12 col-md-7">
               <Showcase />
             </div>
           </MediaQuery>
-          <div className="col-xs-12 col-md-5 col-xl-7">
+          <div className="col-xs-12 col-md-5">
             <Info />
             <Buttons>
               <ButtonsContainer>
                 <Button buttonName="SELECT A SIZE" />
                 <Button buttonName="FIND IN STORE" colour="White" />
               </ButtonsContainer>
-              <ButtonHelp type="button">NEED SIZE HELP?</ButtonHelp>
+              <MediaQuery maxDeviceWidth={1123}>
+                <TextButton buttonName="NEED SIZE HELP?" />
+              </MediaQuery>
             </Buttons>
           </div>
         </div>

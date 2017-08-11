@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import Title from "../../../Product/Title/";
+import TextButton from "./TextButton/";
+import SizeButton from "./SizeButton/";
+var MediaQuery = require("react-responsive");
 
-const ProductCardInfo = styled.div`
+const CardInfo = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 0.5rem;
@@ -12,6 +15,10 @@ const ProductCardInfo = styled.div`
   font-family: 'Raleway', 'Helvetica Neue', sans-serif;
   @media only screen and (min-width: 768px) {
     margin: 0;
+  }
+  @media only screen and (min-width: 1124px) {
+    padding-left: 0.5rem;
+  }
 `;
 
 const Price = styled.h2`
@@ -23,6 +30,10 @@ const Price = styled.h2`
   color: #111111;
   @media only screen and (min-width: 768px) {
     margin: 0;
+  }
+  @media only screen and (min-width: 768px) {
+    font-weight: 500;
+    padding-bottom: 2rem;
 `;
 
 const Colour = styled.p`
@@ -53,26 +64,42 @@ const ProductID = styled.p`
   @media only screen and (min-width: 768px) {
     margin-top: 2px;
   }
-  @media only screen and (min-width: 768px) {
-    display: none;
-  }
 `;
+const SizeContainer = styled.div`display: flex;`;
 
 class Info extends Component {
   render() {
     return (
-      <ProductCardInfo>
-        <div>
-          <Title productName="Long Cotton Gabardine Car Coat" />
-          <Price>110 000 руб</Price>
-          <Colour>Colour: Honey</Colour>
-          <ChangeColour type="button">change colour to black</ChangeColour>
-          <ChangeColour pressed type="button">
-            change colour to honey
-          </ChangeColour>
-        </div>
-        <ProductID>Item 39428531</ProductID>
-      </ProductCardInfo>
+      <div>
+        <MediaQuery minDeviceWidth={1124}>
+          <Title productName="Long Cotton Gabardine Car Coat Coat Coat Coat Coat" />
+        </MediaQuery>
+        <CardInfo>
+          <div>
+            <Price>110 000 руб</Price>
+            <Colour>Colour: Honey</Colour>
+            <ChangeColour type="button">change colour to black</ChangeColour>
+            <ChangeColour pressed type="button">
+              change colour to honey
+            </ChangeColour>
+          </div>
+          <MediaQuery maxDeviceWidth={1123}>
+            <ProductID>Item 39428531</ProductID>
+          </MediaQuery>
+          <MediaQuery minDeviceWidth={1124}>
+            <div>
+              <SizeContainer>
+                <p>Size: XL</p>
+                <TextButton buttonName="NEED SIZE HELP?" />
+              </SizeContainer>
+              <SizeButton buttonName="S" />
+              <SizeButton buttonName="M" />
+              <SizeButton buttonName="L" />
+              <SizeButton buttonName="XL" />
+            </div>
+          </MediaQuery>
+        </CardInfo>
+      </div>
     );
   }
 }

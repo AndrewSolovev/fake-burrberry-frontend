@@ -15,6 +15,11 @@ const Title = styled.h1`
     font-size: 1.5rem;
     line-height: 28px;
   }
+  @media only screen and (min-width: 1124px) {
+    padding-top: 159px;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+  }
 `;
 
 class ProductTitle extends Component {

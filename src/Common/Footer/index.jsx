@@ -28,6 +28,9 @@ const NavTitle = styled.h3`
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-size: 0.75rem;
+  @media only screen and (min-width: 1124px) {
+    padding-top: 4rem;
+  }
 `;
 
 const NavLink = styled.a`

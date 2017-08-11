@@ -19,6 +19,13 @@ const Title = styled.h2`
     padding-top: 1.5rem;
     margin-left: 0;
   }
+  @media only screen and (min-width: 1124px) {
+    display: block;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    border: none;
+    text-align: center;
+  }
 `;
 
 const Container = styled.div`
@@ -35,10 +42,30 @@ class WeRecommend extends Component {
         <Title>WE RECOMMEND</Title>
         <Container>
           <div className="row">
-            <Card src="/rec_1.jpg" alt="man in hoodie" />
-            <Card src="/rec_2.jpg" alt="man in jeans" />
-            <Card src="/rec_3.jpg" alt="bag" />
-            <Card src="/rec_4.jpg" alt="shoes" />
+            <Card
+              src="/rec_1.jpg"
+              alt="man in hoodie"
+              productName="Lightweight Crew Neck Cashmere Sweater with Check Trim"
+              productPrice="27 000 руб."
+            />
+            <Card
+              src="/rec_2.jpg"
+              alt="man in jeans"
+              productName="Check Detail Striped Silk Cotton T-shirt"
+              productPrice="27 000 руб."
+            />
+            <Card
+              src="/rec_3.jpg"
+              alt="bag"
+              productName="Check Cashmere Scarf"
+              productPrice="27 000 руб."
+            />
+            <Card
+              src="/rec_4.jpg"
+              alt="shoes"
+              productName="Leather Brogue Boots"
+              productPrice="27 000 руб."
+            />
           </div>
         </Container>
       </section>

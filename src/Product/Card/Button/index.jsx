@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Button = styled.button`
   margin-bottom: 1rem;
@@ -12,20 +12,26 @@ const Button = styled.button`
   background-color: #171717;
   border: solid 1px #171717;
   color: #ffffff;
+  flex-basis: 100%;
 
   ${props =>
-    props.сolour === "White" &&
-    `
-    background-color: #FFFFFF;
+    props.secondary &&
+    css`
+    background-color: inherit;
     border: solid 1px #999999;
     color: #171717;
+    @media only screen and (min-width: 1124px) {
+      border: solid 1px #171717;
+      margin-left: 1rem;
+      margin-right: -0.5rem;
+    }
   `};
 `;
 
 class CardButton extends Component {
   render() {
     return (
-      <Button сolour={this.props.colour} type="button">
+      <Button secondary={this.props.secondary} type="button">
         {this.props.buttonName}
       </Button>
     );

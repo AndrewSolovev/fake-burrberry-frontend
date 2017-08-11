@@ -9,6 +9,9 @@ const Container = styled.div`
   @media only screen and (min-width: 768px) {
     padding: 1.5rem 0 1rem 0;
     display: ${props => (props.mobileHidden ? "none" : "block")};
+  @media only screen and (min-width: 1124px) {
+     padding-top: 4rem;
+  }
 `;
 const SectionTitle = styled.button`
   display: block;

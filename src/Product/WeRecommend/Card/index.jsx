@@ -15,6 +15,15 @@ const ProductTitle = styled.h3`
   line-height: 19px;
   font-weight: 400;
   text-align: left;
+  @media only screen and (min-width: 1124px) {
+    padding-top: 1rem;
+    font-family: Raleway;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.67;
+    text-align: left;
+    color: #171717;
+  }
 `;
 
 const ProductPrice = styled.h5`
@@ -25,6 +34,13 @@ const ProductPrice = styled.h5`
   font-weight: 400;
   line-height: 14px;
   color: #999999;
+  @media only screen and (min-width: 1124px) {
+    font-family: Raleway;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    text-align: left;
+    color: #171717;
+  }
 `;
 
 class ProductCard extends Component {
@@ -33,8 +49,12 @@ class ProductCard extends Component {
       <div className="col-xs-6 col-md-3">
         <Product>
           <Image src={this.props.src} alt={this.props.alt} />
-          <ProductTitle>Emroided Hooded</ProductTitle>
-          <ProductPrice>27 000 руб</ProductPrice>
+          <ProductTitle productName={this.props.productName}>
+            {this.props.productName}
+          </ProductTitle>
+          <ProductPrice productPrice={this.props.productPrice}>
+            {this.props.productPrice}
+          </ProductPrice>
         </Product>
       </div>
     );

@@ -18,7 +18,7 @@ const Title = styled.h1`
   @media only screen and (min-width: 1124px) {
     padding-top: 159px;
     padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
   }
 `;
 

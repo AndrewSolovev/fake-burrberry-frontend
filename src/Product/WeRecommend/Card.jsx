@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { FormattedNumber } from "react-intl";
 
 const Product = styled.a`
   display: block;
@@ -30,7 +31,7 @@ const Title = styled.h3`
   }
 `;
 
-const Price = styled.h5`
+const Price = styled.h2`
   margin: 0;
   padding-top: 0.5rem;
   padding-bottom: 2rem;
@@ -53,8 +54,14 @@ function ProductCard(props) {
       <Title productName={props.productName}>
         {props.productName}
       </Title>
-      <Price productPrice={props.productPrice}>
-        {props.productPrice}
+      <Price className="Price">
+        <FormattedNumber
+          value={props.price}
+          style="currency"
+          currency={props.currency}
+          currencyDisplay="symbol"
+          minimumFractionDigits={0}
+        />
       </Price>
     </Product>
   );

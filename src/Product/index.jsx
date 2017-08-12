@@ -10,7 +10,6 @@ import Textarea from "./TextArea.jsx";
 import WeRecommend from "./WeRecommend/";
 import Shipping from "./Shipping.jsx";
 import MoreForYou from "./MoreForYou.jsx";
-
 import MediaQuery from "react-responsive";
 
 const DescContainer = styled.div`display: flex;`;

@@ -44,6 +44,8 @@ function WeRecommend(props) {
             <Card
               src="/rec_1.jpg"
               alt="man in hoodie"
+              price="27000"
+              currency="RUB"
               productName="Lightweight Crew Neck Cashmere Sweater with Check Trim"
               productPrice="27 000 руб."
             />
@@ -52,6 +54,8 @@ function WeRecommend(props) {
             <Card
               src="/rec_2.jpg"
               alt="man in jeans"
+              price="22000"
+              currency="RUB"
               productName="Check Detail Striped Silk Cotton T-shirt"
               productPrice="27 000 руб."
             />
@@ -60,6 +64,8 @@ function WeRecommend(props) {
             <Card
               src="/rec_3.jpg"
               alt="bag"
+              price="26800"
+              currency="RUB"
               productName="Check Cashmere Scarf"
               productPrice="27 000 руб."
             />
@@ -68,6 +74,8 @@ function WeRecommend(props) {
             <Card
               src="/rec_4.jpg"
               alt="shoes"
+              price="45000"
+              currency="RUB"
               productName="Leather Brogue Boots"
               productPrice="27 000 руб."
             />

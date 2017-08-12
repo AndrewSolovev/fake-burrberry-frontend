@@ -5,6 +5,7 @@ import Title from "../../Title.jsx";
 import TextButton from "./TextButton.jsx";
 import SizeButton from "./SizeButton.jsx";
 import Hr from "../../../Common/Hr/";
+import Price from "../../Price.jsx";
 import MediaQuery from "react-responsive";
 
 const Info = styled.div`
@@ -31,22 +32,6 @@ const Info = styled.div`
 const PriceAndID = styled.div`
   display: flex;
   justify-content: space-between;
-`;
-
-const Price = styled.h2`
-  margin: 0;
-  margin-top: 1rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 19px;
-  color: #111111;
-  @media only screen and (min-width: 768px) {
-    margin: 0;
-  }
-  @media only screen and (min-width: 992px) {
-    padding-left: 1rem;
-    font-weight: 500;
-
 `;
 
 const Colour = styled.p`
@@ -103,14 +88,13 @@ export default () => {
     <div className="row">
       <MediaQuery minDeviceWidth={992}>
         <Title productName="Long Cotton Gabardine Car Coat Coat Coat Coat Coat" />
-        <Price>110 000 руб</Price>
+        <Price price="110000" currency="RUB" />
       </MediaQuery>
-
       <div className="col-xs-12 col-md-12 col-xl-12">
         <Info>
           <MediaQuery maxDeviceWidth={991}>
             <PriceAndID>
-              <Price>110 000 руб</Price>
+              <Price price="110000" currency="RUB" />
               <ID>Item 39428531</ID>
             </PriceAndID>
           </MediaQuery>

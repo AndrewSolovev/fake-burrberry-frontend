@@ -6,7 +6,7 @@ const TextArea = styled.div`
   flex-flow: column;
   padding: 0 0.5rem 2rem 0.5rem;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     padding: 0 0 1.5rem 0;
   }
 
@@ -15,7 +15,7 @@ const TextArea = styled.div`
     font-family: 'Lora', serif;
     font-weight: 400;
     font-size: 0.875rem;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
 
   ul {
@@ -26,7 +26,7 @@ const TextArea = styled.div`
     font-family: 'Lora', serif;
     font-weight: 400;
     font-size: 0.875rem;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
 `;
 

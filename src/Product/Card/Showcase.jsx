@@ -6,7 +6,7 @@ const Container = styled.div`
   overflow-y: hidden;
   overflow-x: scroll;
   margin: 0 -.5rem;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     margin: 0;
   }
 `;
@@ -16,7 +16,7 @@ const Pic = styled.img`
   object-fit: contain;
   width: auto;
   height: 400px;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     height: 576px;
   }
 `;

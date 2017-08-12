@@ -11,6 +11,7 @@ import WeRecommend from "./WeRecommend/";
 import Shipping from "./Shipping";
 import MoreForYou from "./MoreForYou";
 import MediaQuery from "react-responsive";
+import breakpoints from "../breakpoints";
 
 const DescContainer = styled.div`display: flex;`;
 
@@ -61,7 +62,7 @@ export default () => {
             <SectionHeading isOpened sectionName="DESCRIPTION" />
             <Textarea />
           </div>
-          <MediaQuery minDeviceWidth={992}>
+          <MediaQuery minDeviceWidth={breakpoints.md}>
             <Img src="./desc_img.jpg" />
           </MediaQuery>
         </DescContainer>
@@ -69,7 +70,7 @@ export default () => {
 
       <Hr />
 
-      <MediaQuery minDeviceWidth={992}>
+      <MediaQuery minDeviceWidth={breakpoints.md}>
         <section className="container">
           <Gallery>
             <LeftImg src="./bitmap_3.jpg" />
@@ -80,7 +81,7 @@ export default () => {
       </MediaQuery>
 
       <section className="container">
-        <MediaQuery maxDeviceWidth={767}>
+        <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
           <SectionHeading sectionName="SHIPPING & RETURNS" />
         </MediaQuery>
         <Shipping />
@@ -90,7 +91,7 @@ export default () => {
 
       <WeRecommend />
 
-      <MediaQuery maxDeviceWidth={768}>
+      <MediaQuery maxDeviceWidth={breakpoints.sm}>
         <MoreForYou />
       </MediaQuery>
     </div>

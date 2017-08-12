@@ -14,12 +14,12 @@ const Title = styled.h2`
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 19px;
-  @media only screen and (min-width: 768px) {
+  line-height: 1.125rem;
+  @media only screen and (min-width: 48rem) {
     padding-top: 1.5rem;
     margin-left: 0;
   }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     display: block;
     padding-top: 4rem;
     padding-bottom: 1rem;
@@ -30,7 +30,7 @@ const Title = styled.h2`
 
 const Container = styled.div`
   padding-top: 1.5rem;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     padding-top: 1rem;
   }
 `;

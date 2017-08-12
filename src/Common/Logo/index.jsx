@@ -8,7 +8,7 @@ const Logo = styled.img`
   width: auto;
   margin: 0px;
 
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     height: 16px;
   }
 `;

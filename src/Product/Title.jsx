@@ -7,15 +7,15 @@ const Title = styled.h1`
   font-family: 'Lora', serif;
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5rem;
   color: #111111;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     padding: 1.5rem 0;
     font-size: 1.5rem;
-    line-height: 28px;
+    line-height: 1.75rem;
   }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     padding-top: 159px;
     padding-bottom: 0.5rem;
     padding-left: 1rem;

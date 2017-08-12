@@ -7,6 +7,7 @@ import SecondaryButton from "./SecondaryButton";
 import Hr from "../../../Common/Hr/";
 import FormattedNumber from "../../FormattedNumber";
 import MediaQuery from "react-responsive";
+import breakpoints from "../../../breakpoints";
 
 const Info = styled.div`
   margin: 0;
@@ -15,11 +16,11 @@ const Info = styled.div`
   padding-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
   font-family: 'Raleway', 'Helvetica Neue', sans-serif;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     padding-left: 0;
     padding-right: 0;
   }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
@@ -38,12 +39,12 @@ const Price = styled.div`
   margin-top: 1rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 1.125rem;
   color: #111111;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     margin: 0;
   }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     padding-left: 1rem;
     font-weight: 500;
   }
@@ -51,11 +52,11 @@ const Price = styled.div`
 const Colour = styled.p`
   margin: 0;
   margin-top: 1rem;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 1rem;
   color: #171717;
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     margin-top: 0rem;
 `;
 const ChangeColour = styled.button`
@@ -76,7 +77,7 @@ const ID = styled.p`
   font-weight: 400;
   line-height: 16px;
   color: #171717;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     margin-top: 2px;
   }
 `;
@@ -91,8 +92,8 @@ const Size = styled.p`
   margin: 0;
   padding-right: 5.5rem;
   font-family: Raleway;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   text-align: left;
   color: #171717;
 }
@@ -101,7 +102,7 @@ const Size = styled.p`
 export default () => {
   return (
     <div className="row">
-      <MediaQuery minDeviceWidth={992}>
+      <MediaQuery minDeviceWidth={breakpoints.md}>
         <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
         <Price>
           <FormattedNumber price="110000" currency="RUB" />
@@ -109,7 +110,7 @@ export default () => {
       </MediaQuery>
       <div className="col-xs-12 col-md-12 col-xl-12">
         <Info>
-          <MediaQuery maxDeviceWidth={991}>
+          <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
             <PriceAndID>
               <Price>
                 <FormattedNumber price="110000" currency="RUB" />
@@ -128,7 +129,7 @@ export default () => {
             </ChangeColour>
           </div>
 
-          <MediaQuery minDeviceWidth={992}>
+          <MediaQuery minDeviceWidth={breakpoints.md}>
             <div className="col-xl-6">
               <SizeContainer>
                 <Size>

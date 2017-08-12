@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SecondaryButton = styled.button`
   margin-right: 0.5rem;
-  padding: 7px 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 2px;
   border: solid 1px #171717;
   background-color: inherit;

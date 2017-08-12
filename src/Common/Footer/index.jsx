@@ -7,7 +7,7 @@ const Footer = styled.footer`
   padding-bottom: 1rem;
   background-color: #f3f3f3;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     margin-top: 2rem;
     padding-top: 0;
     padding-bottom: 2rem;
@@ -18,7 +18,7 @@ const Nav = styled.nav`
   display: none;
   padding-bottom: 0.25rem;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     display: block;
   }
 `;
@@ -28,7 +28,7 @@ const Title = styled.h3`
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-size: 0.75rem;
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     padding-top: 4rem;
   }
 `;
@@ -41,7 +41,7 @@ const Link = styled.a`
   color: #999999;
 `;
 const LocationButtons = styled.div`
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     display: flex;
   }
 `;
@@ -57,7 +57,7 @@ const LocationButton = styled.button`
   color: #999999;
   background-color: #f3f3f3;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     margin-right: 1.5rem;
     margin-left: 0rem;
     padding-left: 0;
@@ -70,11 +70,11 @@ const NeedHelp = styled.h2`
   padding-top: 1.5rem;
   text-align: center;
   font-size: 1rem;
-  line-height: 19px;
+  line-height: 1.125rem;
   color: #171717;
   font-weight: 700;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     display: none;
   }
 `;
@@ -88,9 +88,9 @@ const Contact = styled.a`
   text-align: center;
   font-family: 'Lora', serif;
   font-style: italic;
-  line-height: 17px;
+  line-height: 1rem;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     display: none;
   }
 `;

@@ -11,7 +11,7 @@ const Title = styled.h2`
   border-bottom: 1px solid #111111;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 1.125rem;
   color: #111111;
 `;
 
@@ -22,7 +22,7 @@ const Link = styled.a`
   padding-left: 0.5rem;
   font-size: 0.875rem;
   font-family: 'Lora', serif;
-  line-height: 17px;
+  line-height: 1rem;
   font-style: italic;
   font-weight: 400;
 `;

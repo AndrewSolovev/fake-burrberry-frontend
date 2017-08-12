@@ -8,10 +8,10 @@ const TextButton = styled.button`
   color: #171717;
   border: none;
   font-family: 'Raleway', sans-serif;
-  line-height: 16px;
-  font-size: 12px;
+  line-height: 1rem;
+  font-size: 0.75rem;
   font-weight: 400;
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     padding-top: 0;
   }
 `;

@@ -8,11 +8,9 @@ const Line = styled.hr`
   color: #c6c6c6;
   background-color: #c6c6c6;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     display: none;
   }
 `;
 
-export default () => {
-  return <Line />;
-};
+export default Line;

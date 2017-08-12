@@ -12,10 +12,10 @@ const Link = styled.a`
   display: inline-block;
   padding: 1rem 0rem;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 48rem) {
     padding: 1.5rem 0rem;
   }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     padding: 2rem 0rem;
   }
 `;

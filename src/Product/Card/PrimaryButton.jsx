@@ -7,7 +7,7 @@ const Button = styled.button`
   border-radius: 2px;
   font-family: 'Raleway', sans-serif;
   font-size: 0.75rem;
-  line-height: 14px;
+  line-height: 0.875rem;
   text-align: center;
   background-color: #171717;
   border: solid 1px #171717;
@@ -20,7 +20,7 @@ const Button = styled.button`
     background-color: inherit;
     border: solid 1px #999999;
     color: #171717;
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 62rem) {
       border: solid 1px #171717;
       margin-left: 1rem;
       margin-right: -0.5rem;

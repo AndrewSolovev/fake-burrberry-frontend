@@ -17,15 +17,15 @@ const Title = styled.h3`
   padding-top: 0.5rem;
   font-size: 1rem;
   font-family: 'Lora', serif;
-  line-height: 19px;
+  line-height: 1.125rem;
   font-weight: 400;
   text-align: left;
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     padding-top: 1rem;
     font-family: Raleway;
     font-size: 0.75rem;
     font-weight: 600;
-    line-height: 1.67;
+    line-height: 1.25rem;
     text-align: left;
     color: #171717;
   }
@@ -35,14 +35,14 @@ const Price = styled.h2`
   margin: 0;
   padding-top: 0.5rem;
   padding-bottom: 2rem;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 0.875rem;
   color: #999999;
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 62rem) {
     font-family: Raleway;
     font-size: 0.75rem;
-    line-height: 1.33;
+    line-height: 1rem;
     text-align: left;
     color: #171717;
   }

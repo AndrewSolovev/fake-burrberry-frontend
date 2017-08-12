@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Title from "../../Title.jsx";
-import TextButton from "./TextButton.jsx";
-import SizeButton from "./SizeButton.jsx";
+import Title from "../../Title";
+import TextButton from "./TextButton";
+import SecondaryButton from "./SecondaryButton";
 import Hr from "../../../Common/Hr/";
-import Price from "../../Price.jsx";
+import FormattedNumber from "../../FormattedNumber";
 import MediaQuery from "react-responsive";
 
 const Info = styled.div`
@@ -33,7 +33,21 @@ const PriceAndID = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
+const Price = styled.div`
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 19px;
+  color: #111111;
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+  }
+  @media only screen and (min-width: 992px) {
+    padding-left: 1rem;
+    font-weight: 500;
+  }
+`;
 const Colour = styled.p`
   margin: 0;
   margin-top: 1rem;
@@ -54,6 +68,7 @@ const ChangeColour = styled.button`
   font-size: 0;
   background: ${props => (props.pressed ? "#cfa880" : "#232122")};
 `;
+
 const ID = styled.p`
   margin: 0;
   margin-top: 1.125rem;
@@ -87,14 +102,18 @@ export default () => {
   return (
     <div className="row">
       <MediaQuery minDeviceWidth={992}>
-        <Title productName="Long Cotton Gabardine Car Coat Coat Coat Coat Coat" />
-        <Price price="110000" currency="RUB" />
+        <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+        <Price>
+          <FormattedNumber price="110000" currency="RUB" />
+        </Price>
       </MediaQuery>
       <div className="col-xs-12 col-md-12 col-xl-12">
         <Info>
           <MediaQuery maxDeviceWidth={991}>
             <PriceAndID>
-              <Price price="110000" currency="RUB" />
+              <Price>
+                <FormattedNumber price="110000" currency="RUB" />
+              </Price>
               <ID>Item 39428531</ID>
             </PriceAndID>
           </MediaQuery>
@@ -115,12 +134,12 @@ export default () => {
                 <Size>
                   Size: <b>XL</b>
                 </Size>
-                <TextButton buttonName="NEED SIZE HELP?" />
+                <TextButton>NEED SIZE HELP?</TextButton>
               </SizeContainer>
-              <SizeButton buttonName="S" />
-              <SizeButton buttonName="M" />
-              <SizeButton buttonName="L" />
-              <SizeButton pressed buttonName="XL" />
+              <SecondaryButton>S</SecondaryButton>
+              <SecondaryButton>M</SecondaryButton>
+              <SecondaryButton>L</SecondaryButton>
+              <SecondaryButton pressed>XL</SecondaryButton>
             </div>
           </MediaQuery>
         </Info>

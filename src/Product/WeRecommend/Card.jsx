@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
+import FormattedNumber from "../FormattedNumber";
 
 const Product = styled.a`
   display: block;
@@ -54,14 +54,8 @@ function ProductCard(props) {
       <Title productName={props.productName}>
         {props.productName}
       </Title>
-      <Price className="Price">
-        <FormattedNumber
-          value={props.price}
-          style="currency"
-          currency={props.currency}
-          currencyDisplay="symbol"
-          minimumFractionDigits={0}
-        />
+      <Price>
+        <FormattedNumber price={props.price} currency={props.currency} />
       </Price>
     </Product>
   );

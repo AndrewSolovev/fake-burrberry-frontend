@@ -27,13 +27,4 @@ const Button = styled.button`
     }
   `};
 `;
-
-function CardButton(props) {
-  return (
-    <Button secondary={props.secondary} type="button">
-      {props.buttonName}
-    </Button>
-  );
-}
-
-export default CardButton;
+export default Button;

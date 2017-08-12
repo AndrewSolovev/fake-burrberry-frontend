@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Title from "../Title.jsx";
-import Showcase from "./Showcase.jsx";
+import Title from "../Title";
+import Showcase from "./Showcase";
 import Info from "./Info/";
-import Button from "./Button.jsx";
-import TextButton from "./Info/TextButton.jsx";
+import PrimaryButton from "./PrimaryButton";
+import TextButton from "./Info/TextButton";
 import Hr from "../../Common/Hr/";
 import MediaQuery from "react-responsive";
 
@@ -66,7 +66,7 @@ export default () => {
 
           <MediaQuery maxDeviceWidth={991}>
             <div className="col-xs-12">
-              <Title />
+              <Title>Long Cotton Gabardine Car Coat</Title>
             </div>
           </MediaQuery>
 
@@ -82,15 +82,15 @@ export default () => {
             <Buttons>
               <ButtonsContainer>
                 <MediaQuery maxDeviceWidth={991}>
-                  <Button buttonName="SELECT A SIZE" />
+                  <PrimaryButton>SELECT A SIZE</PrimaryButton>
                 </MediaQuery>
                 <MediaQuery minDeviceWidth={992}>
-                  <Button buttonName="ADD TO BAG" />
+                  <PrimaryButton>ADD TO BAG</PrimaryButton>
                 </MediaQuery>
-                <Button secondary buttonName="FIND IN STORE" />
+                <PrimaryButton secondary>FIND IN STORE</PrimaryButton>
               </ButtonsContainer>
               <MediaQuery maxDeviceWidth={991}>
-                <TextButton buttonName="NEED SIZE HELP?"> </TextButton>
+                <TextButton>NEED SIZE HELP?</TextButton>
               </MediaQuery>
             </Buttons>
 

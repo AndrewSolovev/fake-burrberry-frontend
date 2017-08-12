@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import { Helmet } from "react-helmet";
-import Title from "./Title.jsx";
+import Title from "./Title";
 import Card from "./Card/";
 import Hr from "../Common/Hr/";
 import SectionHeading from "./SectionHeading/";
-import Textarea from "./TextArea.jsx";
+import Textarea from "./TextArea";
 import WeRecommend from "./WeRecommend/";
-import Shipping from "./Shipping.jsx";
-import MoreForYou from "./MoreForYou.jsx";
+import Shipping from "./Shipping";
+import MoreForYou from "./MoreForYou";
 import MediaQuery from "react-responsive";
 
 const DescContainer = styled.div`display: flex;`;
@@ -58,7 +58,7 @@ export default () => {
       <section className="container">
         <DescContainer>
           <div>
-            <SectionHeading dropped sectionName="DESCRIPTION" />
+            <SectionHeading isOpened sectionName="DESCRIPTION" />
             <Textarea />
           </div>
           <MediaQuery minDeviceWidth={992}>

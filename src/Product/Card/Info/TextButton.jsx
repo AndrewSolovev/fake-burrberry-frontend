@@ -16,12 +16,4 @@ const TextButton = styled.button`
   }
 `;
 
-function Button(props) {
-  return (
-    <TextButton buttonName={props.buttonName} type="button">
-      {props.buttonName}
-    </TextButton>
-  );
-}
-
-export default Button;
+export default TextButton;

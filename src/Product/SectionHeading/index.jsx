@@ -34,7 +34,7 @@ const Title = styled.button`
     position: absolute;
     bottom: 30%;
     right: 0rem;
-    transform: ${props => (props.dropped ? "rotate(180deg)" : "rotate(0deg)")};
+    transform: ${props => (props.isOpened ? "rotate(180deg)" : "rotate(0deg)")};
   }
 
   @media only screen and (min-width: 768px) {
@@ -46,8 +46,8 @@ const Title = styled.button`
 
 function SectionHeading(props) {
   return (
-    <Container mobileHidden={props.mobileHidden}>
-      <Title dropped={props.dropped}>
+    <Container>
+      <Title isOpened={props.isOpened}>
         {props.sectionName}
       </Title>
     </Container>

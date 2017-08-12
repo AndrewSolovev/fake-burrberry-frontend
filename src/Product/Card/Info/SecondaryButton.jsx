@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const SizeButton = styled.button`
+const SecondaryButton = styled.button`
   margin-right: 0.5rem;
   padding: 7px 1rem;
   border-radius: 2px;
@@ -16,12 +16,4 @@ const SizeButton = styled.button`
 	`};
 `;
 
-function Button(props) {
-  return (
-    <SizeButton pressed={props.pressed} type="button">
-      {props.buttonName}
-    </SizeButton>
-  );
-}
-
-export default Button;
+export default SecondaryButton;

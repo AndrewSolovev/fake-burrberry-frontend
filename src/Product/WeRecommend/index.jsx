@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Card from "./Card.jsx";
+import Card from "./Card";
 
 const Title = styled.h2`
   display: inline-block;
@@ -47,7 +47,6 @@ function WeRecommend(props) {
               price="27000"
               currency="RUB"
               productName="Lightweight Crew Neck Cashmere Sweater with Check Trim"
-              productPrice="27 000 руб."
             />
           </div>
           <div className="col-xs-6 col-md-3 col-lg-3">
@@ -57,7 +56,6 @@ function WeRecommend(props) {
               price="22000"
               currency="RUB"
               productName="Check Detail Striped Silk Cotton T-shirt"
-              productPrice="27 000 руб."
             />
           </div>
           <div className="col-xs-6 col-md-3 col-lg-3">
@@ -67,7 +65,6 @@ function WeRecommend(props) {
               price="26800"
               currency="RUB"
               productName="Check Cashmere Scarf"
-              productPrice="27 000 руб."
             />
           </div>
           <div className="col-xs-6 col-md-3 col-lg-3">
@@ -77,7 +74,6 @@ function WeRecommend(props) {
               price="45000"
               currency="RUB"
               productName="Leather Brogue Boots"
-              productPrice="27 000 руб."
             />
           </div>
         </div>

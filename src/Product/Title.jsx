@@ -22,6 +22,4 @@ const Title = styled.h1`
   }
 `;
 
-export default () => {
-  return <Title>Long Cotton Gabardine Car Coat </Title>;
-};
+export default Title;

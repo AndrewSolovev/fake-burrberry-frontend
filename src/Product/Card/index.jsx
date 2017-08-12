@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Pic from "../../Common/Image/";
-import Title from "../Title/";
-import Showcase from "./Showcase/";
+import Title from "../Title.jsx";
+import Showcase from "./Showcase.jsx";
 import Info from "./Info/";
-import Button from "./Button/";
-import TextButton from "./Info/TextButton/";
+import Button from "./Button.jsx";
+import TextButton from "./Info/TextButton.jsx";
 import Hr from "../../Common/Hr/";
+import MediaQuery from "react-responsive";
 
-var MediaQuery = require("react-responsive");
-
+const CardPic = styled.img`display: block;`;
 const Container = styled.div`
   background-color: #ffffff;
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     background-color: #d4bdad;
   }
 `;
@@ -24,7 +23,7 @@ const Buttons = styled.div`
   @media only screen and (min-width: 768px) {
     padding: 2rem 0rem 3rem 0rem;
   }
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     padding: 0rem 0rem 0rem 0rem;
   }
 `;
@@ -32,7 +31,7 @@ const Buttons = styled.div`
 const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     flex-direction: row;
     padding-left: 0.5rem;
   }
@@ -59,19 +58,19 @@ export default () => {
     <Container>
       <section className="container">
         <div className="row">
-          <MediaQuery minDeviceWidth={1124}>
+          <MediaQuery minDeviceWidth={992}>
             <div>
-              <Pic src="/bitmap.jpg" />
+              <CardPic src="/bitmap.jpg" />
             </div>
           </MediaQuery>
 
-          <MediaQuery maxDeviceWidth={1123}>
+          <MediaQuery maxDeviceWidth={991}>
             <div className="col-xs-12">
-              <Title productName="Long Cotton Gabardine Car Coat" />
+              <Title />
             </div>
           </MediaQuery>
 
-          <MediaQuery maxDeviceWidth={1123}>
+          <MediaQuery maxDeviceWidth={991}>
             <div className="col-xs-12 col-md-7 col-lg-6">
               <Showcase />
             </div>
@@ -82,20 +81,20 @@ export default () => {
 
             <Buttons>
               <ButtonsContainer>
-                <MediaQuery maxDeviceWidth={1123}>
+                <MediaQuery maxDeviceWidth={991}>
                   <Button buttonName="SELECT A SIZE" />
                 </MediaQuery>
-                <MediaQuery minDeviceWidth={1124}>
+                <MediaQuery minDeviceWidth={992}>
                   <Button buttonName="ADD TO BAG" />
                 </MediaQuery>
                 <Button secondary buttonName="FIND IN STORE" />
               </ButtonsContainer>
-              <MediaQuery maxDeviceWidth={1123}>
+              <MediaQuery maxDeviceWidth={991}>
                 <TextButton buttonName="NEED SIZE HELP?"> </TextButton>
               </MediaQuery>
             </Buttons>
 
-            <MediaQuery minDeviceWidth={1124}>
+            <MediaQuery minDeviceWidth={992}>
               <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
               <DeliveryP>
                 Order before 7pm Monday to Thursday for delivery the next day

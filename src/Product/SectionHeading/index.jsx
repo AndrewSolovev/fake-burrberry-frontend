@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import triangle from "../../triangle.svg";
+import triangle from "./triangle.svg";
 
 const Container = styled.div`
   display: flex;
@@ -9,11 +9,11 @@ const Container = styled.div`
   @media only screen and (min-width: 768px) {
     padding: 1.5rem 0 1rem 0;
     display: ${props => (props.mobileHidden ? "none" : "block")};
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
      padding-top: 4rem;
   }
 `;
-const SectionTitle = styled.button`
+const Title = styled.button`
   display: block;
   padding: 0rem;
   background-color: transparent;
@@ -44,15 +44,14 @@ const SectionTitle = styled.button`
   }
 `;
 
-class SectionHeading extends Component {
-  render() {
-    return (
-      <Container mobileHidden={this.props.mobileHidden}>
-        <SectionTitle dropped={this.props.dropped}>
-          {this.props.sectionName}
-        </SectionTitle>
-      </Container>
-    );
-  }
+function SectionHeading(props) {
+  return (
+    <Container mobileHidden={props.mobileHidden}>
+      <Title dropped={props.dropped}>
+        {props.sectionName}
+      </Title>
+    </Container>
+  );
 }
+
 export default SectionHeading;

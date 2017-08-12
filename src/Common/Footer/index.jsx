@@ -23,17 +23,17 @@ const Nav = styled.nav`
   }
 `;
 
-const NavTitle = styled.h3`
+const Title = styled.h3`
   margin: 0;
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-size: 0.75rem;
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     padding-top: 4rem;
   }
 `;
 
-const NavLink = styled.a`
+const Link = styled.a`
   display: block;
   padding-bottom: 0.75rem;
   font-size: 0.75rem;
@@ -99,37 +99,41 @@ export default () => {
   return (
     <Footer>
       <div className="container">
-        <Nav>
-          <div className="row">
-            <div className="col-md-3">
-              <NavTitle>CUSTOMER SERVICE</NavTitle>
-              <NavLink>Contact Us</NavLink>
-              <NavLink>Payment</NavLink>
-              <NavLink>Payment</NavLink>
-              <NavLink>Returns</NavLink>
-              <NavLink>Faqs</NavLink>
-              <NavLink>Live Chat</NavLink>
-              <NavLink>The Burberry App</NavLink>
-              <NavLink>Store Locator</NavLink>
-            </div>
-            <div className="col-md-3">
-              <NavTitle>OUR COMPANY</NavTitle>
-              <NavLink>Our History</NavLink>
-              <NavLink>Burberry Group Plc</NavLink>
-              <NavLink>Careers</NavLink>
-              <NavLink>Corporate Responsibility</NavLink>
-              <NavLink>Site Map</NavLink>
-            </div>
-            <div className="col-md-3">
-              <NavTitle>LEGAL & COOKIES</NavTitle>
-              <NavLink>Terms & Conditions</NavLink>
-              <NavLink>Privacy Policy</NavLink>
-              <NavLink>Cookie Policy</NavLink>
-              <NavLink>Accessibility Statement</NavLink>
-              <NavLink>Japan Only - SCTL indications</NavLink>
-            </div>
+        <div className="row">
+          <div className="col-md-3">
+            <Nav>
+              <Title>CUSTOMER SERVICE</Title>
+              <Link>Contact Us</Link>
+              <Link>Payment</Link>
+              <Link>Payment</Link>
+              <Link>Returns</Link>
+              <Link>Faqs</Link>
+              <Link>Live Chat</Link>
+              <Link>The Burberry App</Link>
+              <Link>Store Locator</Link>
+            </Nav>
           </div>
-        </Nav>
+          <div className="col-md-3">
+            <Nav>
+              <Title>OUR COMPANY</Title>
+              <Link>Our History</Link>
+              <Link>Burberry Group Plc</Link>
+              <Link>Careers</Link>
+              <Link>Corporate Responsibility</Link>
+              <Link>Site Map</Link>
+            </Nav>
+          </div>
+          <div className="col-md-3">
+            <Nav>
+              <Title>LEGAL & COOKIES</Title>
+              <Link>Terms & Conditions</Link>
+              <Link>Privacy Policy</Link>
+              <Link>Cookie Policy</Link>
+              <Link>Accessibility Statement</Link>
+              <Link>Japan Only - SCTL indications</Link>
+            </Nav>
+          </div>
+        </div>
         <LocationButtons>
           <LocationButton type="button">
             Shipping country: RussiaFederation

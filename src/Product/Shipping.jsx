@@ -20,7 +20,7 @@ const Title = styled.h2`
   @media only screen and (min-width: 768px) {
     display: block;
   }
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     padding-top: 4rem;
     padding-left: 5.125rem;
   }
@@ -34,7 +34,7 @@ const OptionsTitle = styled.h3`
   @media only screen and (min-width: 768px) {
     display: block;
   }
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     padding-left: 5.125rem;
   }
 `;
@@ -49,7 +49,7 @@ const OptionsDesc = styled.p`
   @media only screen and (min-width: 768px) {
     display: block;
   }
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     padding-left: 5.125rem;
   }
 `;

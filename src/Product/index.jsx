@@ -2,26 +2,28 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import { Helmet } from "react-helmet";
-import Pic from "../Common/Image/";
-import Title from "./Title/";
+import Title from "./Title.jsx";
 import Card from "./Card/";
 import Hr from "../Common/Hr/";
 import SectionHeading from "./SectionHeading/";
-import Textarea from "./Textarea/";
+import Textarea from "./TextArea.jsx";
 import WeRecommend from "./WeRecommend/";
-import Shipping from "./Shipping/";
-import MoreForYou from "./MoreForYou/";
+import Shipping from "./Shipping.jsx";
+import MoreForYou from "./MoreForYou.jsx";
 
-var MediaQuery = require("react-responsive");
+import MediaQuery from "react-responsive";
 
 const DescContainer = styled.div`display: flex;`;
-const Img = Pic.extend`
+
+const Img = styled.img`
+  display: block;
+  width: 100%;
   padding-top: 4rem;
   padding-left: 1rem;
 `;
 const Gallery = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 const LeftImg = styled.img`
   display: block;
@@ -57,10 +59,10 @@ export default () => {
       <section className="container">
         <DescContainer>
           <div>
-            <SectionHeading sectionName="DESCRIPTION" />
+            <SectionHeading dropped sectionName="DESCRIPTION" />
             <Textarea />
           </div>
-          <MediaQuery minDeviceWidth={1124}>
+          <MediaQuery minDeviceWidth={992}>
             <Img src="./desc_img.jpg" />
           </MediaQuery>
         </DescContainer>
@@ -68,7 +70,7 @@ export default () => {
 
       <Hr />
 
-      <MediaQuery minDeviceWidth={1124}>
+      <MediaQuery minDeviceWidth={992}>
         <section className="container">
           <Gallery>
             <LeftImg src="./bitmap_3.jpg" />
@@ -79,7 +81,7 @@ export default () => {
       </MediaQuery>
 
       <section className="container">
-        <MediaQuery maxDeviceWidth={768}>
+        <MediaQuery maxDeviceWidth={767}>
           <SectionHeading sectionName="SHIPPING & RETURNS" />
         </MediaQuery>
         <Shipping />

@@ -15,20 +15,13 @@ const Title = styled.h1`
     font-size: 1.5rem;
     line-height: 28px;
   }
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     padding-top: 159px;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
   }
 `;
 
-class ProductTitle extends Component {
-  render() {
-    return (
-      <Title>
-        {this.props.productName}
-      </Title>
-    );
-  }
-}
-export default ProductTitle;
+export default () => {
+  return <Title>Long Cotton Gabardine Car Coat </Title>;
+};

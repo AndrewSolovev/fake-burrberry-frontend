@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Card from "./Card/";
+import Card from "./Card.jsx";
 
 const Title = styled.h2`
   display: inline-block;
@@ -19,7 +19,7 @@ const Title = styled.h2`
     padding-top: 1.5rem;
     margin-left: 0;
   }
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     display: block;
     padding-top: 4rem;
     padding-bottom: 1rem;
@@ -34,32 +34,37 @@ const Container = styled.div`
     padding-top: 1rem;
   }
 `;
-
-class WeRecommend extends Component {
-  render() {
-    return (
-      <section className="container">
-        <Title>WE RECOMMEND</Title>
-        <Container>
-          <div className="row">
+function WeRecommend(props) {
+  return (
+    <section className="container">
+      <Title>WE RECOMMEND</Title>
+      <Container>
+        <div className="row">
+          <div className="col-xs-6 col-md-3 col-lg-3">
             <Card
               src="/rec_1.jpg"
               alt="man in hoodie"
               productName="Lightweight Crew Neck Cashmere Sweater with Check Trim"
               productPrice="27 000 руб."
             />
+          </div>
+          <div className="col-xs-6 col-md-3 col-lg-3">
             <Card
               src="/rec_2.jpg"
               alt="man in jeans"
               productName="Check Detail Striped Silk Cotton T-shirt"
               productPrice="27 000 руб."
             />
+          </div>
+          <div className="col-xs-6 col-md-3 col-lg-3">
             <Card
               src="/rec_3.jpg"
               alt="bag"
               productName="Check Cashmere Scarf"
               productPrice="27 000 руб."
             />
+          </div>
+          <div className="col-xs-6 col-md-3 col-lg-3">
             <Card
               src="/rec_4.jpg"
               alt="shoes"
@@ -67,9 +72,10 @@ class WeRecommend extends Component {
               productPrice="27 000 руб."
             />
           </div>
-        </Container>
-      </section>
-    );
-  }
+        </div>
+      </Container>
+    </section>
+  );
 }
+
 export default WeRecommend;

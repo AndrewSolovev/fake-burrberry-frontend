@@ -16,13 +16,12 @@ const SizeButton = styled.button`
 	`};
 `;
 
-class Button extends Component {
-  render() {
-    return (
-      <SizeButton pressed={this.props.pressed} type="button">
-        {this.props.buttonName}
-      </SizeButton>
-    );
-  }
+function Button(props) {
+  return (
+    <SizeButton pressed={props.pressed} type="button">
+      {props.buttonName}
+    </SizeButton>
+  );
 }
+
 export default Button;

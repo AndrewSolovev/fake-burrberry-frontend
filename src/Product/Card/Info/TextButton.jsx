@@ -11,18 +11,17 @@ const TextButton = styled.button`
   line-height: 16px;
   font-size: 12px;
   font-weight: 400;
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     padding-top: 0;
   }
 `;
 
-class Button extends Component {
-  render() {
-    return (
-      <TextButton buttonName={this.props.ButtonName} type="button">
-        {this.props.buttonName}
-      </TextButton>
-    );
-  }
+function Button(props) {
+  return (
+    <TextButton buttonName={props.buttonName} type="button">
+      {props.buttonName}
+    </TextButton>
+  );
 }
+
 export default Button;

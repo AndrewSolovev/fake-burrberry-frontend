@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Title from "../../../Product/Title/";
-import TextButton from "./TextButton/";
-import SizeButton from "./SizeButton/";
+import Title from "../../Title.jsx";
+import TextButton from "./TextButton.jsx";
+import SizeButton from "./SizeButton.jsx";
 import Hr from "../../../Common/Hr/";
-var MediaQuery = require("react-responsive");
+import MediaQuery from "react-responsive";
 
-const CardInfo = styled.div`
+const Info = styled.div`
   margin: 0;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -18,7 +18,7 @@ const CardInfo = styled.div`
     padding-left: 0;
     padding-right: 0;
   }
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
@@ -43,7 +43,7 @@ const Price = styled.h2`
   @media only screen and (min-width: 768px) {
     margin: 0;
   }
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     padding-left: 1rem;
     font-weight: 500;
 
@@ -56,7 +56,7 @@ const Colour = styled.p`
   font-weight: 400;
   line-height: 16px;
   color: #171717;
-  @media only screen and (min-width: 1124px) {
+  @media only screen and (min-width: 992px) {
     margin-top: 0rem;
 `;
 const ChangeColour = styled.button`
@@ -69,7 +69,7 @@ const ChangeColour = styled.button`
   font-size: 0;
   background: ${props => (props.pressed ? "#cfa880" : "#232122")};
 `;
-const ProductID = styled.p`
+const ID = styled.p`
   margin: 0;
   margin-top: 1.125rem;
   font-size: 0.75rem;
@@ -101,17 +101,17 @@ const Size = styled.p`
 export default () => {
   return (
     <div className="row">
-      <MediaQuery minDeviceWidth={1124}>
+      <MediaQuery minDeviceWidth={992}>
         <Title productName="Long Cotton Gabardine Car Coat Coat Coat Coat Coat" />
         <Price>110 000 руб</Price>
       </MediaQuery>
 
       <div className="col-xs-12 col-md-12 col-xl-12">
-        <CardInfo>
-          <MediaQuery maxDeviceWidth={1123}>
+        <Info>
+          <MediaQuery maxDeviceWidth={991}>
             <PriceAndID>
               <Price>110 000 руб</Price>
-              <ProductID>Item 39428531</ProductID>
+              <ID>Item 39428531</ID>
             </PriceAndID>
           </MediaQuery>
 
@@ -125,7 +125,7 @@ export default () => {
             </ChangeColour>
           </div>
 
-          <MediaQuery minDeviceWidth={1124}>
+          <MediaQuery minDeviceWidth={992}>
             <div className="col-xl-6">
               <SizeContainer>
                 <Size>
@@ -139,7 +139,7 @@ export default () => {
               <SizeButton pressed buttonName="XL" />
             </div>
           </MediaQuery>
-        </CardInfo>
+        </Info>
       </div>
     </div>
   );

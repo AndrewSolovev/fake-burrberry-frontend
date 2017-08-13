@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import FormattedNumber from "../FormattedNumber";
+import FormattedPrice from "../../FormattedPrice";
 
 const Product = styled.a`
   display: block;
@@ -55,7 +55,7 @@ function ProductCard(props) {
         {props.productName}
       </Title>
       <Price>
-        <FormattedNumber price={props.price} currency={props.currency} />
+        <FormattedPrice price={props.price} currency={props.currency} />
       </Price>
     </Product>
   );

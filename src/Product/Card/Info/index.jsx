@@ -5,7 +5,7 @@ import Title from "../../Title";
 import TextButton from "./TextButton";
 import SecondaryButton from "./SecondaryButton";
 import Hr from "../../../Common/Hr/";
-import FormattedNumber from "../../FormattedNumber";
+import FormattedPrice from "../../../FormattedPrice";
 import MediaQuery from "react-responsive";
 import breakpoints from "../../../breakpoints";
 
@@ -105,7 +105,7 @@ export default () => {
       <MediaQuery minDeviceWidth={breakpoints.md}>
         <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
         <Price>
-          <FormattedNumber price="110000" currency="RUB" />
+          <FormattedPrice price="110000" currency="RUB" />
         </Price>
       </MediaQuery>
       <div className="col-xs-12 col-md-12 col-xl-12">
@@ -113,7 +113,7 @@ export default () => {
           <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
             <PriceAndID>
               <Price>
-                <FormattedNumber price="110000" currency="RUB" />
+                <FormattedPrice price="110000" currency="RUB" />
               </Price>
               <ID>Item 39428531</ID>
             </PriceAndID>

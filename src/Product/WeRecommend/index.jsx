@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import Card from "./Card";
+import Card from './Card';
 
 const Title = styled.h2`
   display: inline-block;

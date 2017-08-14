@@ -1,11 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import styled from "styled-components";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import App from "./app.js";
+import 'normalize.css';
+import 'flexboxgrid2';
+import './index.css';
 
-import "normalize.css";
-import "flexboxgrid2";
-import "./index.css";
+import App from './app.js';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));

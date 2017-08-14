@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import Title from "../Title";
-import Showcase from "./Showcase";
-import Info from "./Info/";
-import PrimaryButton from "./PrimaryButton";
-import TextButton from "./Info/TextButton";
-import Hr from "../../Common/Hr/";
-import MediaQuery from "react-responsive";
-import breakpoints from "../../breakpoints";
+import Title from '../Title';
+import Showcase from './Showcase';
+import Info from './Info/';
+import PrimaryButton from './PrimaryButton';
+import TextButton from './Info/TextButton';
+import Hr from '../../Common/Hr/';
+import MediaQuery from 'react-responsive';
+import breakpoints from '../../breakpoints';
 
 const CardPic = styled.img`display: block;`;
 const Container = styled.div`
@@ -54,56 +54,52 @@ const DeliveryP = styled.p`
   line-height: 1rem;
 `;
 
-export default () => {
-  return (
-    <Container>
-      <section className="container">
-        <div className="row">
-          <MediaQuery minDeviceWidth={breakpoints.md}>
-            <div>
-              <CardPic src="/bitmap.jpg" />
-            </div>
-          </MediaQuery>
-
-          <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-            <div className="col-xs-12">
-              <Title>Long Cotton Gabardine Car Coat</Title>
-            </div>
-          </MediaQuery>
-
-          <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-            <div className="col-xs-12 col-md-7 col-lg-6">
-              <Showcase />
-            </div>
-          </MediaQuery>
-
-          <div className="col-xs-12 col-md-5 col-lg-6">
-            <Info />
-
-            <Buttons>
-              <ButtonsContainer>
-                <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-                  <PrimaryButton>SELECT A SIZE</PrimaryButton>
-                </MediaQuery>
-                <MediaQuery minDeviceWidth={breakpoints.md}>
-                  <PrimaryButton>ADD TO BAG</PrimaryButton>
-                </MediaQuery>
-                <PrimaryButton secondary>FIND IN STORE</PrimaryButton>
-              </ButtonsContainer>
-              <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-                <TextButton>NEED SIZE HELP?</TextButton>
-              </MediaQuery>
-            </Buttons>
-
-            <MediaQuery minDeviceWidth={breakpoints.md}>
-              <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
-              <DeliveryP>
-                Order before 7pm Monday to Thursday for delivery the next day
-              </DeliveryP>
-            </MediaQuery>
+export default () => (
+  <Container>
+    <section className="container">
+      <div className="row">
+        <MediaQuery minDeviceWidth={breakpoints.md}>
+          <div>
+            <CardPic src="/bitmap.jpg" />
           </div>
+        </MediaQuery>
+
+        <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+          <div className="col-xs-12">
+            <Title>Long Cotton Gabardine Car Coat</Title>
+          </div>
+        </MediaQuery>
+
+        <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+          <div className="col-xs-12 col-md-7 col-lg-6">
+            <Showcase />
+          </div>
+        </MediaQuery>
+
+        <div className="col-xs-12 col-md-5 col-lg-6">
+          <Info />
+
+          <Buttons>
+            <ButtonsContainer>
+              <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+                <PrimaryButton>SELECT A SIZE</PrimaryButton>
+              </MediaQuery>
+              <MediaQuery minDeviceWidth={breakpoints.md}>
+                <PrimaryButton>ADD TO BAG</PrimaryButton>
+              </MediaQuery>
+              <PrimaryButton secondary>FIND IN STORE</PrimaryButton>
+            </ButtonsContainer>
+            <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+              <TextButton>NEED SIZE HELP?</TextButton>
+            </MediaQuery>
+          </Buttons>
+
+          <MediaQuery minDeviceWidth={breakpoints.md}>
+            <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
+            <DeliveryP>Order before 7pm Monday to Thursday for delivery the next day</DeliveryP>
+          </MediaQuery>
         </div>
-      </section>
-    </Container>
-  );
-};
+      </div>
+    </section>
+  </Container>
+);

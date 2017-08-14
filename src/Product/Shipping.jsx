@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Img = styled.img`
   display: none;
@@ -54,30 +54,25 @@ const OptionsDesc = styled.p`
   }
 `;
 
-export default () => {
-  return (
-    <div className="row">
-      <div className="col-md-7">
-        <Img src="/shipping-img.jpg" alt="two burberry's boxes with tape" />
-      </div>
-      <div className="col-md-5">
-        <Title>DELIVERY</Title>
-        <OptionsTitle>Free Next Day Delivery</OptionsTitle>
-        <OptionsDesc>
-          Order before 7pm Monday to Thursday for delivery the next day
-        </OptionsDesc>
-        <OptionsTitle>Collect-in-Store</OptionsTitle>
-        <OptionsDesc>
-          Order online today and pick up your items in storeas early as tomorrow
-        </OptionsDesc>
-        <OptionsTitle>Free Returns</OptionsTitle>
-        <OptionsDesc>Enjoy free returns on your order</OptionsDesc>
-        <OptionsTitle>Free Gift Packaging</OptionsTitle>
-        <OptionsDesc>
-          Discover our gift packaging, a gold lined box tied with a coloured
-          ribbon
-        </OptionsDesc>
-      </div>
+export default () => (
+  <div className="row">
+    <div className="col-md-7">
+      <Img src="/shipping-img.jpg" alt="two burberry's boxes with tape" />
     </div>
-  );
-};
+    <div className="col-md-5">
+      <Title>DELIVERY</Title>
+      <OptionsTitle>Free Next Day Delivery</OptionsTitle>
+      <OptionsDesc>Order before 7pm Monday to Thursday for delivery the next day</OptionsDesc>
+      <OptionsTitle>Collect-in-Store</OptionsTitle>
+      <OptionsDesc>
+          Order online today and pick up your items in storeas early as tomorrow
+      </OptionsDesc>
+      <OptionsTitle>Free Returns</OptionsTitle>
+      <OptionsDesc>Enjoy free returns on your order</OptionsDesc>
+      <OptionsTitle>Free Gift Packaging</OptionsTitle>
+      <OptionsDesc>
+          Discover our gift packaging, a gold lined box tied with a coloured ribbon
+      </OptionsDesc>
+    </div>
+  </div>
+);

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import FormattedPrice from "../../FormattedPrice";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import FormattedPrice from '../../FormattedPrice';
 
 const Product = styled.a`
   display: block;

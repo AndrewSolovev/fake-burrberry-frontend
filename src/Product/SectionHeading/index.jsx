@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import triangle from "./triangle.svg";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import triangle from './triangle.svg';
 
 const Container = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ const Container = styled.div`
   padding: 2rem 0.5rem;
   @media only screen and (min-width: 48rem) {
     padding: 1.5rem 0 1rem 0;
-    display: ${props => (props.mobileHidden ? "none" : "block")};
+    display: ${props => (props.mobileHidden ? 'none' : 'block')};
   @media only screen and (min-width: 62rem) {
      padding-top: 4rem;
   }
@@ -34,7 +34,7 @@ const Title = styled.button`
     position: absolute;
     bottom: 30%;
     right: 0rem;
-    transform: ${props => (props.isOpened ? "rotate(180deg)" : "rotate(0deg)")};
+    transform: ${props => (props.isOpened ? 'rotate(180deg)' : 'rotate(0deg)')};
   }
 
   @media only screen and (min-width: 48rem) {

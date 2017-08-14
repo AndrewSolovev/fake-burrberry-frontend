@@ -1,6 +1,6 @@
-import React from "react";
-import logoImg from "./logo.svg";
-import styled from "styled-components";
+import React from 'react';
+import logoImg from './logo.svg';
+import styled from 'styled-components';
 
 const Logo = styled.img`
   display: block;
@@ -13,6 +13,4 @@ const Logo = styled.img`
   }
 `;
 
-export default () => {
-  return <Logo src={logoImg} alt="logo burrberry" />;
-};
+export default () => <Logo src={logoImg} alt="logo burrberry" />;

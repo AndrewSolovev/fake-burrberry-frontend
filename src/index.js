@@ -6,6 +6,6 @@ import 'normalize.css';
 import 'flexboxgrid2/dist/flexboxgrid.css';
 import './index.css';
 
-import App from './app.jsx'; // eslint-disable-line
+import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root')); // eslint-disable-line

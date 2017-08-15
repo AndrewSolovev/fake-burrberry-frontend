@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 
-function GetPrice(props) {
+function Price(props) {
   return (
     <FormattedNumber
       value={props.price}
@@ -14,9 +14,9 @@ function GetPrice(props) {
   );
 }
 
-GetPrice.propTypes = {
+Price.propTypes = {
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
 };
 
-export default GetPrice;
+export default Price;

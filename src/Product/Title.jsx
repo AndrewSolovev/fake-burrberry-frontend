@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Title = styled.h1`
   margin: 0;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0rem;
   font-family: 'Lora', serif;
   font-size: 1.25rem;
   font-weight: 400;

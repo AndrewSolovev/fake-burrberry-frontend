@@ -7,7 +7,6 @@ const Title = styled.h2`
   display: inline-block;
   width: auto;
   margin: 0;
-  margin-left: 0.5rem;
   padding-top: 3rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #171717;
@@ -44,7 +43,7 @@ function WeRecommend() {
             <Card
               src="/rec_1.jpg"
               alt="man in hoodie"
-              price="27000"
+              price={27000}
               currency="RUB"
               productName="Lightweight Crew Neck Cashmere Sweater with Check Trim"
             />
@@ -53,7 +52,7 @@ function WeRecommend() {
             <Card
               src="/rec_2.jpg"
               alt="man in jeans"
-              price="22000"
+              price={22000}
               currency="RUB"
               productName="Check Detail Striped Silk Cotton T-shirt"
             />
@@ -62,7 +61,7 @@ function WeRecommend() {
             <Card
               src="/rec_3.jpg"
               alt="bag"
-              price="26800"
+              price={26800}
               currency="RUB"
               productName="Check Cashmere Scarf"
             />
@@ -71,7 +70,7 @@ function WeRecommend() {
             <Card
               src="/rec_4.jpg"
               alt="shoes"
-              price="45000"
+              price={45000}
               currency="RUB"
               productName="Leather Brogue Boots"
             />

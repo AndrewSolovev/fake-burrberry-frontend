@@ -10,15 +10,9 @@ import breakpoints from '../../../breakpoints';
 
 const Info = styled.div`
   margin: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
   font-family: 'Raleway', 'Helvetica Neue', sans-serif;
-  @media only screen and (min-width: 48rem) {
-    padding-left: 0;
-    padding-right: 0;
-  }
   @media only screen and (min-width: 62rem) {
     display: flex;
     justify-content: space-between;
@@ -103,7 +97,7 @@ export default () =>
     <MediaQuery minDeviceWidth={breakpoints.md}>
       <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
       <Price>
-        <FormattedPrice price="110000" currency="RUB" />
+        <FormattedPrice price={110000} currency="RUB" />
       </Price>
     </MediaQuery>
     <div className="col-xs-12 col-md-12 col-xl-12">
@@ -111,7 +105,7 @@ export default () =>
         <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
           <PriceAndID>
             <Price>
-              <FormattedPrice price="110000" currency="RUB" />
+              <FormattedPrice price={110000} currency="RUB" />
             </Price>
             <ID>Item 39428531</ID>
           </PriceAndID>

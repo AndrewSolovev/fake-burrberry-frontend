@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 
 const Buttons = styled.div`
-  padding: 2rem 0.5rem 3rem 0.5rem;
+  padding: 2rem 0rem 3rem 0rem;
 
   @media only screen and (min-width: 48rem) {
     padding: 2rem 0rem 3rem 0rem;

@@ -44,7 +44,8 @@ const LocationButtons = styled.div`@media only screen and (min-width: 48rem) {di
 
 const LocationButton = styled.button`
   display: block;
-  padding: 1rem 0.5rem 0rem 0.5rem;
+  padding: 0;
+  padding-top: 1rem;
   border: none;
   font-size: 0.75rem;
   font-weight: 400;
@@ -91,8 +92,8 @@ const Contact = styled.a`
   }
 `;
 
-export default () => (
-  <Footer>
+export default () =>
+  (<Footer>
     <div className="container">
       <div className="row">
         <div className="col-md-3">
@@ -136,5 +137,4 @@ export default () => (
       <NeedHelp>Need help?</NeedHelp>
       <Contact>Find out more and contact us</Contact>
     </div>
-  </Footer>
-);
+  </Footer>);

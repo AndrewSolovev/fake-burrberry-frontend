@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Hamburger from './hamburger.svg';
 import Logo from '../Logo/';
 
 const Header = styled.header`
@@ -22,6 +23,7 @@ const Link = styled.a`
 
 export default () =>
   (<Header>
+    <img src={Hamburger} alt="Hamburger icon" />
     <Link>
       <Logo />
     </Link>

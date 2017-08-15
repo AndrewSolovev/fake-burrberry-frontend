@@ -71,9 +71,9 @@ export default () =>
     <MediaQuery minDeviceWidth={breakpoints.md}>
       <section className="container">
         <Gallery>
-          <LeftImg src="./bitmap_3.jpg" />
-          <CenterImg src="./bitmap_4.jpg" />
-          <RightImg src="./bitmap_2.jpg" />
+          <LeftImg src="/bitmap_3.jpg" />
+          <CenterImg src="/bitmap_4.jpg" />
+          <RightImg src="/bitmap_2.jpg" />
         </Gallery>
       </section>
     </MediaQuery>

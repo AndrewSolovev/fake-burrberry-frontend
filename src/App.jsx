@@ -4,21 +4,26 @@ import { Helmet } from 'react-helmet';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Header from './Common/Header';
-import Product from './Product/';
 import Footer from './Common/Footer';
+import Product from './Product/';
+import Products from './Products/';
 
 addLocaleData([...en, ...ru]);
 
 export default () =>
-  (<IntlProvider locale={navigator.language}>
-    <div>
-      <Helmet>
-        <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
-      </Helmet>
-      <Header />
-      <Product />
-      <Footer />
-    </div>
-  </IntlProvider>);
+  (<Router>
+    <IntlProvider locale={navigator.language}>
+      <div>
+        <Helmet>
+          <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+        </Helmet>
+        <Header />
+        <Route exact path="/products" component={Products} />
+        <Route path="/products/:id" component={Product} />
+        <Footer />
+      </div>
+    </IntlProvider>
+  </Router>);

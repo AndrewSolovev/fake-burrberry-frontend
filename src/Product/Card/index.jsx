@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 
 import Title from '../Title';
@@ -6,8 +7,6 @@ import Showcase from './Showcase';
 import Info from './Info/';
 import PrimaryButton from './PrimaryButton';
 import TextButton from './Info/TextButton';
-import Hr from '../../Common/Hr/';
-import MediaQuery from 'react-responsive';
 import breakpoints from '../../breakpoints';
 
 const CardPic = styled.img`display: block;`;
@@ -54,8 +53,8 @@ const DeliveryP = styled.p`
   line-height: 1rem;
 `;
 
-export default () => (
-  <Container>
+export default () =>
+  (<Container>
     <section className="container">
       <div className="row">
         <MediaQuery minDeviceWidth={breakpoints.md}>
@@ -101,5 +100,4 @@ export default () => (
         </div>
       </div>
     </section>
-  </Container>
-);
+  </Container>);

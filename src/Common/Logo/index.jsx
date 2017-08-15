@@ -1,6 +1,6 @@
 import React from 'react';
-import logoImg from './logo.svg';
 import styled from 'styled-components';
+import logoImg from './logo.svg';
 
 const Logo = styled.img`
   display: block;

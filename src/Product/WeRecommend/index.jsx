@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
@@ -34,7 +34,7 @@ const Container = styled.div`
     padding-top: 1rem;
   }
 `;
-function WeRecommend(props) {
+function WeRecommend() {
   return (
     <section className="container">
       <Title>WE RECOMMEND</Title>

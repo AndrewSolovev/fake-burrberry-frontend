@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 import { Helmet } from 'react-helmet';
-import Title from './Title';
 import Card from './Card/';
 import Hr from '../Common/Hr/';
 import SectionHeading from './SectionHeading/';
@@ -10,7 +10,6 @@ import Textarea from './TextArea';
 import WeRecommend from './WeRecommend/';
 import Shipping from './Shipping';
 import MoreForYou from './MoreForYou';
-import MediaQuery from 'react-responsive';
 import breakpoints from '../breakpoints';
 
 const DescContainer = styled.div`display: flex;`;
@@ -45,8 +44,8 @@ const RightImg = styled.img`
   padding-top: 4rem;
 `;
 
-export default () => (
-  <div>
+export default () =>
+  (<div>
     <Helmet>
       <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
     </Helmet>
@@ -93,5 +92,4 @@ export default () => (
     <MediaQuery maxDeviceWidth={breakpoints.sm}>
       <MoreForYou />
     </MediaQuery>
-  </div>
-);
+  </div>);

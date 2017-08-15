@@ -1,5 +1,5 @@
+/* eslint no-undef: 0 */
 import React from 'react';
-
 import { Helmet } from 'react-helmet';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';

@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 
 import Title from '../../Title';
 import TextButton from './TextButton';
 import SecondaryButton from './SecondaryButton';
-import Hr from '../../../Common/Hr/';
 import FormattedPrice from '../../../FormattedPrice';
-import MediaQuery from 'react-responsive';
 import breakpoints from '../../../breakpoints';
 
 const Info = styled.div`
@@ -99,8 +98,8 @@ const Size = styled.p`
 }
 `;
 
-export default () => (
-  <div className="row">
+export default () =>
+  (<div className="row">
     <MediaQuery minDeviceWidth={breakpoints.md}>
       <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
       <Price>
@@ -120,11 +119,11 @@ export default () => (
 
         <div className="col-xl-6">
           <Colour>
-              Colour: <b>Honey</b>
+            Colour: <b>Honey</b>
           </Colour>
           <ChangeColour type="button">change colour to black</ChangeColour>
           <ChangeColour pressed type="button">
-              change colour to honey
+            change colour to honey
           </ChangeColour>
         </div>
 
@@ -132,7 +131,7 @@ export default () => (
           <div className="col-xl-6">
             <SizeContainer>
               <Size>
-                  Size: <b>XL</b>
+                Size: <b>XL</b>
               </Size>
               <TextButton>NEED SIZE HELP?</TextButton>
             </SizeContainer>
@@ -144,5 +143,4 @@ export default () => (
         </MediaQuery>
       </Info>
     </div>
-  </div>
-);
+  </div>);

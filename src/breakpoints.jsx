@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default {
   xs: 320,
   sm: 768,

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import triangle from './triangle.svg';
 
@@ -53,5 +54,10 @@ function SectionHeading(props) {
     </Container>
   );
 }
+
+SectionHeading.propTypes = {
+  isOpened: PropTypes.string.isRequired,
+  sectionName: PropTypes.string.isRequired,
+};
 
 export default SectionHeading;

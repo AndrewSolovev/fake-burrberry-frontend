@@ -27,11 +27,10 @@ const Link = styled.a`
   font-weight: 400;
 `;
 
-export default () => (
-  <section className="container">
+export default () =>
+  (<section className="container">
     <Title>MORE FOR YOU</Title>
-    <Link>Men's Black Trench Coats</Link>
-    <Link>Men's Short Trench Coats</Link>
-    <Link>Men's Long Trench Coats</Link>
-  </section>
-);
+    <Link>Men&apos;s Black Trench Coats</Link>
+    <Link>Men&apos;s Short Trench Coats</Link>
+    <Link>Men&apos;s Long Trench Coats</Link>
+  </section>);

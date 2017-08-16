@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from 'react';
+import MediaQuery from 'react-responsive';
+import styled from 'styled-components';
 
-import Title from "../../Title";
-import TextButton from "./TextButton";
-import SecondaryButton from "./SecondaryButton";
-import Hr from "../../../Common/Hr/";
-import FormattedPrice from "../../../FormattedPrice";
-import MediaQuery from "react-responsive";
-import breakpoints from "../../../breakpoints";
+import Title from '../../Title';
+import TextButton from './TextButton';
+import SecondaryButton from './SecondaryButton';
+import FormattedPrice from '../../../FormattedPrice';
+import breakpoints from '../../../breakpoints';
 
 const Info = styled.div`
   margin: 0;
@@ -67,7 +66,7 @@ const ChangeColour = styled.button`
   border-radius: 50px;
   border: 1px solid #232122;
   font-size: 0;
-  background: ${props => (props.pressed ? "#cfa880" : "#232122")};
+  background: ${props => (props.pressed ? '#cfa880' : '#232122')};
 `;
 
 const ID = styled.p`
@@ -99,52 +98,49 @@ const Size = styled.p`
 }
 `;
 
-export default () => {
-  return (
-    <div className="row">
-      <MediaQuery minDeviceWidth={breakpoints.md}>
-        <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-        <Price>
-          <FormattedPrice price="110000" currency="RUB" />
-        </Price>
-      </MediaQuery>
-      <div className="col-xs-12 col-md-12 col-xl-12">
-        <Info>
-          <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-            <PriceAndID>
-              <Price>
-                <FormattedPrice price="110000" currency="RUB" />
-              </Price>
-              <ID>Item 39428531</ID>
-            </PriceAndID>
-          </MediaQuery>
+export default () =>
+  (<div className="row">
+    <MediaQuery minDeviceWidth={breakpoints.md}>
+      <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+      <Price>
+        <FormattedPrice price="110000" currency="RUB" />
+      </Price>
+    </MediaQuery>
+    <div className="col-xs-12 col-md-12 col-xl-12">
+      <Info>
+        <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+          <PriceAndID>
+            <Price>
+              <FormattedPrice price="110000" currency="RUB" />
+            </Price>
+            <ID>Item 39428531</ID>
+          </PriceAndID>
+        </MediaQuery>
 
+        <div className="col-xl-6">
+          <Colour>
+            Colour: <b>Honey</b>
+          </Colour>
+          <ChangeColour type="button">change colour to black</ChangeColour>
+          <ChangeColour pressed type="button">
+            change colour to honey
+          </ChangeColour>
+        </div>
+
+        <MediaQuery minDeviceWidth={breakpoints.md}>
           <div className="col-xl-6">
-            <Colour>
-              Colour: <b>Honey</b>
-            </Colour>
-            <ChangeColour type="button">change colour to black</ChangeColour>
-            <ChangeColour pressed type="button">
-              change colour to honey
-            </ChangeColour>
+            <SizeContainer>
+              <Size>
+                Size: <b>XL</b>
+              </Size>
+              <TextButton>NEED SIZE HELP?</TextButton>
+            </SizeContainer>
+            <SecondaryButton>S</SecondaryButton>
+            <SecondaryButton>M</SecondaryButton>
+            <SecondaryButton>L</SecondaryButton>
+            <SecondaryButton pressed>XL</SecondaryButton>
           </div>
-
-          <MediaQuery minDeviceWidth={breakpoints.md}>
-            <div className="col-xl-6">
-              <SizeContainer>
-                <Size>
-                  Size: <b>XL</b>
-                </Size>
-                <TextButton>NEED SIZE HELP?</TextButton>
-              </SizeContainer>
-              <SecondaryButton>S</SecondaryButton>
-              <SecondaryButton>M</SecondaryButton>
-              <SecondaryButton>L</SecondaryButton>
-              <SecondaryButton pressed>XL</SecondaryButton>
-            </div>
-          </MediaQuery>
-        </Info>
-      </div>
+        </MediaQuery>
+      </Info>
     </div>
-  );
-};
+  </div>);

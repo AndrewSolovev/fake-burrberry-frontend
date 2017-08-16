@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const TextButton = styled.button`
   padding: 0;

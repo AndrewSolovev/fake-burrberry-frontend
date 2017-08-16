@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Card from "./Card";
+import Card from './Card';
 
 const Title = styled.h2`
   display: inline-block;
@@ -34,7 +34,7 @@ const Container = styled.div`
     padding-top: 1rem;
   }
 `;
-function WeRecommend(props) {
+function WeRecommend() {
   return (
     <section className="container">
       <Title>WE RECOMMEND</Title>

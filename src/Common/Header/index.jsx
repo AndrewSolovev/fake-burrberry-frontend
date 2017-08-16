@@ -1,6 +1,6 @@
-import React from "react";
-import Logo from "../Logo/";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import Logo from '../Logo/';
 
 const Header = styled.header`
   display: flex;
@@ -20,12 +20,9 @@ const Link = styled.a`
   }
 `;
 
-export default () => {
-  return (
-    <Header>
-      <Link>
-        <Logo />
-      </Link>
-    </Header>
-  );
-};
+export default () =>
+  (<Header>
+    <Link>
+      <Logo />
+    </Link>
+  </Header>);

@@ -1,17 +1,16 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
-import { Helmet } from "react-helmet";
-import Title from "./Title";
-import Card from "./Card/";
-import Hr from "../Common/Hr/";
-import SectionHeading from "./SectionHeading/";
-import Textarea from "./TextArea";
-import WeRecommend from "./WeRecommend/";
-import Shipping from "./Shipping";
-import MoreForYou from "./MoreForYou";
-import MediaQuery from "react-responsive";
-import breakpoints from "../breakpoints";
+import { Helmet } from 'react-helmet';
+import Card from './Card/';
+import Hr from '../Common/Hr/';
+import SectionHeading from './SectionHeading/';
+import Textarea from './TextArea';
+import WeRecommend from './WeRecommend/';
+import Shipping from './Shipping';
+import MoreForYou from './MoreForYou';
+import breakpoints from '../breakpoints';
 
 const DescContainer = styled.div`display: flex;`;
 
@@ -45,55 +44,52 @@ const RightImg = styled.img`
   padding-top: 4rem;
 `;
 
-export default () => {
-  return (
-    <div>
-      <Helmet>
-        <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
-      </Helmet>
+export default () =>
+  (<div>
+    <Helmet>
+      <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+    </Helmet>
 
-      <Card />
+    <Card />
 
-      <Hr />
+    <Hr />
 
-      <section className="container">
-        <DescContainer>
-          <div>
-            <SectionHeading isOpened sectionName="DESCRIPTION" />
-            <Textarea />
-          </div>
-          <MediaQuery minDeviceWidth={breakpoints.md}>
-            <Img src="./desc_img.jpg" />
-          </MediaQuery>
-        </DescContainer>
-      </section>
-
-      <Hr />
-
-      <MediaQuery minDeviceWidth={breakpoints.md}>
-        <section className="container">
-          <Gallery>
-            <LeftImg src="./bitmap_3.jpg" />
-            <CenterImg src="./bitmap_4.jpg" />
-            <RightImg src="./bitmap_2.jpg" />
-          </Gallery>
-        </section>
-      </MediaQuery>
-
-      <section className="container">
-        <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
-          <SectionHeading sectionName="SHIPPING & RETURNS" />
+    <section className="container">
+      <DescContainer>
+        <div>
+          <SectionHeading isOpened sectionName="DESCRIPTION" />
+          <Textarea />
+        </div>
+        <MediaQuery minDeviceWidth={breakpoints.md}>
+          <Img src="./desc_img.jpg" />
         </MediaQuery>
-        <Shipping />
+      </DescContainer>
+    </section>
+
+    <Hr />
+
+    <MediaQuery minDeviceWidth={breakpoints.md}>
+      <section className="container">
+        <Gallery>
+          <LeftImg src="./bitmap_3.jpg" />
+          <CenterImg src="./bitmap_4.jpg" />
+          <RightImg src="./bitmap_2.jpg" />
+        </Gallery>
       </section>
+    </MediaQuery>
 
-      <Hr />
-
-      <WeRecommend />
-
-      <MediaQuery maxDeviceWidth={breakpoints.sm}>
-        <MoreForYou />
+    <section className="container">
+      <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+        <SectionHeading sectionName="SHIPPING & RETURNS" />
       </MediaQuery>
-    </div>
-  );
-};
+      <Shipping />
+    </section>
+
+    <Hr />
+
+    <WeRecommend />
+
+    <MediaQuery maxDeviceWidth={breakpoints.sm}>
+      <MoreForYou />
+    </MediaQuery>
+  </div>);

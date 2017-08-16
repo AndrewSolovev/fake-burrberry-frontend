@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Title = styled.h1`
   margin: 0;

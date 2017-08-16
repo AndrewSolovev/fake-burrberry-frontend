@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import FormattedPrice from "../../FormattedPrice";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import FormattedPrice from '../../FormattedPrice';
 
 const Product = styled.a`
   display: block;
@@ -60,5 +61,13 @@ function ProductCard(props) {
     </Product>
   );
 }
+
+ProductCard.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  productName: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+};
 
 export default ProductCard;

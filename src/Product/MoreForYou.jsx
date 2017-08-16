@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Title = styled.h2`
   margin: 0;
@@ -27,13 +27,10 @@ const Link = styled.a`
   font-weight: 400;
 `;
 
-export default () => {
-  return (
-    <section className="container">
-      <Title>MORE FOR YOU</Title>
-      <Link>Men's Black Trench Coats</Link>
-      <Link>Men's Short Trench Coats</Link>
-      <Link>Men's Long Trench Coats</Link>
-    </section>
-  );
-};
+export default () =>
+  (<section className="container">
+    <Title>MORE FOR YOU</Title>
+    <Link>Men&apos;s Black Trench Coats</Link>
+    <Link>Men&apos;s Short Trench Coats</Link>
+    <Link>Men&apos;s Long Trench Coats</Link>
+  </section>);

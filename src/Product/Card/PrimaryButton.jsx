@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const Button = styled.button`
   margin-bottom: 1rem;

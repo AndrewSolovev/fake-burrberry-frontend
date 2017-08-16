@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const SecondaryButton = styled.button`
   margin-right: 0.5rem;
@@ -12,8 +11,8 @@ const SecondaryButton = styled.button`
   ${props =>
     props.pressed &&
     `
-		font-weight: 700;
-	`};
+    font-weight: 700;
+`};
 `;
 
 export default SecondaryButton;

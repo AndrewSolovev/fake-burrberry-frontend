@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Category from './Category/';
 import Title from './Title';
 import Card from '../Card';
@@ -34,7 +35,7 @@ export default () =>
             price={26800}
             currency="RUB"
             productName="Check Cashmere Scarf"
-            fitValue="Relaxed Fit"
+            promoLabel="Relaxed Fit"
             coloursValue={3}
           />
         </div>
@@ -45,7 +46,7 @@ export default () =>
             price={26800}
             currency="RUB"
             productName="Check Cashmere Scarf"
-            fitValue="Relaxed Fit"
+            promoLabel="Relaxed Fit"
             coloursValue={3}
           />
         </div>
@@ -56,7 +57,7 @@ export default () =>
             price={26800}
             currency="RUB"
             productName="Check Cashmere Scarf"
-            fitValue="Relaxed Fit"
+            promoLabel="Relaxed Fit"
             coloursValue={3}
           />
         </div>
@@ -67,7 +68,7 @@ export default () =>
             price={26800}
             currency="RUB"
             productName="Check Cashmere Scarf"
-            fitValue="Relaxed Fit"
+            promoLabel="Relaxed Fit"
             coloursValue={3}
           />
         </div>
@@ -83,7 +84,7 @@ export default () =>
             price={26800}
             currency="RUB"
             productName="Check Cashmere Scarf"
-            fitValue="Relaxed Fit"
+            promoLabel="Relaxed Fit"
             coloursValue={3}
           />
         </div>
@@ -94,7 +95,7 @@ export default () =>
             price={26800}
             currency="RUB"
             productName="Check Cashmere Scarf"
-            fitValue="Relaxed Fit"
+            promoLabel="Relaxed Fit"
             coloursValue={3}
           />
         </div>
@@ -105,7 +106,7 @@ export default () =>
             price={26800}
             currency="RUB"
             productName="Check Cashmere Scarf"
-            fitValue="Relaxed Fit"
+            promoLabel="Relaxed Fit"
             coloursValue={3}
           />
         </div>
@@ -116,7 +117,7 @@ export default () =>
             price={26800}
             currency="RUB"
             productName="Check Cashmere Scarf"
-            fitValue="Relaxed Fit"
+            promoLabel="Relaxed Fit"
             coloursValue={3}
           />
         </div>

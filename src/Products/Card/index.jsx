@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -13,8 +15,10 @@ const Pic = styled.img`
   display: block;
   width: 100%;
 `;
-const FitAndHeart = styled.div`display: flex;`;
-const Fit = styled.p`
+
+const Info = styled.div`display: flex;`;
+
+const Promo = styled.p`
   margin: 0;
   padding-bottom: 0.5rem;
   font-size: 0.75rem;
@@ -44,18 +48,32 @@ const Price = styled.h2`
   line-height: 1rem;
   font-weight: 400;
 `;
+
+const Heart = styled.svg`padding-left: 0.5rem;`;
 const Underline = styled.a`text-decoration: underline;`;
 
 function ProductCard(props) {
   return (
     <Product>
       <Pic src={props.src} alt={props.alt} />
-      <FitAndHeart>
-        <Fit fitValue={props.fitValue}>
-          {props.fitValue}
-        </Fit>
-
-        <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
+      <Info>
+        <div>
+          {props.promoLabel !== ' ' &&
+            <Promo promoLabel={props.promoLabel}>
+              {props.promoLabel}
+            </Promo>}
+          <Title productName={props.productName}>
+            {props.productName}
+          </Title>
+          {props.coloursValue !== ' ' &&
+            <Colours coloursValue={props.coloursValue}>
+              Available in <Underline>{props.coloursValue} colours</Underline>
+            </Colours>}
+          <Price>
+            <FormattedPrice price={props.price} currency={props.currency} />
+          </Price>
+        </div>
+        <Heart width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
           <title>3CF726F5-2D61-4AA0-881C-02ACD3124AA4</title>
           <desc>Created with sketchtool.</desc>
           <defs />
@@ -84,17 +102,8 @@ function ProductCard(props) {
               </g>
             </g>
           </g>
-        </svg>
-      </FitAndHeart>
-      <Title productName={props.productName}>
-        {props.productName}
-      </Title>
-      <Colours coloursValue={props.coloursValue}>
-        Available in <Underline>{props.coloursValue} colours</Underline>
-      </Colours>
-      <Price>
-        <FormattedPrice price={props.price} currency={props.currency} />
-      </Price>
+        </Heart>
+      </Info>
     </Product>
   );
 }
@@ -105,8 +114,13 @@ ProductCard.propTypes = {
   productName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
-  fitValue: PropTypes.string,
+  promoLabel: PropTypes.string,
   coloursValue: PropTypes.number,
+};
+
+ProductCard.defaultProps = {
+  promoLabel: ' ',
+  coloursValue: ' ',
 };
 
 export default ProductCard;

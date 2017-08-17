@@ -8,8 +8,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Header from './Common/Header';
 import Footer from './Common/Footer';
-import Product from './Product/';
-import Products from './Products/';
+import Product from './Products/Show/';
+import Products from './Products/List/';
 
 addLocaleData([...en, ...ru]);
 

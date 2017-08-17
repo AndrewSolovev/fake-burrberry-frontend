@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "flexboxgrid2": "^7.0.0-alpha6",
+    "flexboxgrid2": "^7.0.0-alpha7",
     "normalize.css": "^7.0.0",
     "normalize.js": "0.0.1",
     "prop-types": "^15.5.10",

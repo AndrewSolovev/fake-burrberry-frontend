@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import logoImg from './logo.svg';
 
 const Logo = styled.img`
-  display: block;
-  margin: auto;
   height: 12px;
   width: auto;
   @media only screen and (min-width: 62rem) {

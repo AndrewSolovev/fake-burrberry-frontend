@@ -16,7 +16,10 @@ const Pic = styled.img`
   width: 100%;
 `;
 
-const Info = styled.div`display: flex;`;
+const Info = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 const Promo = styled.p`
   margin: 0;
@@ -77,7 +80,7 @@ function ProductCard(props) {
           <title>3CF726F5-2D61-4AA0-881C-02ACD3124AA4</title>
           <desc>Created with sketchtool.</desc>
           <defs />
-          <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g id="Symbols" stroke="none" strokeWidth="1" fill="#171717" fillRule="nonzero">
             <g
               id="Card/Mobile"
               transform="translate(-130.000000, -213.000000)"

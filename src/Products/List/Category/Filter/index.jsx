@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
+import breakpoints from '../../../../breakpoints';
 import Option from './Option';
 
 const Filter = styled.div`
@@ -11,7 +13,8 @@ const Filter = styled.div`
 
 const Refine = styled.p`
   margin: 0;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
   font-size: 0.75rem;
   line-height: 1.25rem;
   color: #171717;
@@ -21,7 +24,9 @@ const Refine = styled.p`
 
 export default () =>
   (<Filter>
-    <Refine>Refine by</Refine>
+    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+      <Refine>Refine by</Refine>
+    </MediaQuery>
     <Option value="Category" />
     <Option value="Colour" />
     <Option value="Size" />

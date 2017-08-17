@@ -10,7 +10,9 @@ export default () =>
   (<Category>
     <div className="container">
       <Title />
-      <Desc />
+      <div className="col-xs-12 col-sm-9">
+        <Desc />
+      </div>
       <Filter />
     </div>
   </Category>);

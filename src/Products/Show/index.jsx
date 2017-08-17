@@ -51,8 +51,9 @@ export default () =>
     </Helmet>
 
     <Card />
-
-    <Hr />
+    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+      <Hr />
+    </MediaQuery>
 
     <section className="container">
       <DescContainer>
@@ -65,8 +66,9 @@ export default () =>
         </MediaQuery>
       </DescContainer>
     </section>
-
-    <Hr />
+    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+      <Hr />
+    </MediaQuery>
 
     <MediaQuery minDeviceWidth={breakpoints.md}>
       <section className="container">
@@ -84,8 +86,9 @@ export default () =>
       </MediaQuery>
       <Shipping />
     </section>
-
-    <Hr />
+    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+      <Hr />
+    </MediaQuery>
 
     <WeRecommend />
 

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Desc = styled.p`
   margin: 0;
   padding-top: 1rem;
+  margin-left: -0.5rem;
   font-size: 0.75rem;
   line-height: 1.25rem;
   color: #171717;

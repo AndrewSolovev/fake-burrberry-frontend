@@ -10,10 +10,15 @@ import Button from '../../Common/Buttons/PrimaryButton';
 const SectionTitle = Title.extend`
   padding-top: 2rem;
   padding-bottom: 1rem;
+  @media only screen and (min-width: 48rem) {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    font-size: 1.25rem;
+  }
 `;
 
 const Line = Hr.extend`
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 `;
 const Showing = styled.div`text-align: center;`;
@@ -28,7 +33,7 @@ export default () =>
     <div className="container">
       <SectionTitle>Heritage Trench Coats</SectionTitle>
       <div className="row">
-        <div className="col-xs-6">
+        <div className="col-xs-6 col-sm-3">
           <Card
             src="/rec_3.jpg"
             alt="bag"
@@ -39,7 +44,7 @@ export default () =>
             coloursValue={3}
           />
         </div>
-        <div className="col-xs-6">
+        <div className="col-xs-6 col-sm-3">
           <Card
             src="/rec_2.jpg"
             alt="bag"
@@ -50,7 +55,7 @@ export default () =>
             coloursValue={3}
           />
         </div>
-        <div className="col-xs-6">
+        <div className="col-xs-6 col-sm-3">
           <Card
             src="/rec_1.jpg"
             alt="bag"
@@ -61,7 +66,7 @@ export default () =>
             coloursValue={3}
           />
         </div>
-        <div className="col-xs-6">
+        <div className="col-xs-6 col-sm-3">
           <Card
             src="/rec_4.jpg"
             alt="bag"
@@ -77,7 +82,7 @@ export default () =>
 
       <SectionTitle>Single Breasted Tren</SectionTitle>
       <div className="row">
-        <div className="col-xs-6">
+        <div className="col-xs-6 col-sm-3">
           <Card
             src="/rec_3.jpg"
             alt="bag"
@@ -88,7 +93,7 @@ export default () =>
             coloursValue={3}
           />
         </div>
-        <div className="col-xs-6">
+        <div className="col-xs-6 col-sm-3">
           <Card
             src="/rec_2.jpg"
             alt="bag"
@@ -99,7 +104,7 @@ export default () =>
             coloursValue={3}
           />
         </div>
-        <div className="col-xs-6">
+        <div className="col-xs-6 col-sm-3">
           <Card
             src="/rec_1.jpg"
             alt="bag"
@@ -110,7 +115,7 @@ export default () =>
             coloursValue={3}
           />
         </div>
-        <div className="col-xs-6">
+        <div className="col-xs-6 col-sm-3">
           <Card
             src="/rec_4.jpg"
             alt="bag"

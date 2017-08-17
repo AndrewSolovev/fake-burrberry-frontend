@@ -4,10 +4,9 @@ import logoImg from './logo.svg';
 
 const Logo = styled.img`
   display: block;
+  margin: auto;
   height: 12px;
   width: auto;
-  margin: 0px;
-
   @media only screen and (min-width: 62rem) {
     height: 16px;
   }

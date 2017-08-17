@@ -5,12 +5,12 @@ import Logo from '../Logo/';
 
 const Header = styled.header`
   display: flex;
-  justify-content: center;
+  align-items: center;
   border-bottom: 1px solid #c6c6c6;
 `;
 
 const Link = styled.a`
-  display: inline-block;
+  flex: 85%;
   padding: 1rem 0rem;
 
   @media only screen and (min-width: 48rem) {
@@ -20,10 +20,19 @@ const Link = styled.a`
     padding: 2rem 0rem;
   }
 `;
+const Ham = styled.button`
+  display: block;
+  margin-left: 0.5rem;
+  padding: 5px 8px;
+  background-image: url(${Hamburger});
+  background-size: cover;
+  border: none;
+  background-color: #ffffff;
+`;
 
 export default () =>
   (<Header>
-    <img src={Hamburger} alt="Hamburger icon" />
+    <Ham />
     <Link>
       <Logo />
     </Link>

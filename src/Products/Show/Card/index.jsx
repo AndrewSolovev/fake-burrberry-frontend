@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 import Title from '../Title';
 import Showcase from './Showcase';
-import Info from './Info/';
-import PrimaryButton from './PrimaryButton';
-import TextButton from './Info/TextButton';
-import breakpoints from '../../breakpoints';
+import Info from './Info';
+import PrimaryButton from '../../../Common/Buttons/PrimaryButton';
+import TextButton from '../../../Common/Buttons/TextButton';
+import breakpoints from '../../../breakpoints';
 
 const CardPic = styled.img`display: block;`;
 const Container = styled.div`
@@ -53,6 +53,14 @@ const DeliveryP = styled.p`
   line-height: 1rem;
 `;
 
+const BlackButton = PrimaryButton.extend`
+  margin-bottom: 1rem;
+  @media only screen and (min-width: 62rem) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+`;
+
 export default () =>
   (<Container>
     <section className="container">
@@ -81,10 +89,10 @@ export default () =>
           <Buttons>
             <ButtonsContainer>
               <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-                <PrimaryButton>SELECT A SIZE</PrimaryButton>
+                <BlackButton>SELECT A SIZE</BlackButton>
               </MediaQuery>
               <MediaQuery minDeviceWidth={breakpoints.md}>
-                <PrimaryButton>ADD TO BAG</PrimaryButton>
+                <BlackButton>ADD TO BAG</BlackButton>
               </MediaQuery>
               <PrimaryButton secondary>FIND IN STORE</PrimaryButton>
             </ButtonsContainer>

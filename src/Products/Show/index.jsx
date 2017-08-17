@@ -4,13 +4,13 @@ import MediaQuery from 'react-responsive';
 
 import { Helmet } from 'react-helmet';
 import Card from './Card/';
-import Hr from '../Common/Hr/';
+import Hr from '../../Common/Hr/';
 import SectionHeading from './SectionHeading/';
 import Textarea from './TextArea';
 import WeRecommend from './WeRecommend/';
 import Shipping from './Shipping';
 import MoreForYou from './MoreForYou';
-import breakpoints from '../breakpoints';
+import breakpoints from '../../breakpoints';
 
 const DescContainer = styled.div`display: flex;`;
 

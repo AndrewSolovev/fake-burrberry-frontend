@@ -2,9 +2,9 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 
-import Title from '../../Title';
-import TextButton from './TextButton';
-import SecondaryButton from './SecondaryButton';
+import Title from '../Title';
+import TextButton from '../../../Common/Buttons/TextButton';
+import SecondaryButton from '../../../Common/Buttons/SecondaryButton';
 import FormattedPrice from '../../../FormattedPrice';
 import breakpoints from '../../../breakpoints';
 

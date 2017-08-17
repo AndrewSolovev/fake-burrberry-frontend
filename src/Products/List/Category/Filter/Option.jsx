@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
 import arrowImg from './arrow.svg';
 
 const Container = styled.div`
@@ -18,13 +17,19 @@ const Select = styled.p`
   line-height: 1.25rem;
   color: #171717;
   font-weight: 400;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    background-image: url(${arrowImg});
+    background-size: cover;
+    width: 12px;
+    height: 6px;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+  }
 `;
-const Arrow = styled.img`
-  width: 12px;
-  height: 6px;
-  padding-left: 0.5rem;
-  flex-shrink: 0;
-`;
+
 
 function Option(props) {
   return (
@@ -32,7 +37,6 @@ function Option(props) {
       <Select value={props.value}>
         {props.value}
       </Select>
-      <Arrow src={arrowImg} alt="arrow" />
     </Container>
   );
 }

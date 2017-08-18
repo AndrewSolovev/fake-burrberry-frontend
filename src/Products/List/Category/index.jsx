@@ -9,7 +9,7 @@ const Category = styled.div`background-color: #f3f3f3;`;
 export default () =>
   (<Category>
     <div className="container">
-      <Title />
+      <Title>Men&apos;s clothing</Title>
       <div className="col-xs-12 col-sm-9">
         <Description />
       </div>

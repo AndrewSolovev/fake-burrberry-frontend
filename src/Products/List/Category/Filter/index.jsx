@@ -14,6 +14,7 @@ const Filter = styled.div`
   overflow: scroll;
   @media all and (min-width: 48rem) {
     margin: 0;
+    overflow: visible;
   }
 `;
 

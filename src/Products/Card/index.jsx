@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import FormattedPrice from '../../FormattedPrice';
 import Heart from './Heart';
 
-const Product = styled.a`
-  display: block;
-  padding: 0;
-`;
+const Product = styled.div`padding: 0;`;
 
 const Pic = styled.img`
   margin-bottom: 1rem;
@@ -28,11 +26,26 @@ const Promo = styled.p`
   line-height: 1rem;
 `;
 
-const Title = styled.h3`
+const Title = styled(Link)`
   margin: 0;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
+  text-decoration: none;
+  color: #171717;
+  cursor: pointer;
+
+  &:visited {
+    color: #171717;
+  }
+
+  @media only screen and (min-width: 48em) {
+    font-size: 0.875;
+    line-height: 1.25rem;
+  }
+  @media only screen and (min-width: 62rem) {
+    font-size: 1rem;
+  }
 `;
 
 const Colours = styled.p`
@@ -52,26 +65,28 @@ const Price = styled.h2`
   font-weight: 400;
 `;
 
+const LinkTo = styled(Link)`
+  cursor: pointer;
+`;
 const Underline = styled.a`text-decoration: underline;`;
-const Link = styled.a`cursor: pointer;`;
 
 function ProductCard(props) {
   return (
     <Product>
-      <Link>
+      <LinkTo to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
         <Pic src={props.src} alt={props.alt} />
-      </Link>
+      </LinkTo>
       <Info>
         <div>
           {props.promoLabel !== ' ' &&
             <Promo>
               {props.promoLabel}
             </Promo>}
-          <Link>
-            <Title>
-              {props.productName}
-            </Title>
-          </Link>
+
+          <Title to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
+            {props.productName}
+          </Title>
+
           {props.coloursAmount !== ' ' &&
             <Colours>
               Available in <Underline>{props.coloursAmount} colours</Underline>
@@ -88,6 +103,9 @@ function ProductCard(props) {
 
 ProductCard.propTypes = {
   src: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  subcategory: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   productName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,

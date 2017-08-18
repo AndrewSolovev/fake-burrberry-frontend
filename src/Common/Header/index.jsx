@@ -21,7 +21,6 @@ const LogoLink = styled.a`cursor: pointer;`;
 const Ham = styled.button`
   position: absolute;
   display: block;
-  margin-left: 0.5rem;
   padding: 5px 8px;
   background-image: url(${Hamburger});
   background-size: cover;
@@ -31,7 +30,6 @@ const Ham = styled.button`
 
 const Shopping = styled.button`
   position: absolute;
-  margin-left: 0.5rem;
   padding: 0;
   border: none;
   font-size: 0.75rem;
@@ -56,6 +54,9 @@ const Nav = styled.nav`
   @media only screen and (min-width: 48rem) {
     margin-top: 1.5rem;
   }
+  @media only screen and (min-width: 62rem) {
+    margin-top: 2rem;
+  }
 `;
 
 const NavLink = styled.a`
@@ -77,7 +78,7 @@ const NavLink = styled.a`
 
 export default () =>
   (<Header>
-    <div>
+    <div className="container">
       <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
         <Ham />
       </MediaQuery>

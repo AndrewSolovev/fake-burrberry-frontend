@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h1`
@@ -16,4 +15,4 @@ const Title = styled.h1`
   }
 `;
 
-export default () => <Title>Men&apos;s clothing</Title>;
+export default Title;

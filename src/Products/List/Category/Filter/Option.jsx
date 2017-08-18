@@ -33,6 +33,9 @@ const Select = styled.button`
     margin-right: 3rem;
     margin-right: ${props => (props.position ? '0' : '')};
   }
+  @media only screen and (min-width: 62rem) {
+    margin-top: 2.5rem;
+  }
 `;
 
 function Option(props) {

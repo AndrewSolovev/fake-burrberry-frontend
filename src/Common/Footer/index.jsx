@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
+import breakpoints from '../../breakpoints';
 
 const Footer = styled.footer`
   margin-top: 4rem;
@@ -35,17 +37,18 @@ const Title = styled.h3`
 
 const Link = styled.a`
   display: block;
-  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #999999;
+  cursor: pointer;
 `;
 const LocationButtons = styled.div`@media only screen and (min-width: 48rem) {display: flex;}`;
 
 const LocationButton = styled.button`
   display: block;
   padding: 0;
-  padding-top: 1rem;
+  margin-top: 1rem;
   border: none;
   font-size: 0.75rem;
   font-weight: 400;
@@ -64,7 +67,7 @@ const LocationButton = styled.button`
 
 const NeedHelp = styled.h2`
   margin: 0;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
   text-align: center;
   font-size: 1rem;
   line-height: 1.125rem;
@@ -90,6 +93,23 @@ const Contact = styled.a`
   @media only screen and (min-width: 48rem) {
     display: none;
   }
+`;
+const Pic = styled.img`
+  margin-top: 4rem;
+  display: block;
+  height: 154px;
+  width: auto;
+`;
+const FindStore = styled.a`
+  display: block;
+  margin-top: 1rem;
+  font-family: Raleway;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
 `;
 
 export default () =>
@@ -129,10 +149,20 @@ export default () =>
             <Link>Japan Only - SCTL indications</Link>
           </Nav>
         </div>
+        <MediaQuery minDeviceWidth={breakpoints.md}>
+          <div className="col-md-3">
+            <Pic src="/shopimage.jpg" alt="shop" />
+            <FindStore>Find a Store</FindStore>
+          </div>
+        </MediaQuery>
       </div>
       <LocationButtons>
-        <LocationButton type="button">Shipping country: RussiaFederation</LocationButton>
-        <LocationButton type="button">Language: English</LocationButton>
+        <LocationButton type="button">
+          Shipping country: <b>Russian Federation</b>
+        </LocationButton>
+        <LocationButton type="button">
+          Language: <b>English</b>
+        </LocationButton>
       </LocationButtons>
       <NeedHelp>Need help?</NeedHelp>
       <Contact>Find out more and contact us</Contact>

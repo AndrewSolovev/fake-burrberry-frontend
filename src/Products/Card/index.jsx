@@ -68,7 +68,10 @@ const Price = styled.h2`
 const LinkTo = styled(Link)`
   cursor: pointer;
 `;
-const Underline = styled.a`text-decoration: underline;`;
+const Underline = styled(Link)`
+  color: #171717;
+  text-decoration: underline;
+`;
 
 function ProductCard(props) {
   return (
@@ -87,9 +90,12 @@ function ProductCard(props) {
             {props.productName}
           </Title>
 
-          {props.coloursAmount !== ' ' &&
+          {props.coloursAmount !== 1 &&
             <Colours>
-              Available in <Underline>{props.coloursAmount} colours</Underline>
+              Available in{' '}
+              <Underline to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
+                {props.coloursAmount} colours
+              </Underline>
             </Colours>}
           <Price>
             <FormattedPrice price={props.price} currency={props.currency} />
@@ -116,7 +122,7 @@ ProductCard.propTypes = {
 
 ProductCard.defaultProps = {
   promoLabel: ' ',
-  coloursAmount: ' ',
+  coloursAmount: 1,
 };
 
 export default ProductCard;

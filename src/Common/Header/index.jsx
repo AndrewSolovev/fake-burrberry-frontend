@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
+import { NavLink } from 'react-router-dom';
 
 import breakpoints from '../../breakpoints';
 import Hamburger from '../../icons/hamburger.svg';
@@ -59,7 +60,7 @@ const Nav = styled.nav`
   }
 `;
 
-const NavLink = styled.a`
+const Link = styled(NavLink)`
   display: inline-block;
   padding: 1rem;
   border-bottom: 1px solid #ffffff;
@@ -68,11 +69,15 @@ const NavLink = styled.a`
   line-height: 1rem;
   letter-spacing: 1.5px;
   color: #999999;
+  text-decoration: none;
   cursor: pointer;
+  color: ${props => (props.selected ? '#171717' : '')};
+  border-bottom: ${props => (props.selected ? '1px solid #171717;' : '')};
 
   &:hover {
     color: #171717;
     border-bottom: 1px solid #171717;
+
   }
 `;
 
@@ -91,11 +96,13 @@ export default () =>
     </div>
     <MediaQuery minDeviceWidth={breakpoints.sm}>
       <Nav>
-        <NavLink>WOMEN</NavLink>
-        <NavLink>MEN</NavLink>
-        <NavLink>CHILDREN</NavLink>
-        <NavLink>BEAUTY</NavLink>
-        <NavLink>EXPERIENCE</NavLink>
+        <Link to="/products/women/">WOMEN</Link>
+        <Link selected to="/products/men/">
+          MEN
+        </Link>
+        <Link to="/products/children/">CHILDREN</Link>
+        <Link to="/products/beauty/">BEAUTY</Link>
+        <Link to="/products/experience/">EXPERIENCE</Link>
       </Nav>
     </MediaQuery>
   </Header>);

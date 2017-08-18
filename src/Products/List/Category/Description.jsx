@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Desc = styled.p`
+const Description = styled.p`
   margin: 0;
   padding-top: 1rem;
   margin-left: -0.5rem;
@@ -15,8 +15,8 @@ const More = styled.a`
   cursor: pointer;
 `;
 export default () =>
-  (<Desc>
+  (<Description>
     Explore our menswear collection for the season. Sculptural knitwear, sweatshirts, artist
     overalls and oversized cabans feature alongside our signature trench coat in both heritage.{' '}
     <More>More</More>
-  </Desc>);
+  </Description>);

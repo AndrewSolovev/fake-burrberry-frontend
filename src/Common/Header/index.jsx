@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 
 import breakpoints from '../../breakpoints';
-import Hamburger from './hamburger.svg';
+import Hamburger from '../../icons/hamburger.svg';
 import Logo from '../Logo/';
-import arrowImg from '../../Pics/arrow.svg';
+import arrowImg from '../../icons/arrow.svg';
 
 const Header = styled.header`
   padding: 1rem 0rem;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Title from './Title';
-import Desc from './Desc';
+import Description from './Description';
 import Filter from './Filter';
 
 const Category = styled.div`background-color: #f3f3f3;`;
@@ -11,7 +11,7 @@ export default () =>
     <div className="container">
       <Title />
       <div className="col-xs-12 col-sm-9">
-        <Desc />
+        <Description />
       </div>
       <Filter />
     </div>

@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import Card from './Card/';
 import Hr from '../../Common/Hr/';
 import SectionHeading from './SectionHeading/';
-import Textarea from './TextArea';
+import TextSection from './TextSection';
 import WeRecommend from './WeRecommend/';
 import Shipping from './Shipping';
 import MoreForYou from './MoreForYou';
@@ -59,7 +59,7 @@ export default () =>
       <DescContainer>
         <div>
           <SectionHeading isOpened sectionName="DESCRIPTION" />
-          <Textarea />
+          <TextSection />
         </div>
         <MediaQuery minDeviceWidth={breakpoints.md}>
           <Img src="./desc_img.jpg" />

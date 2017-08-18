@@ -26,6 +26,10 @@ const Showing = styled.div`text-align: center;`;
 const ShowingOf = styled.p`
   margin: 0;
   padding-bottom: 1rem;
+  line-height: 1.125rem;
+  @media only screen and (min-width: 48rem) {
+    padding-bottom: 2rem;
+  }
 `;
 export default () =>
   (<div>
@@ -41,7 +45,7 @@ export default () =>
             currency="RUB"
             productName="Check Cashmere Scarf"
             promoLabel="Relaxed Fit"
-            coloursValue={3}
+            coloursAmount={3}
           />
         </div>
         <div className="col-xs-6 col-sm-3">
@@ -52,7 +56,7 @@ export default () =>
             currency="RUB"
             productName="Check Cashmere Scarf"
             promoLabel="Relaxed Fit"
-            coloursValue={3}
+            coloursAmount={3}
           />
         </div>
         <div className="col-xs-6 col-sm-3">
@@ -63,7 +67,7 @@ export default () =>
             currency="RUB"
             productName="Check Cashmere Scarf"
             promoLabel="Relaxed Fit"
-            coloursValue={3}
+            coloursAmount={3}
           />
         </div>
         <div className="col-xs-6 col-sm-3">
@@ -74,7 +78,7 @@ export default () =>
             currency="RUB"
             productName="Check Cashmere Scarf"
             promoLabel="Relaxed Fit"
-            coloursValue={3}
+            coloursAmount={3}
           />
         </div>
       </div>
@@ -90,7 +94,7 @@ export default () =>
             currency="RUB"
             productName="Check Cashmere Scarf"
             promoLabel="Relaxed Fit"
-            coloursValue={3}
+            coloursAmount={3}
           />
         </div>
         <div className="col-xs-6 col-sm-3">
@@ -101,7 +105,7 @@ export default () =>
             currency="RUB"
             productName="Check Cashmere Scarf"
             promoLabel="Relaxed Fit"
-            coloursValue={3}
+            coloursAmount={3}
           />
         </div>
         <div className="col-xs-6 col-sm-3">
@@ -112,7 +116,7 @@ export default () =>
             currency="RUB"
             productName="Check Cashmere Scarf"
             promoLabel="Relaxed Fit"
-            coloursValue={3}
+            coloursAmount={3}
           />
         </div>
         <div className="col-xs-6 col-sm-3">
@@ -123,7 +127,7 @@ export default () =>
             currency="RUB"
             productName="Check Cashmere Scarf"
             promoLabel="Relaxed Fit"
-            coloursValue={3}
+            coloursAmount={3}
           />
         </div>
       </div>

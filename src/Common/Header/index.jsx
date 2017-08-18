@@ -8,19 +8,16 @@ import Logo from '../Logo/';
 import arrowImg from '../../icons/arrow.svg';
 
 const Header = styled.header`
-  padding: 1rem 0rem;
+  margin: 1rem 0rem;
 
   @media only screen and (min-width: 48rem) {
-    padding: 1.5rem 0rem;
+    margin: 1.5rem 0rem 0rem 0rem;
   }
   @media only screen and (min-width: 62rem) {
-    padding: 2rem 0rem;
+    margin: 2rem 0rem 0rem 0rem;
   }
 `;
-const LogoLink = styled.a`
-  display: block;
-  text-align: center;
-`;
+const LogoLink = styled.a`cursor: pointer;`;
 const Ham = styled.button`
   position: absolute;
   display: block;
@@ -33,13 +30,12 @@ const Ham = styled.button`
 `;
 
 const Shopping = styled.button`
-  display: block;
-  margin: 0;
+  position: absolute;
+  margin-left: 0.5rem;
   padding: 0;
-  padding-left: 0.5rem;
   border: none;
   font-size: 0.75rem;
-  line-height: 1.25rem;
+  line-height: 1rem;
   background-color: #ffffff;
   color: #999999;
   font-weight: 400;
@@ -55,7 +51,12 @@ const Shopping = styled.button`
     flex-shrink: 0;
   }
 `;
-const Nav = styled.nav`text-align: center;`;
+const Nav = styled.nav`
+  text-align: center;
+  @media only screen and (min-width: 48rem) {
+    margin-top: 1.5rem;
+  }
+`;
 
 const NavLink = styled.a`
   display: inline-block;

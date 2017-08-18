@@ -6,9 +6,15 @@ import Option from './Option';
 
 const Filter = styled.div`
   display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  margin: 0;
+  padding: 0;
   padding-bottom: 1.5rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow: scroll;
+  @media all and (min-width: 48rem) {
+    margin: 0;
+  }
 `;
 
 const Refine = styled.p`
@@ -21,7 +27,6 @@ const Refine = styled.p`
   font-weight: 400;
   flex-shrink: 0;
 `;
-
 export default () =>
   (<Filter>
     <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
@@ -30,5 +35,5 @@ export default () =>
     <Option value="Category" />
     <Option value="Colour" />
     <Option value="Size" />
-    <Option value="Sort by price" />
+    <Option position="right" value="Sort by price" />
   </Filter>);

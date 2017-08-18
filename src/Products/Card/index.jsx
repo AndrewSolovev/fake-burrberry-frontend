@@ -10,7 +10,7 @@ const Product = styled.a`
 `;
 
 const Pic = styled.img`
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   display: block;
   width: 100%;
 `;
@@ -18,6 +18,7 @@ const Pic = styled.img`
 const Info = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 `;
 
 const Promo = styled.p`
@@ -52,20 +53,25 @@ const Price = styled.h2`
 `;
 
 const Underline = styled.a`text-decoration: underline;`;
+const Link = styled.a`cursor: pointer;`;
 
 function ProductCard(props) {
   return (
     <Product>
-      <Pic src={props.src} alt={props.alt} />
+      <Link>
+        <Pic src={props.src} alt={props.alt} />
+      </Link>
       <Info>
         <div>
           {props.promoLabel !== ' ' &&
             <Promo>
               {props.promoLabel}
             </Promo>}
-          <Title>
-            {props.productName}
-          </Title>
+          <Link>
+            <Title>
+              {props.productName}
+            </Title>
+          </Link>
           {props.coloursAmount !== ' ' &&
             <Colours>
               Available in <Underline>{props.coloursAmount} colours</Underline>

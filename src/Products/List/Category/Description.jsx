@@ -11,7 +11,8 @@ const Description = styled.p`
   font-weight: 400;
 `;
 const More = styled.a`
-  text-decoration: underline;
+  border-bottom: 1px solid #171717;
+  text-decoration: none;
   cursor: pointer;
 `;
 export default () =>

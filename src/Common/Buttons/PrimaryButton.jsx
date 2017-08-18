@@ -17,7 +17,7 @@ const Button = styled.button`
     props.secondary &&
     css`
     background-color: inherit;
-    border: solid 1px #999999;
+    border: solid 1px #171717;
     color: #171717;
 
   `};

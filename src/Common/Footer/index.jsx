@@ -101,16 +101,17 @@ const Pic = styled.img`
   display: block;
   height: 154px;
   width: auto;
+  margin-bottom: 1rem;
 `;
 const FindStore = styled.a`
-  display: block;
   margin-top: 1rem;
   font-family: Raleway;
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1rem;
   text-align: left;
-  text-decoration: underline;
+  border-bottom: 1px solid #171717;
+  text-decoration: none;
   cursor: pointer;
 `;
 

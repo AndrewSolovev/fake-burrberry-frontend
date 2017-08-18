@@ -51,7 +51,6 @@ const Title = styled(Link)`
 
 const Colours = styled.p`
   margin: 0;
-  margin-bottom: 0.375rem;
   padding-top: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -59,7 +58,7 @@ const Colours = styled.p`
 
 const Price = styled.h2`
   margin: 0;
-  margin-top: 0.375rem;
+  margin-top: 0.25rem;
   margin-bottom: 3rem;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -71,7 +70,8 @@ const LinkTo = styled(Link)`
 `;
 const Underline = styled(Link)`
   color: #171717;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid #171717;
 `;
 
 function ProductCard(props) {
@@ -113,7 +113,7 @@ ProductCard.propTypes = {
   to: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   subcategory: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   productName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
@@ -124,6 +124,7 @@ ProductCard.propTypes = {
 ProductCard.defaultProps = {
   promoLabel: ' ',
   coloursAmount: 1,
+  alt: ' ',
 };
 
 export default ProductCard;

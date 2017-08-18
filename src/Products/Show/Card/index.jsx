@@ -39,7 +39,7 @@ const ButtonsContainer = styled.div`
 
 const DeliveryTitle = styled.h3`
   margin: 0;
-  padding-top: 0.5rem;
+  margin-top: 1.5rem;
   padding-left: 0.5rem;
   font-size: 0.75rem;
   font-weight: 700;
@@ -60,6 +60,8 @@ const BlackButton = PrimaryButton.extend`
     margin-right: 1rem;
   }
 `;
+
+const NeedHelp = TextButton.extend`margin-top: 1.5rem;`;
 
 export default () =>
   (<Container>
@@ -97,7 +99,7 @@ export default () =>
               <PrimaryButton secondary>FIND IN STORE</PrimaryButton>
             </ButtonsContainer>
             <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-              <TextButton>NEED SIZE HELP?</TextButton>
+              <NeedHelp>NEED SIZE HELP?</NeedHelp>
             </MediaQuery>
           </Buttons>
 

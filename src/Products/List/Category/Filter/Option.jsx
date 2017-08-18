@@ -13,7 +13,7 @@ const Select = styled.button`
   border: none;
   font-family: Raleway;
   font-size: 0.75rem;
-  line-height: 1.25rem;
+  line-height: 1rem;
   color: #171717;
   background-color: #f3f3f3;
   font-weight: 400;

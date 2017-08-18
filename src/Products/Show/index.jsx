@@ -7,7 +7,7 @@ import Card from './Card/';
 import Hr from '../../Common/Hr/';
 import SectionHeading from './SectionHeading/';
 import TextSection from './TextSection';
-import WeRecommend from './WeRecommend/';
+import WeRecommend from './WeRecommend';
 import Shipping from './Shipping';
 import MoreForYou from './MoreForYou';
 import breakpoints from '../../breakpoints';
@@ -62,7 +62,7 @@ export default () =>
           <TextSection />
         </div>
         <MediaQuery minDeviceWidth={breakpoints.md}>
-          <Img src="./desc_img.jpg" />
+          <Img src="/desc_img.jpg" />
         </MediaQuery>
       </DescContainer>
     </section>
@@ -92,7 +92,7 @@ export default () =>
 
     <WeRecommend />
 
-    <MediaQuery maxDeviceWidth={breakpoints.sm}>
+    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
       <MoreForYou />
     </MediaQuery>
   </div>);

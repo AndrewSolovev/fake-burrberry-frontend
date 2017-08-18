@@ -21,7 +21,15 @@ const Line = Hr.extend`
   margin-top: 1rem;
   margin-bottom: 1rem;
 `;
-const Showing = styled.div`text-align: center;`;
+const Showing = styled.div`
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  @media only screen and (min-width: 48rem) {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+  }
+`;
 
 const ShowingOf = styled.p`
   margin: 0;
@@ -37,7 +45,7 @@ export default () =>
     <div className="container">
       <SectionTitle>Heritage Trench Coats</SectionTitle>
       <div className="row">
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="heritage-trench-coats"
@@ -51,7 +59,7 @@ export default () =>
             alt="Trench Coat"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="heritage-trench-coats"
@@ -64,7 +72,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="heritage-trench-coats"
@@ -77,7 +85,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="heritage-trench-coats"
@@ -90,7 +98,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="heritage-trench-coats"
@@ -103,7 +111,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="heritage-trench-coats"
@@ -116,7 +124,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="heritage-trench-coats"
@@ -129,7 +137,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="heritage-trench-coats"
@@ -147,7 +155,7 @@ export default () =>
 
       <SectionTitle>Single Breasted Trench Coats</SectionTitle>
       <div className="row">
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="single-breasted-trench-coats"
@@ -160,7 +168,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="single-breasted-trench-coats"
@@ -173,7 +181,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="single-breasted-trench-coats"
@@ -186,7 +194,7 @@ export default () =>
             currency="RUB"
           />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="col-xs-6 col-md-3">
           <Card
             category="men"
             subcategory="single-breasted-trench-coats"

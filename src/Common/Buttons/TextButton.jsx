@@ -10,6 +10,7 @@ const TextButton = styled.button`
   line-height: 1rem;
   font-size: 0.75rem;
   font-weight: 400;
+  cursor: pointer;
   @media only screen and (min-width: 62rem) {
     padding-top: 0;
   }

@@ -14,8 +14,8 @@ import List from './Products/List/';
 addLocaleData([...en, ...ru]);
 
 export default () =>
-  (<Router>
-    <IntlProvider locale={navigator.language}>
+  (<IntlProvider locale={navigator.language}>
+    <Router>
       <div>
         <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
         <Header />
@@ -26,5 +26,5 @@ export default () =>
         </Switch>
         <Footer />
       </div>
-    </IntlProvider>
-  </Router>);
+    </Router>
+  </IntlProvider>);

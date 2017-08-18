@@ -11,6 +11,7 @@ const Button = styled.button`
   border: solid 1px #171717;
   color: #ffffff;
   flex-basis: 100%;
+  cursor: pointer;
 
   ${props =>
     props.secondary &&

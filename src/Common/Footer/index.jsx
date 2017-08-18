@@ -56,6 +56,7 @@ const LocationButton = styled.button`
   line-height: 16px;
   color: #999999;
   background-color: #f3f3f3;
+  cursor: pointer;
 
   @media only screen and (min-width: 48rem) {
     margin-right: 1.5rem;
@@ -73,6 +74,7 @@ const NeedHelp = styled.h2`
   line-height: 1.125rem;
   color: #171717;
   font-weight: 700;
+  cursor: pointer;
 
   @media only screen and (min-width: 48rem) {
     display: none;

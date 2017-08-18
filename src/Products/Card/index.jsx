@@ -11,6 +11,7 @@ const Pic = styled.img`
   margin-bottom: 1rem;
   display: block;
   width: 100%;
+  height: auto;
 `;
 
 const Info = styled.div`

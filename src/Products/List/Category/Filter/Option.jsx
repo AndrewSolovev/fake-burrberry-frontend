@@ -17,6 +17,7 @@ const Select = styled.button`
   color: #171717;
   background-color: #f3f3f3;
   font-weight: 400;
+  cursor: pointer;
 
   &:after {
     content: "";

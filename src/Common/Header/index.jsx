@@ -33,11 +33,14 @@ const Shopping = styled.button`
   position: absolute;
   padding: 0;
   border: none;
+  font-family: Raleway;
   font-size: 0.75rem;
   line-height: 1rem;
+  font-weight: 600;
   background-color: #ffffff;
   color: #999999;
   font-weight: 400;
+  cursor: pointer;
 
   &:after {
     content: "";
@@ -71,14 +74,12 @@ const Link = styled(NavLink)`
   color: #999999;
   text-decoration: none;
   cursor: pointer;
-  color: ${props => (props.selected ? '#171717' : '')};
-  border-bottom: ${props => (props.selected ? '1px solid #171717;' : '')};
 
-  &:hover {
+  &.active {
     color: #171717;
     border-bottom: 1px solid #171717;
-
   }
+
 `;
 
 export default () =>
@@ -97,9 +98,7 @@ export default () =>
     <MediaQuery minDeviceWidth={breakpoints.sm}>
       <Nav>
         <Link to="/products/women/">WOMEN</Link>
-        <Link selected to="/products/men/">
-          MEN
-        </Link>
+        <Link to="/products/men/">MEN</Link>
         <Link to="/products/children/">CHILDREN</Link>
         <Link to="/products/beauty/">BEAUTY</Link>
         <Link to="/products/experience/">EXPERIENCE</Link>

@@ -24,12 +24,12 @@ const Promo = styled.p`
   margin: 0;
   font-size: 0.75rem;
   line-height: 1rem;
+  padding-bottom: 0.5rem;
 `;
 
 const Title = styled(Link)`
   display: block;
   margin: 0;
-  padding-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -78,7 +78,7 @@ const Underline = styled(Link)`
 function ProductCard(props) {
   return (
     <Product>
-      <LinkTo to={`/${props.category}/${props.subcategory}/${props.to}`}>
+      <LinkTo to={`/${props.to}`}>
         <Pic src={props.src} alt={props.alt} />
       </LinkTo>
       <Info>
@@ -88,16 +88,13 @@ function ProductCard(props) {
               {props.promoLabel}
             </Promo>}
 
-          <Title to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
+          <Title to={`/${props.to}`}>
             {props.productName}
           </Title>
 
           {props.coloursAmount !== 1 &&
             <Colours>
-              Available in{' '}
-              <Underline to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
-                {props.coloursAmount} colours
-              </Underline>
+              Available in <Underline to={`/${props.to}`}>{props.coloursAmount} colours</Underline>
             </Colours>}
           <Price>
             <FormattedPrice price={props.price} currency={props.currency} />
@@ -112,8 +109,6 @@ function ProductCard(props) {
 ProductCard.propTypes = {
   src: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  subcategory: PropTypes.string.isRequired,
   alt: PropTypes.string,
   productName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,

@@ -63,6 +63,9 @@ const LocationButton = styled.button`
     padding-left: 0;
     padding-right: 0;
   }
+  @media only screen and (min-width: 62rem) {
+    margin-top: 2.25rem;
+  }
 `;
 
 const NeedHelp = styled.h2`

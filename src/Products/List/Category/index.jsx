@@ -10,7 +10,7 @@ export default () =>
   (<Category>
     <div className="container">
       <Title>Men&apos;s Сlothing</Title>
-      <div className="col-xs-12 col-md-9">
+      <div className="col-xs-12 col-md-9 col-lg-7">
         <Description />
       </div>
       <Filter />

@@ -78,7 +78,7 @@ const Underline = styled(Link)`
 function ProductCard(props) {
   return (
     <Product>
-      <LinkTo to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
+      <LinkTo to={`/${props.category}/${props.subcategory}/${props.to}`}>
         <Pic src={props.src} alt={props.alt} />
       </LinkTo>
       <Info>

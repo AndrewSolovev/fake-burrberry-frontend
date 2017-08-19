@@ -97,11 +97,11 @@ export default () =>
     </div>
     <MediaQuery minWidth={breakpoints.sm}>
       <Nav>
-        <Link to="/products/women/">WOMEN</Link>
-        <Link to="/products/men/">MEN</Link>
-        <Link to="/products/children/">CHILDREN</Link>
-        <Link to="/products/beauty/">BEAUTY</Link>
-        <Link to="/products/experience/">EXPERIENCE</Link>
+        <Link to="/women/">WOMEN</Link>
+        <Link to="/men/">MEN</Link>
+        <Link to="/children/">CHILDREN</Link>
+        <Link to="/beauty/">BEAUTY</Link>
+        <Link to="/experience/">EXPERIENCE</Link>
       </Nav>
     </MediaQuery>
   </Header>);

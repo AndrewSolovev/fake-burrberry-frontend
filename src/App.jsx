@@ -20,9 +20,10 @@ export default () =>
         <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
         <Header />
         <Switch>
-          <Route exact path="/products/:section/" component={List} />
-          <Route exact path="/products/:section/:category" component={List} />
-          <Route path="/products/:section/:category/:id" component={Show} />
+          <Route exact path="/men/" component={List} />
+          <Route exact path="/men/:section/" component={List} />
+          <Route exact path="/men/:section/:category" component={Show} />
+          <Route path="/:section/:category/:id" component={Show} />
         </Switch>
         <Footer />
       </div>

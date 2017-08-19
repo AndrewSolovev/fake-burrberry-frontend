@@ -154,7 +154,7 @@ export default () =>
         </div>
         <MediaQuery minWidth={breakpoints.md}>
           <div className="col-md-3">
-            <Pic src="/shopimage.jpg" alt="shop" />
+            <Pic src={`${process.env.PUBLIC_URL}/shopimage.jpg`} alt="shop" />
             <FindStore>Find a store</FindStore>
           </div>
         </MediaQuery>

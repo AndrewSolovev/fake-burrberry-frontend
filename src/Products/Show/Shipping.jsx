@@ -1,14 +1,16 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 
+import breakpoints from '../../breakpoints';
+
 const Img = styled.img`
-  display: none;
+  display: block;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 
   @media only screen and (min-width: 62rem) {
     margin-bottom: 0rem;
-    display: block;
     width: 100%;
   }
 `;
@@ -60,9 +62,15 @@ const OptionsDesc = styled.p`
 
 export default () =>
   (<div className="row">
-    <div className="col-md-7">
-      <Img src="/shipping-img.jpg" alt="two burberry's boxes with tape" />
-    </div>
+    <MediaQuery minWidth={breakpoints.sm}>
+      <div className="col-md-7">
+        <Img
+          src={`${process.env.PUBLIC_URL}/shipping-img.jpg`}
+          alt="two burberry's boxes with tape"
+        />
+      </div>
+    </MediaQuery>
+
     <div className="col-md-5">
       <Title>DELIVERY</Title>
       <OptionsTitle>Free Next Day Delivery</OptionsTitle>

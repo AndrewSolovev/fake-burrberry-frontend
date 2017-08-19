@@ -69,7 +69,7 @@ export default () =>
       <div className="row">
         <MediaQuery minWidth={breakpoints.md}>
           <div>
-            <CardPic src="/bitmap.jpg" />
+            <CardPic src={`${process.env.PUBLIC_URL}/bitmap.jpg`} />
           </div>
         </MediaQuery>
 

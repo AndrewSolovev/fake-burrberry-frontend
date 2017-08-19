@@ -22,8 +22,8 @@ const Pic = styled.img`
 `;
 export default () =>
   (<Container>
-    <Pic src="/bitmap_1.jpg" alt="man in a coat" />
-    <Pic src="/bitmap_2.jpg" alt="coat closer" />
-    <Pic src="/bitmap_3.jpg" alt="coat's collar closer" />
-    <Pic src="/bitmap_4.jpg" alt="man in a coat from behind" />
+    <Pic src={`${process.env.PUBLIC_URL}/bitmap_1.jpg`} alt="man in a coat" />
+    <Pic src={`${process.env.PUBLIC_URL}/bitmap_2.jpg`} alt="coat closer" />
+    <Pic src={`${process.env.PUBLIC_URL}/bitmap_3.jpg`} alt="coat's collar closer" />
+    <Pic src={`${process.env.PUBLIC_URL}/bitmap_4.jpg`} alt="man in a coat from behind" />
   </Container>);

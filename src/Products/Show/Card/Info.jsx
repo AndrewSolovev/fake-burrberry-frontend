@@ -94,7 +94,7 @@ const Size = styled.p`
 
 export default () =>
   (<div className="row">
-    <MediaQuery minDeviceWidth={breakpoints.md}>
+    <MediaQuery minWidth={breakpoints.md}>
       <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
       <Price>
         <FormattedPrice price={110000} currency="RUB" />
@@ -102,7 +102,7 @@ export default () =>
     </MediaQuery>
     <div className="col-xs-12 col-md-12 col-xl-12">
       <Info>
-        <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+        <MediaQuery maxWidth={breakpoints.md - 1}>
           <PriceAndID>
             <Price>
               <FormattedPrice price={110000} currency="RUB" />
@@ -121,7 +121,7 @@ export default () =>
           </ChangeColour>
         </div>
 
-        <MediaQuery minDeviceWidth={breakpoints.md}>
+        <MediaQuery minWidth={breakpoints.md}>
           <div className="col-xl-6">
             <SizeContainer>
               <Size>

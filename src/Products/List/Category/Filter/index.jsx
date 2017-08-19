@@ -11,10 +11,9 @@ const Filter = styled.div`
   padding-bottom: 1.5rem;
   flex-wrap: nowrap;
   flex-direction: row;
-  overflow: scroll;
+  overflow: auto;
   @media all and (min-width: 48rem) {
     margin: 0;
-    overflow: visible;
   }
 `;
 

@@ -51,7 +51,7 @@ export default () =>
     </Helmet>
 
     <Card />
-    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
       <Hr />
     </MediaQuery>
 
@@ -61,16 +61,16 @@ export default () =>
           <SectionHeading isOpened sectionName="DESCRIPTION" />
           <TextSection />
         </div>
-        <MediaQuery minDeviceWidth={breakpoints.md}>
+        <MediaQuery minWidth={breakpoints.md}>
           <Img src="/desc_img.jpg" />
         </MediaQuery>
       </DescContainer>
     </section>
-    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
       <Hr />
     </MediaQuery>
 
-    <MediaQuery minDeviceWidth={breakpoints.md}>
+    <MediaQuery minWidth={breakpoints.md}>
       <section className="container">
         <Gallery>
           <LeftImg src="/bitmap_3.jpg" />
@@ -81,18 +81,18 @@ export default () =>
     </MediaQuery>
 
     <section className="container">
-      <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+      <MediaQuery maxWidth={breakpoints.sm - 1}>
         <SectionHeading sectionName="SHIPPING & RETURNS" />
       </MediaQuery>
       <Shipping />
     </section>
-    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
       <Hr />
     </MediaQuery>
 
     <WeRecommend />
 
-    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
       <MoreForYou />
     </MediaQuery>
   </div>);

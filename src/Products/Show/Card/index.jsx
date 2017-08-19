@@ -67,19 +67,19 @@ export default () =>
   (<Container>
     <section className="container">
       <div className="row">
-        <MediaQuery minDeviceWidth={breakpoints.md}>
+        <MediaQuery minWidth={breakpoints.md}>
           <div>
             <CardPic src="/bitmap.jpg" />
           </div>
         </MediaQuery>
 
-        <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+        <MediaQuery maxWidth={breakpoints.md - 1}>
           <div className="col-xs-12">
             <Title>Long Cotton Gabardine Car Coat</Title>
           </div>
         </MediaQuery>
 
-        <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+        <MediaQuery maxWidth={breakpoints.md - 1}>
           <div className="col-xs-12 col-md-7 col-lg-6">
             <Showcase />
           </div>
@@ -90,20 +90,20 @@ export default () =>
 
           <Buttons>
             <ButtonsContainer>
-              <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+              <MediaQuery maxWidth={breakpoints.md - 1}>
                 <BlackButton>SELECT A SIZE</BlackButton>
               </MediaQuery>
-              <MediaQuery minDeviceWidth={breakpoints.md}>
+              <MediaQuery minWidth={breakpoints.md}>
                 <BlackButton>ADD TO BAG</BlackButton>
               </MediaQuery>
               <PrimaryButton secondary>FIND IN STORE</PrimaryButton>
             </ButtonsContainer>
-            <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+            <MediaQuery maxWidth={breakpoints.md - 1}>
               <NeedHelp>NEED SIZE HELP?</NeedHelp>
             </MediaQuery>
           </Buttons>
 
-          <MediaQuery minDeviceWidth={breakpoints.md}>
+          <MediaQuery minWidth={breakpoints.md}>
             <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
             <DeliveryP>Order before 7pm Monday to Thursday for delivery the next day</DeliveryP>
           </MediaQuery>

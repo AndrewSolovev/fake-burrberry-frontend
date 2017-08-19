@@ -18,7 +18,6 @@ const Footer = styled.footer`
 
 const Nav = styled.nav`
   display: none;
-  padding-bottom: 0.25rem;
 
   @media only screen and (min-width: 48rem) {
     display: block;
@@ -59,8 +58,7 @@ const LocationButton = styled.button`
   cursor: pointer;
 
   @media only screen and (min-width: 48rem) {
-    margin-right: 1.5rem;
-    margin-left: 0rem;
+    margin: 2.25rem 1.5rem 0 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -152,7 +150,7 @@ export default () =>
             <Link>Japan Only - SCTL indications</Link>
           </Nav>
         </div>
-        <MediaQuery minDeviceWidth={breakpoints.md}>
+        <MediaQuery minWidth={breakpoints.md}>
           <div className="col-md-3">
             <Pic src="/shopimage.jpg" alt="shop" />
             <FindStore>Find a Store</FindStore>

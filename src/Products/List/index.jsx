@@ -20,6 +20,9 @@ const SectionTitle = Title.extend`
 const Line = Hr.extend`
   margin-top: 1rem;
   margin-bottom: 1rem;
+  @media only screen and (min-width: 62rem) {
+    margin-bottom: 0;
+  }
 `;
 const Showing = styled.div`
   text-align: center;
@@ -34,9 +37,13 @@ const Showing = styled.div`
 const ShowingOf = styled.p`
   margin: 0;
   padding-bottom: 1rem;
+  font-family: Lora;
+  font-size: 1rem;
   line-height: 1.125rem;
+  font-weight: 400;
   @media only screen and (min-width: 48rem) {
     padding-bottom: 2rem;
+    font-size: 1.25rem;
   }
 `;
 export default () =>

@@ -85,17 +85,17 @@ const Link = styled(NavLink)`
 export default () =>
   (<Header>
     <div className="container">
-      <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+      <MediaQuery maxWidth={breakpoints.sm - 1}>
         <Ham />
       </MediaQuery>
-      <MediaQuery minDeviceWidth={breakpoints.sm}>
+      <MediaQuery minWidth={breakpoints.sm}>
         <Shopping>Shopping in: United Kingdom (£)</Shopping>
       </MediaQuery>
       <LogoLink>
         <Logo />
       </LogoLink>
     </div>
-    <MediaQuery minDeviceWidth={breakpoints.sm}>
+    <MediaQuery minWidth={breakpoints.sm}>
       <Nav>
         <Link to="/products/women/">WOMEN</Link>
         <Link to="/products/men/">MEN</Link>

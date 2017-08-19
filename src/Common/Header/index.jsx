@@ -9,7 +9,7 @@ import Logo from '../Logo/';
 import arrowImg from '../../icons/arrow.svg';
 
 const Header = styled.header`
-  margin: 1rem 0rem;
+  margin: 1.125rem 0rem;
 
   @media only screen and (min-width: 48rem) {
     margin: 1.5rem 0rem 0rem 0rem;
@@ -39,7 +39,6 @@ const Shopping = styled.button`
   font-weight: 600;
   background-color: #ffffff;
   color: #999999;
-  font-weight: 400;
   cursor: pointer;
 
   &:after {
@@ -50,6 +49,7 @@ const Shopping = styled.button`
     width: 12px;
     height: 6px;
     margin-left: 0.5rem;
+    margin-bottom: 2px;
     flex-shrink: 0;
   }
 `;

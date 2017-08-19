@@ -22,14 +22,14 @@ const Refine = styled.p`
   margin-top: 2rem;
   margin-right: 2rem;
   font-size: 0.75rem;
-  line-height: 1.25rem;
+  line-height: 1rem;
   color: #171717;
   font-weight: 400;
   flex-shrink: 0;
 `;
 export default () =>
   (<Filter>
-    <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
       <Refine>Refine by</Refine>
     </MediaQuery>
     <Option value="Category" />

@@ -38,6 +38,7 @@ const Link = styled.a`
   display: block;
   margin-bottom: 0.75rem;
   font-size: 0.75rem;
+  font-weight: 600;
   line-height: 1rem;
   color: #999999;
   cursor: pointer;
@@ -58,7 +59,7 @@ const LocationButton = styled.button`
   cursor: pointer;
 
   @media only screen and (min-width: 48rem) {
-    margin: 2.25rem 1.5rem 0 0;
+    margin: 1.25rem 1.5rem 0 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -98,7 +99,7 @@ const Pic = styled.img`
   margin-top: 4rem;
   display: block;
   height: 154px;
-  width: auto;
+  width: 232px;
   margin-bottom: 1rem;
 `;
 const FindStore = styled.a`
@@ -113,6 +114,7 @@ const FindStore = styled.a`
   cursor: pointer;
 `;
 
+const Grey = styled.span`color: #171717;`;
 export default () =>
   (<Footer>
     <div className="container">
@@ -153,16 +155,16 @@ export default () =>
         <MediaQuery minWidth={breakpoints.md}>
           <div className="col-md-3">
             <Pic src="/shopimage.jpg" alt="shop" />
-            <FindStore>Find a Store</FindStore>
+            <FindStore>Find a store</FindStore>
           </div>
         </MediaQuery>
       </div>
       <LocationButtons>
         <LocationButton type="button">
-          Shipping country: <b>Russian Federation</b>
+          Shipping country: <Grey>Russian Federation</Grey>
         </LocationButton>
         <LocationButton type="button">
-          Language: <b>English</b>
+          Language: <Grey>English</Grey>
         </LocationButton>
       </LocationButtons>
       <NeedHelp>Need help?</NeedHelp>

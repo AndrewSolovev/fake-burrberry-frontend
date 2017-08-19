@@ -9,8 +9,8 @@ const Category = styled.div`background-color: #f3f3f3;`;
 export default () =>
   (<Category>
     <div className="container">
-      <Title>Men&apos;s clothing</Title>
-      <div className="col-xs-12 col-sm-9 col-md-7">
+      <Title>Men&apos;s Сlothing</Title>
+      <div className="col-xs-12 col-md-9">
         <Description />
       </div>
       <Filter />

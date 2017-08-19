@@ -8,8 +8,6 @@ const Title = styled.h2`
   width: auto;
   margin: 0;
   padding-top: 3rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #171717;
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -27,12 +25,7 @@ const Title = styled.h2`
   }
 `;
 
-const Container = styled.div`
-  padding-top: 1.5rem;
-  @media only screen and (min-width: 48rem) {
-    padding-top: 1rem;
-  }
-`;
+const Container = styled.div`padding-top: 1rem;`;
 function WeRecommend() {
   return (
     <section className="container">

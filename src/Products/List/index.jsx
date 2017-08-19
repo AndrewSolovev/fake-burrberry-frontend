@@ -20,16 +20,16 @@ const SectionTitle = Title.extend`
 const Line = Hr.extend`
   margin-top: 1rem;
   margin-bottom: 1rem;
-  @media only screen and (min-width: 62rem) {
+  @media only screen and (min-width: 48rem) {
+    margin-top: 2rem;
     margin-bottom: 0;
   }
 `;
 const Showing = styled.div`
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding-bottom: 1rem;
   @media only screen and (min-width: 48rem) {
-    margin-top: 2rem;
     padding-bottom: 3rem;
   }
 `;
@@ -39,13 +39,14 @@ const ShowingOf = styled.p`
   padding-bottom: 1rem;
   font-family: Lora;
   font-size: 1rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
   font-weight: 400;
   @media only screen and (min-width: 48rem) {
     padding-bottom: 2rem;
     font-size: 1.25rem;
   }
 `;
+const ViewButton = Button.extend`line-height: 1rem;`;
 export default () =>
   (<div>
     <Category />
@@ -269,7 +270,7 @@ export default () =>
       </div>
       <Showing>
         <ShowingOf>Showing 8 of 17</ShowingOf>
-        <Button secondary>View 9 more</Button>
+        <ViewButton secondary>View 9 more</ViewButton>
       </Showing>
     </div>
   </div>);

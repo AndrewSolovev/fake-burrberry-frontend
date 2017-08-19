@@ -22,13 +22,15 @@ const Info = styled.div`
 
 const Promo = styled.p`
   margin: 0;
-  padding-bottom: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
 `;
 
 const Title = styled(Link)`
+  display: block;
   margin: 0;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
@@ -51,15 +53,14 @@ const Title = styled(Link)`
 
 const Colours = styled.p`
   margin: 0;
-  padding-top: 0.5rem;
+  margin-bottom: 0.25rem;
   font-size: 0.75rem;
   line-height: 1rem;
 `;
 
 const Price = styled.h2`
   margin: 0;
-  margin-top: 0.25rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 400;

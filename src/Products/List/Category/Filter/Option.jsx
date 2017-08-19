@@ -31,6 +31,7 @@ const Select = styled.button`
   }
 
   @media only screen and (min-width: 48rem) {
+    margin-top: 2.5rem;
     margin-right: 3rem;
     margin-right: ${props => (props.position ? '0' : '')};
   }

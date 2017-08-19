@@ -83,7 +83,7 @@ const HeartIcon = styled(Heart)`
 function ProductCard(props) {
   return (
     <Product>
-      <LinkTo to={`/${props.to}`}>
+      <LinkTo to={`${props.to}`}>
         <Pic src={props.src} alt={props.alt} />
       </LinkTo>
       <Info>
@@ -99,7 +99,7 @@ function ProductCard(props) {
 
           {props.coloursAmount !== 1 &&
             <Colours>
-              Available in <Underline to={`/${props.to}`}>{props.coloursAmount} colours</Underline>
+              Available in <Underline to={`${props.to}`}>{props.coloursAmount} colours</Underline>
             </Colours>}
           <Price>
             <FormattedPrice price={props.price} currency={props.currency} />

@@ -1,16 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Pic = styled.svg`
-  margin-left: 0.5rem;
-  cursor: pointer;
-  flex-shrink: 0;
-`;
+const Pic = styled.svg`flex-shrink: 0;`;
 
-function HeartIcon() {
+function Heart(props) {
   return (
-    <Pic width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
+    <Pic className={props.className} width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
       <title>3CF726F5-2D61-4AA0-881C-02ACD3124AA4</title>
       <desc>Created with sketchtool.</desc>
       <defs />
@@ -42,5 +39,10 @@ function HeartIcon() {
     </Pic>
   );
 }
-
-export default HeartIcon;
+Heart.propTypes = {
+  className: PropTypes.string,
+};
+Heart.defaultProps = {
+  className: ' ',
+};
+export default Heart;

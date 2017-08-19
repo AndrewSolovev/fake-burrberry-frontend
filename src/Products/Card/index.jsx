@@ -74,6 +74,11 @@ const Underline = styled(Link)`
   text-decoration: none;
   border-bottom: 1px solid #171717;
 `;
+const HeartIcon = styled(Heart)`
+  margin-left: 0.5rem;
+  cursor: pointer;
+  flex-shrink: 0;
+`;
 
 function ProductCard(props) {
   return (
@@ -100,7 +105,7 @@ function ProductCard(props) {
             <FormattedPrice price={props.price} currency={props.currency} />
           </Price>
         </div>
-        <Heart />
+        <HeartIcon />
       </Info>
     </Product>
   );

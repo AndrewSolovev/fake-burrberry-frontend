@@ -8,6 +8,7 @@ const SecondaryButton = styled.button`
   background-color: inherit;
   font-size: 0.75rem;
   line-height: 1rem;
+  cursor: pointer;
   ${props =>
     props.pressed &&
     `

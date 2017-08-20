@@ -4,11 +4,11 @@ import logoImg from './logo.svg';
 
 const Logo = styled.img`
   display: block;
-  height: 10px;
+  text-align: center;
+  margin: auto;
+  height: 12px;
   width: auto;
-  margin: 0px;
-
-  @media only screen and (min-width: 62rem) {
+  @media only screen and (min-width: 48rem) {
     height: 16px;
   }
 `;

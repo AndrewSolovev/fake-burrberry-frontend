@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
+import breakpoints from '../../breakpoints';
 
 const Footer = styled.footer`
   margin-top: 4rem;
@@ -16,7 +18,6 @@ const Footer = styled.footer`
 
 const Nav = styled.nav`
   display: none;
-  padding-bottom: 0.25rem;
 
   @media only screen and (min-width: 48rem) {
     display: block;
@@ -35,16 +36,19 @@ const Title = styled.h3`
 
 const Link = styled.a`
   display: block;
-  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
   font-size: 0.75rem;
+  font-weight: 600;
   line-height: 1rem;
   color: #999999;
+  cursor: pointer;
 `;
 const LocationButtons = styled.div`@media only screen and (min-width: 48rem) {display: flex;}`;
 
 const LocationButton = styled.button`
   display: block;
-  padding: 1rem 0.5rem 0rem 0.5rem;
+  padding: 0;
+  margin-top: 1rem;
   border: none;
   font-size: 0.75rem;
   font-weight: 400;
@@ -52,23 +56,27 @@ const LocationButton = styled.button`
   line-height: 16px;
   color: #999999;
   background-color: #f3f3f3;
+  cursor: pointer;
 
   @media only screen and (min-width: 48rem) {
-    margin-right: 1.5rem;
-    margin-left: 0rem;
+    margin: 1.25rem 1.5rem 0 0;
     padding-left: 0;
     padding-right: 0;
+  }
+  @media only screen and (min-width: 62rem) {
+    margin-top: 2.25rem;
   }
 `;
 
 const NeedHelp = styled.h2`
   margin: 0;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
   text-align: center;
   font-size: 1rem;
   line-height: 1.125rem;
   color: #171717;
   font-weight: 700;
+  cursor: pointer;
 
   @media only screen and (min-width: 48rem) {
     display: none;
@@ -90,9 +98,28 @@ const Contact = styled.a`
     display: none;
   }
 `;
+const Pic = styled.img`
+  margin-top: 4rem;
+  display: block;
+  height: 154px;
+  width: 232px;
+  margin-bottom: 1rem;
+`;
+const FindStore = styled.a`
+  margin-top: 1rem;
+  font-family: Raleway;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #171717;
+  text-decoration: none;
+  cursor: pointer;
+`;
 
-export default () => (
-  <Footer>
+const Grey = styled.span`color: #171717;`;
+export default () =>
+  (<Footer>
     <div className="container">
       <div className="row">
         <div className="col-md-3">
@@ -128,13 +155,22 @@ export default () => (
             <Link>Japan Only - SCTL indications</Link>
           </Nav>
         </div>
+        <MediaQuery minWidth={breakpoints.md}>
+          <div className="col-md-3">
+            <Pic src={`${process.env.PUBLIC_URL}/shopimage.jpg`} alt="shop" />
+            <FindStore>Find a store</FindStore>
+          </div>
+        </MediaQuery>
       </div>
       <LocationButtons>
-        <LocationButton type="button">Shipping country: RussiaFederation</LocationButton>
-        <LocationButton type="button">Language: English</LocationButton>
+        <LocationButton type="button">
+          Shipping country: <Grey>Russian Federation</Grey>
+        </LocationButton>
+        <LocationButton type="button">
+          Language: <Grey>English</Grey>
+        </LocationButton>
       </LocationButtons>
       <NeedHelp>Need help?</NeedHelp>
       <Contact>Find out more and contact us</Contact>
     </div>
-  </Footer>
-);
+  </Footer>);

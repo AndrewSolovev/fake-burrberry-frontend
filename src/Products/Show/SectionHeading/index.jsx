@@ -6,7 +6,7 @@ import triangle from './triangle.svg';
 const Container = styled.div`
   display: flex;
   flex-flow: column;
-  padding: 2rem 0.5rem;
+  padding: 2rem 0rem;
   @media only screen and (min-width: 48rem) {
     padding: 1.5rem 0 1rem 0;
     display: ${props => (props.mobileHidden ? 'none' : 'block')};

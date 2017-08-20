@@ -4,13 +4,13 @@ import MediaQuery from 'react-responsive';
 
 import { Helmet } from 'react-helmet';
 import Card from './Card/';
-import Hr from '../Common/Hr/';
+import Hr from '../../Common/Hr/';
 import SectionHeading from './SectionHeading/';
-import Textarea from './TextArea';
-import WeRecommend from './WeRecommend/';
+import TextSection from './TextSection';
+import WeRecommend from './WeRecommend';
 import Shipping from './Shipping';
 import MoreForYou from './MoreForYou';
-import breakpoints from '../breakpoints';
+import breakpoints from '../../breakpoints';
 
 const DescContainer = styled.div`display: flex;`;
 
@@ -51,45 +51,48 @@ export default () =>
     </Helmet>
 
     <Card />
-
-    <Hr />
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
+      <Hr />
+    </MediaQuery>
 
     <section className="container">
       <DescContainer>
         <div>
           <SectionHeading isOpened sectionName="DESCRIPTION" />
-          <Textarea />
+          <TextSection />
         </div>
-        <MediaQuery minDeviceWidth={breakpoints.md}>
-          <Img src="./desc_img.jpg" />
+        <MediaQuery minWidth={breakpoints.md}>
+          <Img src="/desc_img.jpg" />
         </MediaQuery>
       </DescContainer>
     </section>
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
+      <Hr />
+    </MediaQuery>
 
-    <Hr />
-
-    <MediaQuery minDeviceWidth={breakpoints.md}>
+    <MediaQuery minWidth={breakpoints.md}>
       <section className="container">
         <Gallery>
-          <LeftImg src="./bitmap_3.jpg" />
-          <CenterImg src="./bitmap_4.jpg" />
-          <RightImg src="./bitmap_2.jpg" />
+          <LeftImg src="/bitmap_3.jpg" />
+          <CenterImg src="/bitmap_4.jpg" />
+          <RightImg src="/bitmap_2.jpg" />
         </Gallery>
       </section>
     </MediaQuery>
 
     <section className="container">
-      <MediaQuery maxDeviceWidth={breakpoints.sm - 1}>
+      <MediaQuery maxWidth={breakpoints.sm - 1}>
         <SectionHeading sectionName="SHIPPING & RETURNS" />
       </MediaQuery>
       <Shipping />
     </section>
-
-    <Hr />
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
+      <Hr />
+    </MediaQuery>
 
     <WeRecommend />
 
-    <MediaQuery maxDeviceWidth={breakpoints.sm}>
+    <MediaQuery maxWidth={breakpoints.sm - 1}>
       <MoreForYou />
     </MediaQuery>
   </div>);

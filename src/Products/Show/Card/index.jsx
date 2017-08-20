@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 import Title from '../Title';
 import Showcase from './Showcase';
-import Info from './Info/';
-import PrimaryButton from './PrimaryButton';
-import TextButton from './Info/TextButton';
-import breakpoints from '../../breakpoints';
+import Info from './Info';
+import PrimaryButton from '../../../Common/Buttons/PrimaryButton';
+import TextButton from '../../../Common/Buttons/TextButton';
+import breakpoints from '../../../breakpoints';
 
 const CardPic = styled.img`display: block;`;
 const Container = styled.div`
@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 
 const Buttons = styled.div`
-  padding: 2rem 0.5rem 3rem 0.5rem;
+  padding: 2rem 0rem 3rem 0rem;
 
   @media only screen and (min-width: 48rem) {
     padding: 2rem 0rem 3rem 0rem;
@@ -39,7 +39,7 @@ const ButtonsContainer = styled.div`
 
 const DeliveryTitle = styled.h3`
   margin: 0;
-  padding-top: 0.5rem;
+  margin-top: 1.5rem;
   padding-left: 0.5rem;
   font-size: 0.75rem;
   font-weight: 700;
@@ -53,23 +53,33 @@ const DeliveryP = styled.p`
   line-height: 1rem;
 `;
 
+const BlackButton = PrimaryButton.extend`
+  margin-bottom: 1rem;
+  @media only screen and (min-width: 62rem) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+`;
+
+const NeedHelp = TextButton.extend`margin-top: 1.5rem;`;
+
 export default () =>
   (<Container>
     <section className="container">
       <div className="row">
-        <MediaQuery minDeviceWidth={breakpoints.md}>
+        <MediaQuery minWidth={breakpoints.md}>
           <div>
-            <CardPic src="/bitmap.jpg" />
+            <CardPic src={`${process.env.PUBLIC_URL}/bitmap.jpg`} />
           </div>
         </MediaQuery>
 
-        <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+        <MediaQuery maxWidth={breakpoints.md - 1}>
           <div className="col-xs-12">
             <Title>Long Cotton Gabardine Car Coat</Title>
           </div>
         </MediaQuery>
 
-        <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
+        <MediaQuery maxWidth={breakpoints.md - 1}>
           <div className="col-xs-12 col-md-7 col-lg-6">
             <Showcase />
           </div>
@@ -80,20 +90,20 @@ export default () =>
 
           <Buttons>
             <ButtonsContainer>
-              <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-                <PrimaryButton>SELECT A SIZE</PrimaryButton>
+              <MediaQuery maxWidth={breakpoints.md - 1}>
+                <BlackButton>SELECT A SIZE</BlackButton>
               </MediaQuery>
-              <MediaQuery minDeviceWidth={breakpoints.md}>
-                <PrimaryButton>ADD TO BAG</PrimaryButton>
+              <MediaQuery minWidth={breakpoints.md}>
+                <BlackButton>ADD TO BAG</BlackButton>
               </MediaQuery>
               <PrimaryButton secondary>FIND IN STORE</PrimaryButton>
             </ButtonsContainer>
-            <MediaQuery maxDeviceWidth={breakpoints.md - 1}>
-              <TextButton>NEED SIZE HELP?</TextButton>
+            <MediaQuery maxWidth={breakpoints.md - 1}>
+              <NeedHelp>NEED SIZE HELP?</NeedHelp>
             </MediaQuery>
           </Buttons>
 
-          <MediaQuery minDeviceWidth={breakpoints.md}>
+          <MediaQuery minWidth={breakpoints.md}>
             <DeliveryTitle>Free Next Day Delivery</DeliveryTitle>
             <DeliveryP>Order before 7pm Monday to Thursday for delivery the next day</DeliveryP>
           </MediaQuery>

@@ -9,6 +9,9 @@ env:
 script:
   - npm run lint
 
+before_deploy:
+  - npm run build
+
 deploy:
   # deploy develop to the staging environment
   - provider: script

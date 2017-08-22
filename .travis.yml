@@ -1,6 +1,17 @@
 language: node_js
 node_js:
   - "node"
-
 script:
   - npm run lint
+
+deploy:
+  # deploy develop to the staging environment
+  - provider: script
+    script: scripts/deployD.sh
+    on:
+      branch: develop
+  # deploy master to production
+  - provider: script
+    script: scripts/deployM.sh
+    on:
+      branch: master

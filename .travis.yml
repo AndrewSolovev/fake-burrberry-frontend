@@ -11,7 +11,3 @@ deploy:
     on:
       branch: develop
   # deploy master to production
-  - provider: script
-    script: scripts/deployM.sh
-    on:
-      branch: master

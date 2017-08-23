@@ -18,4 +18,3 @@ deploy:
     script: now alias $(now build -t=$NOW_TOKEN --public) $URL_DEV -t=$NOW_TOKEN
     on:
       branch: develop
-  # deploy master to production

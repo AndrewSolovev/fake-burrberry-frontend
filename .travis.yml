@@ -16,7 +16,6 @@ deploy:
   # deploy develop to the staging environment
   - provider: script
     script: now alias $(now build -t=$NOW_TOKEN --public) $URL_DEV -t=$NOW_TOKEN
-    deploy:
-      skip_cleanup: true
+    skip_cleanup: true
     on:
       branch: develop

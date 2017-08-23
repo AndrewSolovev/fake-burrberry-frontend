@@ -2,10 +2,7 @@ language: node_js
 node_js:
   - "node"
 
-env:
-  global:
-    - URL_DEV: andrewsolovev-burberry-fake-shop-for-study-dev
-    - URL_PROD: andrewsolovev-burberry-fake-shop-for-study
+
 script:
   - npm run lint
 
@@ -19,3 +16,9 @@ deploy:
     skip_cleanup: true
     on:
       branch: develop
+
+ -  provider: script
+    script: now alias $(now build -t=$NOW_TOKEN --public) $URL_PROD -t=$NOW_TOKEN
+    skip_cleanup: true
+    on:
+      branch: master

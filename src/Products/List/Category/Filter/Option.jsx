@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+
+import styled, { css } from 'styled-components';
 import arrowImg from '../../../../icons/arrow.svg';
+import Dropdown from './Dropdown';
+
+const Container = styled.div`
+  position: relative;
+  margin-right: 1rem;
+  margin-left: ${props => (props.right ? 'auto' : '0')};
+  @media only screen and (min-width: 48rem) {
+    margin-right: ${props => (props.right ? '0' : '3rem')};
+  }
+`;
 
 const Select = styled.button`
-  flex-shrink: 0;
   margin: 0;
-  margin-top: 2rem;
-  margin-right: 1rem;
-  margin-left: ${props => (props.position ? 'auto' : '')};
   padding: 0;
   border: none;
   font-family: Raleway;
@@ -18,6 +25,19 @@ const Select = styled.button`
   background-color: #f3f3f3;
   font-weight: 400;
   cursor: pointer;
+  color: #171717;
+  ${props =>
+    props.isOpened === true &&
+    css`
+    color: #171717;
+
+`};
+  ${props =>
+    props.isOpened === false &&
+    props.active === true &&
+    css`
+    color: #999999;
+`};
 
   &:after {
     content: "";
@@ -28,29 +48,64 @@ const Select = styled.button`
     background-image: url(${arrowImg});
     background-size: cover;
     flex-shrink: 0;
-  }
-
-  @media only screen and (min-width: 48rem) {
-    margin-top: 2.5rem;
-    margin-right: 3rem;
-    margin-right: ${props => (props.position ? '0' : '')};
-  }
-  @media only screen and (min-width: 62rem) {
-    margin-top: 2.5rem;
+    transform: ${props => (props.isOpened === true ? 'rotate(180deg)' : '')};
   }
 `;
 
-function Option(props) {
-  return (
-    <Select value={props.value} position={props.position}>
-      {props.value}
-    </Select>
-  );
-}
+class Option extends Component {
+  static propTypes = {
+    value: PropTypes.string.isRequired,
+    content: PropTypes.node.isRequired,
+    right: PropTypes.bool,
+    isActive: PropTypes.func.isRequired,
+    active: PropTypes.bool.isRequired,
+  };
+  static defaultProps = {
+    right: false,
+  };
 
-Option.propTypes = {
-  value: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
-};
+  constructor(props) {
+    super(props);
+    this.state = { isOpened: false };
+    this.handleClick = this.handleClick.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
+  }
+
+  handleClick() {
+    if (!this.state.isOpened) {
+      this.setState({
+        isOpened: true,
+      });
+      this.props.isActive();
+    }
+  }
+  closeDropdown() {
+    this.setState({
+      isOpened: false,
+    });
+    this.props.isActive();
+  }
+
+  render() {
+    return (
+      <Container right={this.props.right}>
+        <Select
+          value={this.props.value}
+          onClick={this.handleClick}
+          isOpened={this.state.isOpened}
+          active={this.props.active}
+        >
+          {this.props.value}
+        </Select>
+        {this.state.isOpened &&
+          <Dropdown
+            right={this.props.right}
+            content={this.props.content}
+            closeDropdown={this.closeDropdown}
+          />}
+      </Container>
+    );
+  }
+}
 
 export default Option;

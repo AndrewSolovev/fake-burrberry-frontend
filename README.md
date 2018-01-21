@@ -1,2 +1,2 @@
 # fake-burrberry-frontend
-Фронтенд ru.burberry.com для курса 
+Фронтенд ru.burberry.com для курса Евгения Родионова.

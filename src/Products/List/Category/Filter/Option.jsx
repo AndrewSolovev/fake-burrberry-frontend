@@ -27,14 +27,14 @@ const Select = styled.button`
   cursor: pointer;
   color: #171717;
   ${props =>
-    props.isOpened === true &&
+    props.isOpened &&
     css`
     color: #171717;
 
 `};
   ${props =>
-    props.isOpened === false &&
-    props.active === true &&
+    !props.isOpened &&
+    props.active &&
     css`
     color: #999999;
 `};
@@ -48,17 +48,18 @@ const Select = styled.button`
     background-image: url(${arrowImg});
     background-size: cover;
     flex-shrink: 0;
-    transform: ${props => (props.isOpened === true ? 'rotate(180deg)' : '')};
+    transform: ${props => (props.isOpened ? 'rotate(180deg)' : '')};
   }
 `;
 
 class Option extends Component {
   static propTypes = {
-    value: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     content: PropTypes.node.isRequired,
     right: PropTypes.bool,
-    isActive: PropTypes.func.isRequired,
+    changingColor: PropTypes.func.isRequired,
     active: PropTypes.bool.isRequired,
+    children: PropTypes.element.isRequired,
   };
   static defaultProps = {
     right: false,
@@ -76,33 +77,35 @@ class Option extends Component {
       this.setState({
         isOpened: true,
       });
-      this.props.isActive();
+      this.props.changingColor();
     }
   }
   closeDropdown() {
     this.setState({
       isOpened: false,
     });
-    this.props.isActive();
+    this.props.changingColor();
   }
 
   render() {
     return (
       <Container right={this.props.right}>
         <Select
-          value={this.props.value}
+          title={this.props.title}
           onClick={this.handleClick}
           isOpened={this.state.isOpened}
           active={this.props.active}
         >
-          {this.props.value}
+          {this.props.title}
         </Select>
         {this.state.isOpened &&
           <Dropdown
             right={this.props.right}
             content={this.props.content}
             closeDropdown={this.closeDropdown}
-          />}
+          >
+            {this.props.children}
+          </Dropdown>}
       </Container>
     );
   }

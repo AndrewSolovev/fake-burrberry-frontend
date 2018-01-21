@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import breakpoints from '../../breakpoints';
 import Hamburger from '../../icons/hamburger.svg';
 import Logo from '../Logo/';
-import arrowImg from '../../icons/arrow.svg';
+import ShoppingIn from './ShoppingIn';
 
 const Header = styled.header`
   margin: 1.125rem 0rem;
@@ -29,30 +29,6 @@ const Ham = styled.button`
   background-color: #ffffff;
 `;
 
-const Shopping = styled.button`
-  position: absolute;
-  padding: 0;
-  border: none;
-  font-family: Raleway;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 600;
-  background-color: #ffffff;
-  color: #999999;
-  cursor: pointer;
-
-  &:after {
-    content: "";
-    display: inline-block;
-    background-image: url(${arrowImg});
-    background-size: cover;
-    width: 12px;
-    height: 6px;
-    margin-left: 0.5rem;
-    margin-bottom: 2px;
-    flex-shrink: 0;
-  }
-`;
 const Nav = styled.nav`
   text-align: center;
   @media only screen and (min-width: 48rem) {
@@ -81,7 +57,6 @@ const Link = styled(NavLink)`
   }
 
 `;
-
 export default () =>
   (<Header>
     <div className="container">
@@ -89,12 +64,15 @@ export default () =>
         <Ham />
       </MediaQuery>
       <MediaQuery minWidth={breakpoints.sm}>
-        <Shopping>Shopping in: United Kingdom (£)</Shopping>
+        <ShoppingIn
+          locations={['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)']}
+        />
       </MediaQuery>
       <LogoLink>
         <Logo />
       </LogoLink>
     </div>
+    <MediaQuery maxWidth={breakpoints.sm} />
     <MediaQuery minWidth={breakpoints.sm}>
       <Nav>
         <Link to="/women/">WOMEN</Link>

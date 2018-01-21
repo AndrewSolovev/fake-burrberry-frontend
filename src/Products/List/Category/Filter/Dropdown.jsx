@@ -6,10 +6,13 @@ const Wrapper = styled.div`
   position: absolute;
   top: calc(100% + 1.5rem);
   left: -1.5rem;
-  width: 377px;
   padding: 1rem 1.5rem 1.5rem;
   background-color: #f3f3f3;
 
+  p {
+    margin: 0;
+    white-space: nowrap;
+  }
   ${props =>
     props.right &&
     css`
@@ -21,7 +24,7 @@ const Wrapper = styled.div`
 
 class Dropdown extends Component {
   static propTypes = {
-    content: PropTypes.node.isRequired,
+    children: PropTypes.element.isRequired,
     right: PropTypes.bool,
     closeDropdown: PropTypes.func.isRequired,
   };
@@ -56,7 +59,7 @@ class Dropdown extends Component {
         }}
         right={this.props.right}
       >
-        {this.props.content}
+        {this.props.children}
       </Wrapper>
     );
   }

@@ -7,6 +7,7 @@ import Card from '../Card';
 import Hr from '../../Common/Hr/';
 import Button from '../../Common/Buttons/PrimaryButton';
 
+const Main = styled.main`overflow-x: hidden;`;
 const SectionTitle = Title.extend`
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -48,7 +49,7 @@ const ShowingOf = styled.p`
 `;
 const ViewButton = Button.extend`line-height: 1rem;`;
 export default () =>
-  (<div>
+  (<Main>
     <Category />
     <div className="container">
       <SectionTitle>Heritage Trench Coats</SectionTitle>
@@ -241,4 +242,4 @@ export default () =>
         <ViewButton secondary>View 9 more</ViewButton>
       </Showing>
     </div>
-  </div>);
+  </Main>);

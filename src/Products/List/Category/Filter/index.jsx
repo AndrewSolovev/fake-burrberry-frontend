@@ -17,10 +17,10 @@ class Filters extends Component {
   constructor(props) {
     super(props);
     this.state = { isAnythingOpened: false };
-    this.isActive = this.isActive.bind(this);
+    this.ChangingColor = this.ChangingColor.bind(this);
   }
 
-  isActive() {
+  ChangingColor() {
     this.setState(prevState => ({
       isAnythingOpened: !prevState.isAnythingOpened,
     }));
@@ -30,27 +30,62 @@ class Filters extends Component {
     return (
       <Filter>
         <Option
-          isActive={this.isActive}
+          changingColor={this.ChangingColor}
           active={this.state.isAnythingOpened}
-          value="Category"
-          content="Content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content  content content content content content content content "
-        />
-        <Option isActive={this.isActive} active={this.state.isAnythingOpened} value="Colour">
-          <p>Content2</p>
-        </Option>
-        <Option isActive={this.isActive} active={this.state.isAnythingOpened} value="Size">
-          <p>Content3</p>
+          title="Category"
+        >
+          {' '}<div>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+          </div>
         </Option>
         <Option
-          isActive={this.isActive}
+          changingColor={this.ChangingColor}
           active={this.state.isAnythingOpened}
-          value="Sort by price"
+          title="Colour"
+        >
+          {' '}{' '}
+          <div>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+          </div>
+        </Option>
+        <Option
+          changingColor={this.ChangingColor}
+          active={this.state.isAnythingOpened}
+          title="Size"
+        >
+          {' '}{' '}
+          <div>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+            <p>content content content content content content content</p>
+          </div>
+        </Option>
+        <Option
+          changingColor={this.ChangingColor}
+          active={this.state.isAnythingOpened}
+          title="Sort by price"
           right
-          content="
-          high or low
-          it’s medium length of content
-        "
-        />
+        >
+          <div>
+            <p>high or</p>
+            <p>low</p>
+            <p>it’s medium length of</p>
+            <p>content</p>
+          </div>
+        </Option>
       </Filter>
     );
   }

@@ -3,10 +3,10 @@ import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 
 import Title from '../Title';
-import TextButton from '../../../Common/Buttons/TextButton';
-import SecondaryButton from '../../../Common/Buttons/SecondaryButton';
 import FormattedPrice from '../../../FormattedPrice';
+import SizeButtons from './Sizes';
 import breakpoints from '../../../breakpoints';
+import Colours from './Colours';
 
 const Info = styled.div`
   margin: 0;
@@ -75,23 +75,6 @@ const ID = styled.p`
   }
 `;
 
-const SizeContainer = styled.div`
-  display: flex;
-  justify-content space-between;
-  margin-bottom: 1rem;
-  `;
-
-const Size = styled.p`
-  margin: 0;
-  padding-right: 5.5rem;
-  font-family: Raleway;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  text-align: left;
-  color: #171717;
-}
-`;
-
 export default () =>
   (<div className="row">
     <MediaQuery minWidth={breakpoints.md}>
@@ -111,28 +94,13 @@ export default () =>
           </PriceAndID>
         </MediaQuery>
 
-        <div className="col-xl-6">
-          <Colour>
-            Colour: <b>Honey</b>
-          </Colour>
-          <ChangeColour type="button">change colour to black</ChangeColour>
-          <ChangeColour pressed type="button">
-            change colour to honey
-          </ChangeColour>
+        <div className=" col-xl-6">
+          <Colours />
         </div>
 
         <MediaQuery minWidth={breakpoints.md}>
-          <div className="col-xl-6">
-            <SizeContainer>
-              <Size>
-                Size: <b>XL</b>
-              </Size>
-              <TextButton>NEED SIZE HELP?</TextButton>
-            </SizeContainer>
-            <SecondaryButton>S</SecondaryButton>
-            <SecondaryButton>M</SecondaryButton>
-            <SecondaryButton>L</SecondaryButton>
-            <SecondaryButton pressed>XL</SecondaryButton>
+          <div className="col-md-6 col-xl-6">
+            <SizeButtons />
           </div>
         </MediaQuery>
       </Info>

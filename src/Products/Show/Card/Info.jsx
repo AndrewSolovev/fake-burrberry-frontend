@@ -42,26 +42,6 @@ const Price = styled.div`
     font-weight: 500;
   }
 `;
-const Colour = styled.p`
-  margin: 0;
-  margin-top: 1rem;
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 1rem;
-  color: #171717;
-  @media only screen and (min-width: 62rem) {
-    margin-top: 0rem;
-`;
-const ChangeColour = styled.button`
-  display: inline-block;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  padding: 19px;
-  border-radius: 50px;
-  border: 1px solid #232122;
-  font-size: 0;
-  background: ${props => (props.pressed ? '#cfa880' : '#232122')};
-`;
 
 const ID = styled.p`
   margin: 0;

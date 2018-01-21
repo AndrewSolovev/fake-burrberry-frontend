@@ -12,6 +12,7 @@ const Pic = styled.img`
   display: block;
   width: 100%;
   height: auto;
+  user-select: none;
 `;
 
 const Info = styled.div`
@@ -93,7 +94,7 @@ function ProductCard(props) {
               {props.promoLabel}
             </Promo>}
 
-          <Title to={`/${props.to}`}>
+          <Title to={`${props.to}`}>
             {props.productName}
           </Title>
 

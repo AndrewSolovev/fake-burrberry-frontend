@@ -3,10 +3,10 @@ import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 
 import Title from '../Title';
-import TextButton from '../../../Common/Buttons/TextButton';
-import SecondaryButton from '../../../Common/Buttons/SecondaryButton';
 import FormattedPrice from '../../../FormattedPrice';
+import SizeButtons from './Sizes';
 import breakpoints from '../../../breakpoints';
+import Colours from './Colours';
 
 const Info = styled.div`
   margin: 0;
@@ -42,26 +42,6 @@ const Price = styled.div`
     font-weight: 500;
   }
 `;
-const Colour = styled.p`
-  margin: 0;
-  margin-top: 1rem;
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 1rem;
-  color: #171717;
-  @media only screen and (min-width: 62rem) {
-    margin-top: 0rem;
-`;
-const ChangeColour = styled.button`
-  display: inline-block;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  padding: 19px;
-  border-radius: 50px;
-  border: 1px solid #232122;
-  font-size: 0;
-  background: ${props => (props.pressed ? '#cfa880' : '#232122')};
-`;
 
 const ID = styled.p`
   margin: 0;
@@ -73,23 +53,6 @@ const ID = styled.p`
   @media only screen and (min-width: 48rem) {
     margin-top: 2px;
   }
-`;
-
-const SizeContainer = styled.div`
-  display: flex;
-  justify-content space-between;
-  margin-bottom: 1rem;
-  `;
-
-const Size = styled.p`
-  margin: 0;
-  padding-right: 5.5rem;
-  font-family: Raleway;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  text-align: left;
-  color: #171717;
-}
 `;
 
 export default () =>
@@ -111,28 +74,13 @@ export default () =>
           </PriceAndID>
         </MediaQuery>
 
-        <div className="col-xl-6">
-          <Colour>
-            Colour: <b>Honey</b>
-          </Colour>
-          <ChangeColour type="button">change colour to black</ChangeColour>
-          <ChangeColour pressed type="button">
-            change colour to honey
-          </ChangeColour>
+        <div className=" col-xl-6">
+          <Colours />
         </div>
 
         <MediaQuery minWidth={breakpoints.md}>
-          <div className="col-xl-6">
-            <SizeContainer>
-              <Size>
-                Size: <b>XL</b>
-              </Size>
-              <TextButton>NEED SIZE HELP?</TextButton>
-            </SizeContainer>
-            <SecondaryButton>S</SecondaryButton>
-            <SecondaryButton>M</SecondaryButton>
-            <SecondaryButton>L</SecondaryButton>
-            <SecondaryButton pressed>XL</SecondaryButton>
+          <div className="col-md-6 col-xl-6">
+            <SizeButtons />
           </div>
         </MediaQuery>
       </Info>

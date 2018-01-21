@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 import breakpoints from '../../breakpoints';
+import ShippingCountry from './ShippingCountry';
+import Language from './Language';
 
 const Footer = styled.footer`
   margin-top: 4rem;
@@ -44,29 +46,6 @@ const Link = styled.a`
   cursor: pointer;
 `;
 const LocationButtons = styled.div`@media only screen and (min-width: 48rem) {display: flex;}`;
-
-const LocationButton = styled.button`
-  display: block;
-  padding: 0;
-  margin-top: 1rem;
-  border: none;
-  font-size: 0.75rem;
-  font-weight: 400;
-  font-family: 'Raleway', sans-serif;
-  line-height: 16px;
-  color: #999999;
-  background-color: #f3f3f3;
-  cursor: pointer;
-
-  @media only screen and (min-width: 48rem) {
-    margin: 1.25rem 1.5rem 0 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  @media only screen and (min-width: 62rem) {
-    margin-top: 2.25rem;
-  }
-`;
 
 const NeedHelp = styled.h2`
   margin: 0;
@@ -117,7 +96,6 @@ const FindStore = styled.a`
   cursor: pointer;
 `;
 
-const Grey = styled.span`color: #171717;`;
 export default () =>
   (<Footer>
     <div className="container">
@@ -163,12 +141,8 @@ export default () =>
         </MediaQuery>
       </div>
       <LocationButtons>
-        <LocationButton type="button">
-          Shipping country: <Grey>Russian Federation</Grey>
-        </LocationButton>
-        <LocationButton type="button">
-          Language: <Grey>English</Grey>
-        </LocationButton>
+        <ShippingCountry locations={['United Kingdom', 'United States', 'Russian Federation']} />
+        <Language languages={['English', 'Russian', 'German']} />
       </LocationButtons>
       <NeedHelp>Need help?</NeedHelp>
       <Contact>Find out more and contact us</Contact>
